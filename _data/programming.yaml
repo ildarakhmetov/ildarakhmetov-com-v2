@@ -4,71 +4,103 @@ categories:
     technologies:
       - name: Python
         url: https://en.wikipedia.org/wiki/Python_(programming_language)
+        icon: python
         actively_using: true
         teaching: true
         learned_recently: false
+      - name: TypeScript
+        url: https://en.wikipedia.org/wiki/TypeScript
+        icon: typescript
+        actively_using: true
+        teaching: false
+        learned_recently: true
       - name: C
         url: https://en.wikipedia.org/wiki/C_(programming_language)
+        icon: c
         actively_using: false
         teaching: true
         learned_recently: false
-      - name: Go
-        url: https://en.wikipedia.org/wiki/Go_(programming_language)
-        actively_using: false
-        teaching: false
-        learned_recently: false
       - name: Rust
         url: https://en.wikipedia.org/wiki/Rust_(programming_language)
+        icon: rust
         actively_using: false
         teaching: false
         learned_recently: true
       - name: JavaScript
         url: https://en.wikipedia.org/wiki/JavaScript
+        icon: javascript
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Java
         url: https://en.wikipedia.org/wiki/Java_(programming_language)
+        icon: openjdk
         actively_using: false
         teaching: false
         learned_recently: false
       - name: R
         url: https://en.wikipedia.org/wiki/R_(programming_language)
+        icon: r
         actively_using: false
         teaching: false
         learned_recently: false
       - name: PHP
         url: https://en.wikipedia.org/wiki/PHP
+        icon: php
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Perl
         url: https://en.wikipedia.org/wiki/Perl
+        icon: perl
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Lisp
         url: https://en.wikipedia.org/wiki/Lisp_(programming_language)
+        icon: commonlisp
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Prolog
         url: https://en.wikipedia.org/wiki/Prolog
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Pascal
         url: https://en.wikipedia.org/wiki/Pascal_(programming_language)
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Dart
         url: https://en.wikipedia.org/wiki/Dart_(programming_language)
+        icon: dart
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Object Pascal
+        url: https://en.wikipedia.org/wiki/Object_Pascal
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: VBA
         url: https://en.wikipedia.org/wiki/Visual_Basic_for_Applications
+        icon: null
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Scratch
+        url: https://en.wikipedia.org/wiki/Scratch_(programming_language)
+        icon: scratch
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Small Basic
+        url: https://en.wikipedia.org/wiki/Microsoft_Small_Basic
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
@@ -76,101 +108,137 @@ categories:
   - name: Esoteric Languages
     color: neo-yellow
     technologies:
-      - name: Piet
-        url: https://en.wikipedia.org/wiki/Esoteric_programming_language#Piet
-        actively_using: false
-        teaching: false
-        learned_recently: false
       - name: Rockstar
         url: https://esolangs.org/wiki/Rockstar
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Befunge
         url: https://en.wikipedia.org/wiki/Befunge
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Brainfuck
         url: https://en.wikipedia.org/wiki/Brainfuck
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Forth
         url: https://en.wikipedia.org/wiki/Forth_(programming_language)
+        icon: null
         actively_using: false
         teaching: false
-        learned_recently: false
-      - name: Scratch
-        url: https://en.wikipedia.org/wiki/Scratch_(programming_language)
-        actively_using: false
-        teaching: false
-        learned_recently: false
-      - name: Small Basic
-        url: https://en.wikipedia.org/wiki/Microsoft_Small_Basic
-        actively_using: false
-        teaching: false
-        learned_recently: false
+        learned_recently: true
 
   - name: Web Frameworks
     color: neo-green
     technologies:
       - name: FastAPI
         url: https://fastapi.tiangolo.com/
+        icon: fastapi
         actively_using: true
         teaching: false
         learned_recently: false
       - name: Flask
         url: https://flask.palletsprojects.com/
+        icon: flask
         actively_using: true
         teaching: false
         learned_recently: false
+      - name: Next.js
+        url: https://nextjs.org/
+        icon: nextdotjs
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Fastify
+        url: https://fastify.dev/
+        icon: fastify
+        actively_using: true
+        teaching: false
+        learned_recently: true
+      - name: Lume
+        url: https://lume.land/
+        icon: null
+        actively_using: true
+        teaching: false
+        learned_recently: true
+      - name: Flet
+        url: https://flet.dev/
+        icon: null
+        actively_using: false
+        teaching: false
+        learned_recently: true
       - name: Django
         url: https://en.wikipedia.org/wiki/Django_(web_framework)
+        icon: django
         actively_using: false
         teaching: false
         learned_recently: false
       - name: React.js
         url: https://react.dev/
+        icon: react
         actively_using: false
         teaching: false
-        learned_recently: true
+        learned_recently: false
 
   - name: Databases & Query Languages
     color: neo-pink
     technologies:
       - name: SQL
         url: https://en.wikipedia.org/wiki/SQL
+        icon: null
         actively_using: false
-        teaching: true
+        teaching: false
         learned_recently: false
       - name: MySQL
         url: https://en.wikipedia.org/wiki/MySQL
+        icon: mysql
         actively_using: true
         teaching: false
         learned_recently: false
       - name: MariaDB
         url: https://en.wikipedia.org/wiki/MariaDB
+        icon: mariadb
         actively_using: true
         teaching: false
         learned_recently: false
       - name: MongoDB
         url: https://en.wikipedia.org/wiki/MongoDB
+        icon: mongodb
         actively_using: true
         teaching: false
         learned_recently: false
+      - name: Redis
+        url: https://redis.io/
+        icon: redis
+        actively_using: true
+        teaching: false
+        learned_recently: true
+      - name: Supabase
+        url: https://supabase.com/
+        icon: supabase
+        actively_using: true
+        teaching: false
+        learned_recently: true
       - name: SQLite
         url: https://en.wikipedia.org/wiki/SQLite
+        icon: sqlite
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Microsoft SQL Server
         url: https://en.wikipedia.org/wiki/Microsoft_SQL_Server
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: T-SQL
         url: https://en.wikipedia.org/wiki/Transact-SQL
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
@@ -180,30 +248,140 @@ categories:
     technologies:
       - name: Pandas
         url: https://pandas.pydata.org/
+        icon: pandas
         actively_using: true
         teaching: false
         learned_recently: false
       - name: MATLAB
         url: https://en.wikipedia.org/wiki/MATLAB
+        icon: null
         actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: AI & Machine Learning
+    color: neo-yellow
+    technologies:
+      - name: Cursor
+        url: https://cursor.com/
+        icon: null
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: GitHub Copilot
+        url: https://github.com/features/copilot
+        icon: githubcopilot
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: LibreChat
+        url: https://www.librechat.ai/
+        icon: null
+        actively_using: true
+        teaching: false
+        learned_recently: true
+      - name: Ollama
+        url: https://ollama.com/
+        icon: ollama
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: OpenAI
+        url: https://openai.com/
+        icon: openai
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Claude
+        url: https://claude.ai/
+        icon: anthropic
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Gemini
+        url: https://gemini.google.com/
+        icon: googlegemini
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: OpenRouter
+        url: https://openrouter.ai/
+        icon: null
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: LangChain
+        url: https://www.langchain.com/
+        icon: langchain
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Midjourney
+        url: https://www.midjourney.com/
+        icon: null
+        actively_using: true
         teaching: false
         learned_recently: false
 
   - name: Cloud & Infrastructure
     color: neo-green
     technologies:
+      - name: Docker
+        url: https://www.docker.com/
+        icon: docker
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: GitHub
+        url: https://github.com/
+        icon: github
+        actively_using: true
+        teaching: false
+        learned_recently: false
       - name: AWS
         url: https://en.wikipedia.org/wiki/Amazon_Web_Services
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Google Cloud
         url: https://en.wikipedia.org/wiki/Google_Cloud_Platform
+        icon: googlecloud
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Yandex Cloud
+        url: https://cloud.yandex.com/
+        icon: yandexcloud
+        teaching: false
+        learned_recently: false
+      - name: Render
+        url: https://render.com/
+        icon: render
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Fly.io
+        url: https://fly.io/
+        icon: flydotio
+        actively_using: true
+        teaching: false
+        learned_recently: true
+      - name: Netlify
+        url: https://www.netlify.com/
+        icon: netlify
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Terraform
+        url: https://www.terraform.io/
+        icon: terraform
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Heroku
         url: https://en.wikipedia.org/wiki/Heroku
+        icon: heroku
         actively_using: false
         teaching: false
         learned_recently: false
@@ -213,6 +391,7 @@ categories:
     technologies:
       - name: Flutter
         url: https://en.wikipedia.org/wiki/Flutter_(software)
+        icon: flutter
         actively_using: false
         teaching: false
         learned_recently: false
@@ -222,21 +401,25 @@ categories:
     technologies:
       - name: 1C
         url: https://en.wikipedia.org/wiki/1C_Company
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Delphi
         url: https://en.wikipedia.org/wiki/Delphi_(software)
+        icon: delphi
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Clarion
         url: https://en.wikipedia.org/wiki/Clarion_(programming_language)
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: FoxPro
         url: https://en.wikipedia.org/wiki/FoxPro
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
@@ -246,21 +429,25 @@ categories:
     technologies:
       - name: Regex
         url: https://en.wikipedia.org/wiki/Regular_expression
+        icon: null
         actively_using: true
         teaching: false
         learned_recently: false
       - name: HTML/CSS
         url: https://en.wikipedia.org/wiki/HTML
+        icon: html5
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Assembly
         url: https://en.wikipedia.org/wiki/Assembly_language
+        icon: null
         actively_using: false
         teaching: false
         learned_recently: false
       - name: Sh/Bash
         url: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+        icon: gnubash
         actively_using: false
         teaching: false
         learned_recently: false

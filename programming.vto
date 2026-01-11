@@ -3,6 +3,15 @@ layout: layout.vto
 title: Programming
 ---
 
+<style>
+  .tech-icon {
+    filter: brightness(0) saturate(100%);
+  }
+  .group:hover .tech-icon {
+    filter: brightness(0) saturate(100%) invert(1);
+  }
+</style>
+
 <div class="max-w-none">
   <h1 class="text-4xl font-black mb-8">Programming</h1>
 
@@ -30,9 +39,12 @@ title: Programming
       <h2 class="text-3xl font-black mb-6">{{ category.name }}</h2>
       <div class="flex flex-wrap gap-3">
         {{ for tech of category.technologies }}
-          <a href="{{ tech.url }}" target="_blank" rel="noopener noreferrer" class="relative px-4 py-2 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors inline-flex items-center gap-2">
-            {{ tech.name }}
-            <span class="flex gap-1">
+          <a href="{{ tech.url }}" target="_blank" rel="noopener noreferrer" class="relative px-4 py-2 h-[2.75rem] bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors inline-flex items-center gap-2 group">
+            {{ if tech.icon }}
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/{{ tech.icon }}.svg" alt="{{ tech.name }}" class="w-5 h-5 inline-block flex-shrink-0 tech-icon" />
+            {{ /if }}
+            <span>{{ tech.name }}</span>
+            <span class="flex gap-1 ml-1">
               {{ if tech.actively_using }}
                 <span class="w-2 h-2 bg-green-500 rounded-full border border-black flex-shrink-0" title="Actively using"></span>
               {{ /if }}
