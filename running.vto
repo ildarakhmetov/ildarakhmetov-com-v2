@@ -1,0 +1,48 @@
+---
+layout: layout.vto
+title: Running
+---
+
+<div class="max-w-none">
+  <h1 class="text-4xl font-black mb-8">Running</h1>
+
+  <!-- Strava Activity Summary -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-pink p-8 rounded-none mb-8">
+    <h2 class="text-3xl font-black mb-6">Strava Activity</h2>
+    <div class="flex justify-center">
+      <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/65861699/activity-summary/4c1ff0a7a9f108dfa984c5472434fbca887edc34' class="border-2 border-black"></iframe>
+    </div>
+    <p class="text-center mt-6 font-semibold">
+      <a href="https://www.strava.com/athletes/65861699" target="_blank" class="hover:underline font-bold">Let's connect on Strava! →</a>
+    </p>
+  </div>
+
+  <!-- Full Marathons -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-green p-8 rounded-none mb-8">
+    <h2 class="text-3xl font-black mb-6">Full Marathons</h2>
+    <ul class="space-y-3">
+      {{ for marathon of running.marathons }}
+        <li class="hover:bg-white/50 px-3 py-2 transition-colors rounded flex items-center gap-2">
+          <span class="font-bold">{{ marathon.name }}</span>
+          <span class="opacity-75">({{ marathon.year }})</span>
+          {{ if marathon.status === "training" }}
+            <span class="text-sm px-2 py-1 bg-black text-white font-bold rounded">Currently Training</span>
+          {{ /if }}
+        </li>
+      {{ /for }}
+    </ul>
+  </div>
+
+  <!-- Half-Marathons -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-yellow p-8 rounded-none mb-8">
+    <h2 class="text-3xl font-black mb-6">Half-Marathons</h2>
+    <ul class="space-y-3">
+      {{ for race of running.half_marathons }}
+        <li class="hover:bg-white/50 px-3 py-2 transition-colors rounded flex items-center gap-2">
+          <span class="font-bold">{{ race.name }}</span>
+          <span class="opacity-75">({{ race.year }})</span>
+        </li>
+      {{ /for }}
+    </ul>
+  </div>
+</div>
