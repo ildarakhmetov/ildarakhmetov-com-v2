@@ -1,0 +1,32 @@
+---
+layout: layout.vto
+title: Traveling
+---
+
+<div class="max-w-none">
+  <h1 class="text-4xl font-black mb-8">Traveling</h1>
+  <p class="text-lg mb-8 opacity-75">Countries I've been to (so far)</p>
+
+  <!-- All Countries -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-blue p-8 rounded-none mb-8">
+    <h2 class="text-3xl font-black mb-6">All Countries</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">
+      {{ for country of traveling.visited }}
+        <div class="py-1 flex items-baseline gap-2">
+          <span class="font-semibold flex-shrink-0">{{ country.name }}</span>
+          <span class="opacity-60 text-sm">{{ country.years }}</span>
+        </div>
+      {{ /for }}
+    </div>
+  </div>
+
+  <!-- Called Home -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-pink p-8 rounded-none mb-8">
+    <h2 class="text-3xl font-black mb-6">Called Home</h2>
+    <div class="flex flex-wrap gap-3">
+      {{ for country of traveling.lived }}
+        <span class="px-4 py-2 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">{{ country }}</span>
+      {{ /for }}
+    </div>
+  </div>
+</div>
