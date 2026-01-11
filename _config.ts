@@ -7,5 +7,6 @@ site.use(tailwindcss());
 
 // Add the CSS file to be processed
 site.add("styles.css");
+site.copy("assets");
 
 export default site;
