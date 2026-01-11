@@ -1,0 +1,51 @@
+---
+layout: layout.vto
+title: Programming
+---
+
+<div class="max-w-none">
+  <h1 class="text-4xl font-black mb-8">Programming</h1>
+
+  <!-- Legend -->
+  <div class="border-4 border-black shadow-neo bg-white p-6 rounded-none mb-8">
+    <h2 class="text-xl font-black mb-4">Legend</h2>
+    <div class="flex flex-wrap gap-6">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-green-500 rounded-full border-2 border-black"></span>
+        <span class="font-semibold">Actively using</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-blue-500 rounded-full border-2 border-black"></span>
+        <span class="font-semibold">Teaching</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-purple-500 rounded-full border-2 border-black"></span>
+        <span class="font-semibold">Learned recently</span>
+      </div>
+    </div>
+  </div>
+
+  {{ for category of programming.categories }}
+    <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-{{ category.color }} p-8 rounded-none mb-8">
+      <h2 class="text-3xl font-black mb-6">{{ category.name }}</h2>
+      <div class="flex flex-wrap gap-3">
+        {{ for tech of category.technologies }}
+          <a href="{{ tech.url }}" target="_blank" rel="noopener noreferrer" class="relative px-4 py-2 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors inline-flex items-center gap-2">
+            {{ tech.name }}
+            <span class="flex gap-1">
+              {{ if tech.actively_using }}
+                <span class="w-2 h-2 bg-green-500 rounded-full border border-black flex-shrink-0" title="Actively using"></span>
+              {{ /if }}
+              {{ if tech.teaching }}
+                <span class="w-2 h-2 bg-blue-500 rounded-full border border-black flex-shrink-0" title="Teaching"></span>
+              {{ /if }}
+              {{ if tech.learned_recently }}
+                <span class="w-2 h-2 bg-purple-500 rounded-full border border-black flex-shrink-0" title="Learned recently"></span>
+              {{ /if }}
+            </span>
+          </a>
+        {{ /for }}
+      </div>
+    </div>
+  {{ /for }}
+</div>

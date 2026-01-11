@@ -1,0 +1,266 @@
+categories:
+  - name: Programming Languages
+    color: neo-blue
+    technologies:
+      - name: Python
+        url: https://en.wikipedia.org/wiki/Python_(programming_language)
+        actively_using: true
+        teaching: true
+        learned_recently: false
+      - name: C
+        url: https://en.wikipedia.org/wiki/C_(programming_language)
+        actively_using: false
+        teaching: true
+        learned_recently: false
+      - name: Go
+        url: https://en.wikipedia.org/wiki/Go_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Rust
+        url: https://en.wikipedia.org/wiki/Rust_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: true
+      - name: JavaScript
+        url: https://en.wikipedia.org/wiki/JavaScript
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Java
+        url: https://en.wikipedia.org/wiki/Java_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: R
+        url: https://en.wikipedia.org/wiki/R_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: PHP
+        url: https://en.wikipedia.org/wiki/PHP
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Perl
+        url: https://en.wikipedia.org/wiki/Perl
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Lisp
+        url: https://en.wikipedia.org/wiki/Lisp_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Prolog
+        url: https://en.wikipedia.org/wiki/Prolog
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Pascal
+        url: https://en.wikipedia.org/wiki/Pascal_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Dart
+        url: https://en.wikipedia.org/wiki/Dart_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: VBA
+        url: https://en.wikipedia.org/wiki/Visual_Basic_for_Applications
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Esoteric Languages
+    color: neo-yellow
+    technologies:
+      - name: Piet
+        url: https://en.wikipedia.org/wiki/Esoteric_programming_language#Piet
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Rockstar
+        url: https://esolangs.org/wiki/Rockstar
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Befunge
+        url: https://en.wikipedia.org/wiki/Befunge
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Brainfuck
+        url: https://en.wikipedia.org/wiki/Brainfuck
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Forth
+        url: https://en.wikipedia.org/wiki/Forth_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Scratch
+        url: https://en.wikipedia.org/wiki/Scratch_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Small Basic
+        url: https://en.wikipedia.org/wiki/Microsoft_Small_Basic
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Web Frameworks
+    color: neo-green
+    technologies:
+      - name: FastAPI
+        url: https://fastapi.tiangolo.com/
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Flask
+        url: https://flask.palletsprojects.com/
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: Django
+        url: https://en.wikipedia.org/wiki/Django_(web_framework)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: React.js
+        url: https://react.dev/
+        actively_using: false
+        teaching: false
+        learned_recently: true
+
+  - name: Databases & Query Languages
+    color: neo-pink
+    technologies:
+      - name: SQL
+        url: https://en.wikipedia.org/wiki/SQL
+        actively_using: false
+        teaching: true
+        learned_recently: false
+      - name: MySQL
+        url: https://en.wikipedia.org/wiki/MySQL
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: MariaDB
+        url: https://en.wikipedia.org/wiki/MariaDB
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: MongoDB
+        url: https://en.wikipedia.org/wiki/MongoDB
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: SQLite
+        url: https://en.wikipedia.org/wiki/SQLite
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Microsoft SQL Server
+        url: https://en.wikipedia.org/wiki/Microsoft_SQL_Server
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: T-SQL
+        url: https://en.wikipedia.org/wiki/Transact-SQL
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Data Science & Analysis
+    color: neo-blue
+    technologies:
+      - name: Pandas
+        url: https://pandas.pydata.org/
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: MATLAB
+        url: https://en.wikipedia.org/wiki/MATLAB
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Cloud & Infrastructure
+    color: neo-green
+    technologies:
+      - name: AWS
+        url: https://en.wikipedia.org/wiki/Amazon_Web_Services
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Google Cloud
+        url: https://en.wikipedia.org/wiki/Google_Cloud_Platform
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Heroku
+        url: https://en.wikipedia.org/wiki/Heroku
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Mobile Development
+    color: neo-yellow
+    technologies:
+      - name: Flutter
+        url: https://en.wikipedia.org/wiki/Flutter_(software)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Legacy & Business Software
+    color: neo-pink
+    technologies:
+      - name: 1C
+        url: https://en.wikipedia.org/wiki/1C_Company
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Delphi
+        url: https://en.wikipedia.org/wiki/Delphi_(software)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Clarion
+        url: https://en.wikipedia.org/wiki/Clarion_(programming_language)
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: FoxPro
+        url: https://en.wikipedia.org/wiki/FoxPro
+        actively_using: false
+        teaching: false
+        learned_recently: false
+
+  - name: Other Technologies
+    color: neo-blue
+    technologies:
+      - name: Regex
+        url: https://en.wikipedia.org/wiki/Regular_expression
+        actively_using: true
+        teaching: false
+        learned_recently: false
+      - name: HTML/CSS
+        url: https://en.wikipedia.org/wiki/HTML
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Assembly
+        url: https://en.wikipedia.org/wiki/Assembly_language
+        actively_using: false
+        teaching: false
+        learned_recently: false
+      - name: Sh/Bash
+        url: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+        actively_using: false
+        teaching: false
+        learned_recently: false
