@@ -5,6 +5,10 @@ date: 2025-06-07 14:00:00
 description: "Here’s the question that’s been bouncing around my head while I go on my long runs or wait in line for coffee: Should students actually use Cursor from Week One?"
 tags:
 - post
+- AI
+- education
+- teaching
+thumbnail: assets/img/blog/2025/cursor.png
 url: /blog/2025/cs1-in-the-age-of-ai/
 ---
 
