@@ -1,0 +1,162 @@
+---
+layout: layout.vto
+title: Blog
+---
+
+<div class="max-w-none">
+  <h1 class="text-4xl font-black mb-8">Blog</h1>
+  
+  <p class="text-xl mb-8 opacity-75">
+    Thoughts on technology, education, leadership, and life.
+  </p>
+  
+  <!-- Blog Posts Grid -->
+  <div id="blog-grid" class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ set posts = search.pages("post", "date=desc") }}
+    
+    {{ for post of posts }}
+    <article class="blog-post-card border-4 border-black shadow-neo hover:shadow-none transition-all bg-white rounded-none overflow-hidden flex flex-col">
+      <!-- Thumbnail -->
+      {{ if post.thumbnail }}
+      <a href="{{ post.url }}" class="block leading-none">
+        <img src="/{{ post.thumbnail }}" alt="{{ post.title }}" loading="lazy" class="w-full h-48 object-cover border-b-4 border-black block" />
+      </a>
+      {{ else }}
+      <a href="{{ post.url }}" class="block">
+        <div class="w-full h-48 bg-neo-blue border-b-4 border-black flex items-center justify-center">
+          <span class="text-4xl font-black opacity-25">📝</span>
+        </div>
+      </a>
+      {{ /if }}
+      
+      <!-- Content -->
+      <div class="p-6 flex-1 flex flex-col">
+        {{ if post.description }}
+        <p class="text-sm mb-4 flex-1">{{ post.description }}</p>
+        {{ /if }}
+        
+        {{ if post.date }}
+        <div class="mt-auto mb-4">
+          <time class="px-2 py-1 bg-neo-yellow border border-black font-bold text-xs">
+            {{ post.date |> date("HUMAN_DATE") }}
+          </time>
+        </div>
+        {{ /if }}
+        
+        <a href="{{ post.url }}" class="inline-block px-4 py-2 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors text-center">
+          Read More →
+        </a>
+      </div>
+    </article>
+    {{ /for }}
+  </div>
+  
+  <!-- Loading indicator -->
+  <div id="loading-indicator" class="text-center mt-8">
+    <div class="inline-block px-6 py-3 bg-neo-yellow border-4 border-black font-bold">
+      Loading more posts...
+    </div>
+  </div>
+  
+  {{ if posts.length === 0 }}
+  <div class="border-4 border-black bg-neo-yellow p-8 text-center">
+    <p class="text-xl font-bold">No posts found. Check back soon!</p>
+  </div>
+  {{ /if }}
+</div>
+
+<script>
+  // Infinite scroll with lazy loading
+  (function() {
+    const POSTS_PER_BATCH = 12;
+    const cards = document.querySelectorAll('.blog-post-card');
+    const loadingIndicator = document.getElementById('loading-indicator');
+    let currentBatch = 0;
+    let isLoading = false;
+    
+    // Initially hide all posts except the first batch
+    function initializePosts() {
+      cards.forEach((card, index) => {
+        if (index >= POSTS_PER_BATCH) {
+          card.style.display = 'none';
+        }
+      });
+      currentBatch = 1;
+    }
+    
+    // Show next batch of posts
+    function showNextBatch() {
+      if (isLoading) return;
+      
+      const startIndex = currentBatch * POSTS_PER_BATCH;
+      const endIndex = startIndex + POSTS_PER_BATCH;
+      
+      // Check if there are more posts to show
+      if (startIndex >= cards.length) {
+        if (loadingIndicator) {
+          loadingIndicator.style.display = 'none';
+        }
+        return;
+      }
+      
+      isLoading = true;
+      
+      // Simulate slight delay for better UX
+      setTimeout(() => {
+        for (let i = startIndex; i < endIndex && i < cards.length; i++) {
+          cards[i].style.display = 'flex';
+        }
+        
+        currentBatch++;
+        isLoading = false;
+        
+        // Hide loading indicator if we've shown all posts
+        if (currentBatch * POSTS_PER_BATCH >= cards.length) {
+          if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
+          }
+        }
+      }, 300);
+    }
+    
+    // Set up Intersection Observer for infinite scroll
+    function setupInfiniteScroll() {
+      const options = {
+        root: null,
+        rootMargin: '400px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !isLoading && currentBatch * POSTS_PER_BATCH < cards.length) {
+            showNextBatch();
+          }
+        });
+      }, options);
+      
+      // Observe the loading indicator
+      if (loadingIndicator) {
+        observer.observe(loadingIndicator);
+      }
+    }
+    
+    // Initialize on page load
+    if (cards.length > POSTS_PER_BATCH) {
+      initializePosts();
+      setupInfiniteScroll();
+    } else if (loadingIndicator) {
+      // Hide loading indicator if we have fewer posts than one batch
+      loadingIndicator.style.display = 'none';
+    }
+  })();
+</script>
+
+<noscript>
+  <style>
+    /* Show all posts if JavaScript is disabled */
+    .blog-post-card {
+      display: flex !important;
+    }
+  </style>
+</noscript>

@@ -1,2 +1,5 @@
 _site/
 deno.lock
+.venv/
+scripts/
+_legacy_posts/
