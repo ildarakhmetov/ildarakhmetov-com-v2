@@ -166,6 +166,12 @@ categories:
         actively_using: true
         teaching: false
         learned_recently: true
+      - name: Vento
+        url: https://vento.js.org/
+        icon: null
+        actively_using: true
+        teaching: false
+        learned_recently: true
       - name: Flet
         url: https://flet.dev/
         icon: null
@@ -427,6 +433,12 @@ categories:
   - name: Other Technologies
     color: neo-blue
     technologies:
+      - name: Deno
+        url: https://deno.com/
+        icon: deno
+        actively_using: true
+        teaching: false
+        learned_recently: true
       - name: Regex
         url: https://en.wikipedia.org/wiki/Regular_expression
         icon: null
