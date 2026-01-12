@@ -1,6 +1,6 @@
 ---
 layout: layout.vto
-title: Ildar Akhmetov
+title: Ildar Akhmetov - Personal Website
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -8,7 +8,7 @@ title: Ildar Akhmetov
   <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none transition-all bg-white p-8 rounded-none">
     <div class="flex flex-col md:flex-row gap-8 items-start">
       <div class="flex-shrink-0 mx-auto md:mx-0">
-        <img src="/assets/img/site/ildar.jpg" alt="Ildar Akhmetov" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-black shadow-neo object-cover">
+        <img src="/assets/img/ildar.jpg" alt="Ildar Akhmetov" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-black shadow-neo object-cover">
       </div>
       <div>
         <h1 class="text-4xl font-black mb-2">Ildar Akhmetov</h1>
@@ -21,15 +21,6 @@ title: Ildar Akhmetov
         </p>
       </div>
     </div>
-  </div>
-
-  <!-- Teaching - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-blue p-8 rounded-none flex flex-col justify-center items-center text-center">
-    <h3 class="text-2xl font-black mb-4">Teaching</h3>
-    <p class="mb-4 font-semibold">Course materials & resources</p>
-    <a href="/teaching/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
-      View Courses
-    </a>
   </div>
 
   <!-- Links/Socials - Small card -->
@@ -59,8 +50,56 @@ title: Ildar Akhmetov
     </ul>
   </div>
 
-  <!-- Current Focus - Medium card -->
+  <!-- Blog - Large card spanning 2 columns -->
   <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-pink p-8 rounded-none">
+    <h3 class="text-2xl font-black mb-4">Blog</h3>
+    <p class="text-lg mb-6 opacity-75">Ildar's thoughts on technology, education, leadership, and life.</p>
+    
+    {{ set recentPosts = search.pages("post", "date=desc", 3) }}
+    
+    {{ if recentPosts.length > 0 }}
+    <div class="space-y-4 mb-6">
+      {{ for post of recentPosts }}
+      <div class="border-l-4 border-black pl-4">
+        <a href="{{ post.url }}" class="font-bold text-lg hover:underline">{{ post.title }}</a>
+        {{ if post.date }}
+        <p class="text-sm opacity-75 mt-1">{{ post.date |> date("HUMAN_DATE") }}</p>
+        {{ /if }}
+      </div>
+      {{ /for }}
+    </div>
+    {{ /if }}
+    
+    <a href="/blog/" class="inline-block px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+      View All Posts →
+    </a>
+  </div>
+
+  <!-- Teaching - Small card -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-blue p-6 rounded-none">
+    {{ set currentUniversity = teaching.universities[0] }}
+    {{ set currentSemester = currentUniversity.semesters[0] }}
+    
+    <h3 class="text-2xl font-black mb-3 text-center">Teaching</h3>
+    <div class="mb-4">
+      <p class="font-bold text-center mb-2">{{ currentSemester.term }}</p>
+      <p class="text-sm text-center opacity-75 mb-3">{{ currentUniversity.name }}</p>
+      <div class="space-y-2">
+        {{ for course of currentSemester.courses }}
+        <div class="text-sm">
+          <span class="font-bold">{{ course.code }}</span>
+          <span class="block opacity-75">{{ course.name }}</span>
+        </div>
+        {{ /for }}
+      </div>
+    </div>
+    <a href="/teaching/" class="block text-center px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+      View All Courses
+    </a>
+  </div>
+
+  <!-- Current Focus - Medium card -->
+  <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-yellow p-8 rounded-none">
     <h3 class="text-2xl font-black mb-6">Current Roles</h3>
     <div class="grid md:grid-cols-2 gap-8">
       <div>
@@ -80,30 +119,55 @@ title: Ildar Akhmetov
     </div>
   </div>
 
-  <!-- Running - Small card -->
+  <!-- Programming - Small card -->
   <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-green p-8 rounded-none flex flex-col justify-center items-center text-center">
-    <h3 class="text-2xl font-black mb-4">Running</h3>
-    <p class="mb-4 font-semibold">Marathon & race history</p>
-    <a href="/running/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
-      View Races
+    <h3 class="text-2xl font-black mb-4">Programming</h3>
+    {{ set activeCount = 0 }}
+    {{ for category of programming.categories }}
+      {{ for tech of category.technologies }}
+        {{ if tech.actively_using }}
+          {{ set activeCount = activeCount + 1 }}
+        {{ /if }}
+      {{ /for }}
+    {{ /for }}
+    <p class="mb-4 font-semibold">actively using {{ activeCount }} technologies</p>
+    <a href="/programming/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+      View Stack
     </a>
   </div>
 
   <!-- Traveling - Small card -->
   <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-blue p-8 rounded-none flex flex-col justify-center items-center text-center">
     <h3 class="text-2xl font-black mb-4">Traveling</h3>
-    <p class="mb-4 font-semibold">Countries I've explored</p>
+    {{ set countryCount = traveling.visited.length }}
+    <p class="mb-4 font-semibold">{{ countryCount }} countries explored</p>
     <a href="/traveling/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
       View Countries
     </a>
   </div>
 
-  <!-- Programming - Small card -->
+  <!-- Running - Small card -->
   <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-pink p-8 rounded-none flex flex-col justify-center items-center text-center">
-    <h3 class="text-2xl font-black mb-4">Programming</h3>
-    <p class="mb-4 font-semibold">Languages & technologies</p>
-    <a href="/programming/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
-      View Stack
+    <h3 class="text-2xl font-black mb-4">Running</h3>
+    {{ set marathonCount = 0 }}
+    {{ for marathon of running.marathons }}
+      {{ if marathon.status === "completed" }}
+        {{ set marathonCount = marathonCount + 1 }}
+      {{ /if }}
+    {{ /for }}
+    {{ set halfMarathonCount = running.half_marathons.length }}
+    <p class="mb-4 font-semibold">{{ marathonCount }} marathon • {{ halfMarathonCount }} half-marathons</p>
+    <a href="/running/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+      View Races
+    </a>
+  </div>
+
+  <!-- Publications - Small card -->
+  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-yellow p-8 rounded-none flex flex-col justify-center items-center text-center">
+    <h3 class="text-2xl font-black mb-4">Publications</h3>
+    <p class="mb-4 font-semibold">Research & papers</p>
+    <a href="/publications/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+      View Publications
     </a>
   </div>
 </div>
