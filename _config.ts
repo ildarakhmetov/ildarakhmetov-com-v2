@@ -33,13 +33,17 @@ site.copy("assets");
 // Copy CNAME file for GitHub Pages custom domain
 site.copy("CNAME");
 
-// Append site name to page titles for SEO
+// Append site name to page titles for SEO (in meta tags only, not display)
 site.preprocess([".html"], (pages) => {
   for (const page of pages) {
     const data = page.data;
     // Skip home page (title already includes site name or is the site name)
     if (data.url !== "/" && data.title && !data.title.includes("Ildar Akhmetov")) {
-      data.title = `${data.title} | Ildar Akhmetov`;
+      // Set metas.title with the site name suffix for SEO
+      if (!data.metas) {
+        data.metas = {};
+      }
+      data.metas.title = `${data.title} | Ildar Akhmetov`;
     }
   }
 });
