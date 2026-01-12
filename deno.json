@@ -43,6 +43,10 @@
     "serve": {
       "description": "Run and serve the site for development",
       "command": "deno task lume -s"
+    },
+    "test": {
+      "description": "Run tests",
+      "command": "deno test --allow-read --allow-env --allow-net"
     }
   },
   "compilerOptions": {

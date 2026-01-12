@@ -20,6 +20,9 @@ jobs:
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
 
+      - name: Run tests
+        run: deno task test
+
       - name: Build site
         run: deno task build
 
