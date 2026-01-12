@@ -165,7 +165,8 @@ title: Ildar Akhmetov - Personal Website
   <!-- Publications - Small card -->
   <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-yellow p-8 rounded-none flex flex-col justify-center items-center text-center">
     <h3 class="text-2xl font-black mb-4">Publications</h3>
-    <p class="mb-4 font-semibold">Research & papers</p>
+    {{ set publicationCount = publications.length }}
+    <p class="mb-4 font-semibold">{{ publicationCount }} research papers</p>
     <a href="/publications/" class="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
       View Publications
     </a>

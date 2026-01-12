@@ -1,0 +1,74 @@
+---
+layout: layout.vto
+title: Publications
+---
+
+<div class="max-w-none">
+  <h1 class="text-4xl font-black mb-8">Publications</h1>
+  <p class="text-lg mb-8 opacity-75">Research papers and academic contributions</p>
+
+  <!-- Publications Grid -->
+  <div class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ for publication of publications }}
+      <article class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-white p-6 rounded-none flex flex-col">
+        <!-- Title -->
+        <h2 class="text-base font-bold mb-3 leading-tight flex-1">
+          {{ if publication.url }}
+            <a href="{{ publication.url }}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              {{ publication.title }}
+            </a>
+          {{ else if publication.doi }}
+            <a href="https://doi.org/{{ publication.doi }}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              {{ publication.title }}
+            </a>
+          {{ else }}
+            {{ publication.title }}
+          {{ /if }}
+        </h2>
+        
+        <!-- Authors -->
+        <p class="text-sm mb-3 opacity-75">
+          {{ for index, author of publication.formattedAuthors }}{{ if author.isHighlighted }}<strong>{{ author.name }}</strong>{{ else }}{{ author.name }}{{ /if }}{{ if index < publication.formattedAuthors.length - 1 }}{{ if index === publication.formattedAuthors.length - 2 }} and {{ else }}, {{ /if }}{{ /if }}{{ /for }}
+        </p>
+        
+        <!-- Venue and Year -->
+        <div class="flex flex-wrap gap-2 items-center text-xs mt-auto">
+          {{ if publication.journal }}
+            <span class="px-2 py-1 bg-neo-blue border-2 border-black font-semibold">
+              {{ publication.journal }}
+            </span>
+          {{ else if publication.booktitle }}
+            <span class="px-2 py-1 bg-neo-yellow border-2 border-black font-semibold">
+              {{ publication.booktitle }}
+            </span>
+          {{ /if }}
+          
+          {{ if publication.year }}
+            <span class="px-2 py-1 bg-neo-pink border-2 border-black font-bold">
+              {{ publication.year }}
+            </span>
+          {{ /if }}
+          
+          {{ if publication.volume }}
+            <span class="opacity-60">Vol. {{ publication.volume }}</span>
+          {{ /if }}
+          
+          {{ if publication.number }}
+            <span class="opacity-60">No. {{ publication.number }}</span>
+          {{ /if }}
+        </div>
+        
+        <!-- Publisher/Organization -->
+        {{ if publication.publisher }}
+          <p class="text-xs opacity-60 mt-2">
+            {{ publication.publisher }}
+          </p>
+        {{ else if publication.organization }}
+          <p class="text-xs opacity-60 mt-2">
+            {{ publication.organization }}
+          </p>
+        {{ /if }}
+      </article>
+    {{ /for }}
+  </div>
+</div>
