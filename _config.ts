@@ -2,6 +2,7 @@ import lume from "lume/mod.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import markdown from "lume/plugins/markdown.ts";
 import date from "lume/plugins/date.ts";
+import metas from "lume/plugins/metas.ts";
 import { BibtexParser } from "./_lib/bibtex-parser.ts";
 
 // Use environment variable for location, or default to production URL
@@ -14,6 +15,7 @@ const site = lume({
 site.use(tailwindcss());
 site.use(markdown());
 site.use(date());
+site.use(metas());
 
 // Custom BibTeX loader for publications
 async function bibLoader(path: string) {
@@ -30,5 +32,16 @@ site.copy("assets");
 
 // Copy CNAME file for GitHub Pages custom domain
 site.copy("CNAME");
+
+// Append site name to page titles for SEO
+site.preprocess([".html"], (pages) => {
+  for (const page of pages) {
+    const data = page.data;
+    // Skip home page (title already includes site name or is the site name)
+    if (data.url !== "/" && data.title && !data.title.includes("Ildar Akhmetov")) {
+      data.title = `${data.title} | Ildar Akhmetov`;
+    }
+  }
+});
 
 export default site;

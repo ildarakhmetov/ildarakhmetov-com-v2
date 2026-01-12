@@ -8,10 +8,11 @@ layout: layout.vto
     <h1 class="text-3xl md:text-5xl font-black mb-4">{{ title }}</h1>
     
     {{ if date }}
-    <div class="mb-4">
+    <div class="mb-4 flex flex-wrap items-center gap-3">
       <time class="px-3 py-1 bg-neo-yellow border-2 border-black font-bold text-sm">
         {{ date |> date("HUMAN_DATE") }}
       </time>
+      <span class="text-sm text-gray-600">by Ildar Akhmetov</span>
     </div>
     {{ /if }}
     

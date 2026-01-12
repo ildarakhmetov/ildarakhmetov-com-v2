@@ -1,0 +1,7 @@
+metas:
+  site: Ildar Akhmetov
+  title: "=title"
+  description: "=description || Personal website of Ildar Akhmetov - Educator, Builder, and Leader."
+  image: "=thumbnail"
+  lang: en
+  generator: true
