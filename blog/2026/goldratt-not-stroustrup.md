@@ -13,8 +13,6 @@ categories: management
 url: /blog/2026/goldratt-not-stroustrup/
 ---
 
-# Goldratt, not Stroustrup
-
 > This post is an experiment. I want to see, what happens if I write the whole thing myself. No AI. 
 > 
 > Both my parents wrote fiction and have published books. They did not need ChatGPT to write for them. 

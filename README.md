@@ -37,6 +37,12 @@ Built with [Deno](https://deno.com/) and [Lume](https://lume.land/) static site 
 └── deno.json           # Deno configuration and tasks
 ```
 
+## Blog Thumbnail Convention
+
+- In blog post front matter, `thumbnail` should reference the original source image in `assets/img/blog/...`.
+- The `/blog/` cards automatically generate optimized variants from this source (`avif`, `webp`, `jpg`) at responsive widths.
+- Keep using the same `thumbnail` field; no extra thumbnail files are required in post metadata.
+
 ## License
 
 See [LICENSE.md](LICENSE.md)

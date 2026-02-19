@@ -3,6 +3,8 @@ import tailwindcss from "lume/plugins/tailwindcss.ts";
 import markdown from "lume/plugins/markdown.ts";
 import date from "lume/plugins/date.ts";
 import metas from "lume/plugins/metas.ts";
+import picture from "lume/plugins/picture.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 import { BibtexParser } from "./_lib/bibtex-parser.ts";
 
 // Use environment variable for location, or default to production URL
@@ -16,6 +18,8 @@ site.use(tailwindcss());
 site.use(markdown());
 site.use(date());
 site.use(metas());
+site.use(picture());
+site.use(transformImages());
 
 // Custom BibTeX loader for publications
 async function bibLoader(path: string) {
