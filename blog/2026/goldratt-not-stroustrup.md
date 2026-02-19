@@ -11,6 +11,7 @@ tags:
 - leadership
 categories: management
 url: /blog/2026/goldratt-not-stroustrup/
+thumbnail: assets/img/blog/2026/toyota-book.png
 ---
 
 > This post is an experiment. I want to see, what happens if I write the whole thing myself. No AI. 
@@ -157,6 +158,27 @@ Your new textbooks are not about programming language syntax. They're about mana
 
 Goldratt, not Stroustrup.
 
-![The Goal by Eliyahu M. Goldratt and Jeff Cox](/assets/img/blog/2026/thegoal.png)
-
-![The Toyota Way by Jeffrey K. Liker](/assets/img/blog/2026/toyota-book.png)
+<div class="flex flex-wrap gap-4">
+  <a href="/assets/img/blog/2026/thegoal.png" target="_blank" rel="noopener noreferrer" class="block">
+    <img
+      src="/assets/img/blog/2026/thegoal.png"
+      alt="The Goal by Eliyahu M. Goldratt and Jeff Cox"
+      loading="lazy"
+      decoding="async"
+      transform-images="avif webp jpg 220 440"
+      sizes="220px"
+      class="w-[220px] max-w-full h-auto border-2 border-black shadow-neo hover:shadow-none transition-all"
+    />
+  </a>
+  <a href="/assets/img/blog/2026/toyota-book.png" target="_blank" rel="noopener noreferrer" class="block">
+    <img
+      src="/assets/img/blog/2026/toyota-book.png"
+      alt="The Toyota Way by Jeffrey K. Liker"
+      loading="lazy"
+      decoding="async"
+      transform-images="avif webp jpg 220 440"
+      sizes="220px"
+      class="w-[220px] max-w-full h-auto border-2 border-black shadow-neo hover:shadow-none transition-all"
+    />
+  </a>
+</div>
