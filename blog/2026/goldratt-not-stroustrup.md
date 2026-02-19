@@ -2,8 +2,6 @@
 layout: blog-post.vto
 title: Goldratt, not Stroustrup
 date: 2026-02-19 14:00:00
-description: What I do at 5am is not coding -- it's management. Why Toyota Way principles
-  from the 1970s map almost perfectly to managing AI agents in 2026.
 tags:
 - post
 - management
