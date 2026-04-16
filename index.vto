@@ -55,28 +55,28 @@ title: Ildar Akhmetov
     </ul>
   </div>
 
-  <!-- Blog - Large card spanning 2 columns -->
+  <!-- 256 Tips - Large card spanning 2 columns -->
   <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-pink p-8 rounded-none">
-    <h3 class="text-2xl font-black mb-4">Blog</h3>
-    <p class="text-lg mb-6 opacity-75">Ildar's thoughts on technology, education, leadership, and life.</p>
-    
-    {{ set recentPosts = search.pages("post", "date=desc", 3) }}
-    
-    {{ if recentPosts.length > 0 }}
+    <h3 class="text-2xl font-black mb-1">256 Tips for Junior Devs</h3>
+    <p class="text-lg mb-6 opacity-75">Short, practical tips — released one at a time, each with a YouTube Short.</p>
+
+    {{ set recentTips = search.pages("tip", "date=desc", 3) }}
+
+    {{ if recentTips.length > 0 }}
     <div class="space-y-4 mb-6">
-      {{ for post of recentPosts }}
+      {{ for tip of recentTips }}
       <div class="border-l-4 border-black pl-4">
-        <a href="{{ post.url }}" class="font-bold text-lg hover:underline">{{ post.title }}</a>
-        {{ if post.date }}
-        <p class="text-sm opacity-75 mt-1">{{ post.date |> date("HUMAN_DATE") }}</p>
+        <a href="{{ tip.url }}" class="font-bold text-lg hover:underline">Tip {{ tip.tip_number }}: {{ tip.title }}</a>
+        {{ if tip.date }}
+        <p class="text-sm opacity-75 mt-1">{{ tip.date |> date("HUMAN_DATE") }}</p>
         {{ /if }}
       </div>
       {{ /for }}
     </div>
     {{ /if }}
-    
-    <a href="/blog/" class="inline-block px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
-      View All Posts →
+
+    <a href="/256tipsdev/" class="inline-block px-6 py-3 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+      View All Tips →
     </a>
   </div>
 
