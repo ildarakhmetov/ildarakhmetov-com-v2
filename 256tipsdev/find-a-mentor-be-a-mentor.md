@@ -1,16 +1,16 @@
 ---
-layout: blog-post.vto
-title: "Tip 0: Find a Mentor, Be a Mentor"
+layout: tip.vto
+title: "Find a Mentor, Be a Mentor"
+tip_number: 0
 date: 2026-04-15 12:00:00
 description: "There is a pyramid of mentorship: someone can be a great mentor for you, and you can be a great mentor for someone else."
 tags:
-- post
+- tip
 - mentorship
 - career
 - junior-devs
-categories: 256 Tips for Junior Devs
-thumbnail: 
-url: /blog/2026/find-a-mentor-be-a-mentor/
+youtube_url: ""
+url: /256tipsdev/find-a-mentor-be-a-mentor/
 ---
 
 There is a pyramid of mentorship:
