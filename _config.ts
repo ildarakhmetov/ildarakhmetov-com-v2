@@ -17,9 +17,9 @@ const site = lume({
 site.use(tailwindcss());
 site.use(markdown());
 site.use(date());
-site.use(metas());
 site.use(picture());
 site.use(transformImages());
+site.use(metas());
 
 // Custom BibTeX loader for publications
 async function bibLoader(path: string) {
@@ -42,7 +42,9 @@ site.preprocess([".html"], (pages) => {
   for (const page of pages) {
     const data = page.data;
     // Skip home page (title already includes site name or is the site name)
-    if (data.url !== "/" && data.title && !data.title.includes("Ildar Akhmetov")) {
+    if (
+      data.url !== "/" && data.title && !data.title.includes("Ildar Akhmetov")
+    ) {
       // Set metas.title with the site name suffix for SEO
       if (!data.metas) {
         data.metas = {};

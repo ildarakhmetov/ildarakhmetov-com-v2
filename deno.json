@@ -61,6 +61,7 @@
     "fmt-component"
   ],
   "lint": {
+    "include": ["_config.ts", "_lib/", "tailwind.config.ts"],
     "plugins": [
       "https://cdn.jsdelivr.net/gh/lumeland/lume@3.1.4/lint.ts"
     ],
@@ -69,6 +70,9 @@
         "no-import-prefix"
       ]
     }
+  },
+  "fmt": {
+    "include": ["_config.ts", "_lib/", "tailwind.config.ts"]
   },
   "lock": {
     "path": "./deno.lock",

@@ -1,5 +1,5 @@
-import { assertEquals } from "jsr:@std/assert";
-import { BibtexParser, type BibtexEntry } from "./bibtex-parser.ts";
+import { assertEquals } from "jsr:@std/assert@^1";
+import { type BibtexEntry, BibtexParser } from "./bibtex-parser.ts";
 
 // Tests for parse() method
 Deno.test("parse - single entry with all fields", () => {
@@ -113,7 +113,9 @@ Deno.test("formatAuthors - single author in Last, First format", () => {
 });
 
 Deno.test("formatAuthors - multiple authors with and separator", () => {
-  const result = BibtexParser.formatAuthors("Doe, John and Smith, Jane and Brown, Bob");
+  const result = BibtexParser.formatAuthors(
+    "Doe, John and Smith, Jane and Brown, Bob",
+  );
   assertEquals(result.length, 3);
   assertEquals(result[0].name, "John Doe");
   assertEquals(result[1].name, "Jane Smith");
@@ -129,7 +131,7 @@ Deno.test("formatAuthors - author with middle name", () => {
 Deno.test("formatAuthors - highlight specific author", () => {
   const result = BibtexParser.formatAuthors(
     "Doe, John and Akhmetov, Ildar and Smith, Jane",
-    "Akhmetov"
+    "Akhmetov",
   );
   assertEquals(result.length, 3);
   assertEquals(result[0].isHighlighted, false);
@@ -141,7 +143,7 @@ Deno.test("formatAuthors - highlight specific author", () => {
 Deno.test("formatAuthors - case insensitive highlighting", () => {
   const result = BibtexParser.formatAuthors(
     "AKHMETOV, ILDAR",
-    "akhmetov"
+    "akhmetov",
   );
   assertEquals(result[0].isHighlighted, true);
 });
@@ -188,11 +190,11 @@ Deno.test("sortByYear - does not mutate original array", () => {
     { type: "article", citationKey: "a", year: "2020" },
     { type: "article", citationKey: "b", year: "2023" },
   ];
-  const original = [...entries];
-  BibtexParser.sortByYear(entries);
-  // Original array should be mutated (sort mutates in place)
-  assertEquals(entries[0].year, "2023");
-  assertEquals(entries[1].year, "2020");
+  const sorted = BibtexParser.sortByYear(entries);
+  assertEquals(entries[0].year, "2020");
+  assertEquals(entries[1].year, "2023");
+  assertEquals(sorted[0].year, "2023");
+  assertEquals(sorted[1].year, "2020");
 });
 
 // Tests for parseWithFormattedAuthors() method
@@ -224,13 +226,16 @@ Deno.test("parseAndSortWithFormattedAuthors - complete workflow", () => {
     author={Smith, Jane and Akhmetov, Ildar},
     year={2024}
   }`;
-  const result = BibtexParser.parseAndSortWithFormattedAuthors(input, "Akhmetov");
-  
+  const result = BibtexParser.parseAndSortWithFormattedAuthors(
+    input,
+    "Akhmetov",
+  );
+
   // Should be sorted by year (newest first)
   assertEquals(result.length, 2);
   assertEquals(result[0].year, "2024");
   assertEquals(result[1].year, "2020");
-  
+
   // Should have formatted authors
   assertEquals(result[0].formattedAuthors?.length, 2);
   assertEquals(result[0].formattedAuthors?.[1].isHighlighted, true);
