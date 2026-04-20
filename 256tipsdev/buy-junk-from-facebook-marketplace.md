@@ -9,6 +9,7 @@ tags:
 - infrastructure
 - hardware
 - junior-devs
+youtube_url: "https://youtube.com/shorts/w0knYlDo9n8"
 url: /256tipsdev/buy-junk-from-facebook-marketplace/
 ---
 
