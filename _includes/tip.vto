@@ -56,6 +56,9 @@ layout: layout.vto
     {{ content }}
   </div>
 
+  <!-- Newsletter Signup -->
+  {{ include "newsletter-signup.vto" }}
+
   <!-- Prev / Next Navigation (publication order) -->
   {{ if prevTip || nextTip }}
   <nav class="mt-12 pt-8 border-t-4 border-black grid grid-cols-1 md:grid-cols-2 gap-4">

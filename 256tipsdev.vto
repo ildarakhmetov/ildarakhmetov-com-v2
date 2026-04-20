@@ -22,7 +22,14 @@ metas:
        class="inline-block px-6 py-3 bg-neo-yellow border-4 border-black shadow-neo hover:shadow-none transition-all font-black">
       ● Instagram: @256tipsdev
     </a>
+    <a href="https://www.tiktok.com/@256tipsdev" target="_blank" rel="noopener noreferrer"
+       class="inline-block px-6 py-3 bg-neo-blue border-4 border-black shadow-neo hover:shadow-none transition-all font-black">
+      ♪ TikTok: @256tipsdev
+    </a>
   </div>
+
+  <!-- Newsletter Signup -->
+  {{ include "newsletter-signup.vto" }}
 
   <!-- Tips List -->
   {{ set tips = search.pages("tip", "date=desc") }}
