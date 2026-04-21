@@ -28,9 +28,6 @@ metas:
     </a>
   </div>
 
-  <!-- Newsletter Signup -->
-  {{ include "newsletter-signup.vto" }}
-
   <!-- Tips List -->
   {{ set tips = search.pages("tip", "date=desc") }}
 
@@ -59,4 +56,7 @@ metas:
     {{ /for }}
   </ol>
   {{ /if }}
+
+  <!-- Newsletter Signup -->
+  {{ include "newsletter-signup.vto" }}
 </div>
