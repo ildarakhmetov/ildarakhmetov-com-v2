@@ -134,7 +134,7 @@ categories:
         learned_recently: true
 
   - name: Web Frameworks
-    color: neo-green
+    color: neo-yellow
     technologies:
       - name: FastAPI
         url: https://fastapi.tiangolo.com/
@@ -330,7 +330,7 @@ categories:
         learned_recently: false
 
   - name: Cloud & Infrastructure
-    color: neo-green
+    color: neo-yellow
     technologies:
       - name: Docker
         url: https://www.docker.com/
