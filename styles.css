@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@theme {
+  --color-paper: #F3EDE1;
+  --color-ink: #0D0D0D;
+  --color-riso-red: #FF4133;
+  --color-blueprint: #2E50FF;
+  --color-neo-yellow: #FFD24D;
+  --color-neo-pink: #FF4133;
+  --color-neo-blue: #2E50FF;
+  --color-neo-green: #7ED9A1;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --shadow-neo: 4px 4px 0 0 #0D0D0D;
+  --shadow-neo-lg: 8px 8px 0 0 #0D0D0D;
+}
+
 h1, h2, h3, h4 {
   font-family: "Fraunces", ui-serif, Georgia, serif;
   font-variation-settings: "SOFT" 70, "opsz" 144;
