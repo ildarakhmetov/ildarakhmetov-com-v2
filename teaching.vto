@@ -11,8 +11,9 @@ metas:
   <h2 class="text-2xl font-black mb-6">Courses I Teach</h2>
 
   {{ for university of teaching.universities }}
-    <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-{{ university.color }} p-8 rounded-none mb-8">
-      <h3 class="text-3xl font-black mb-6">{{ university.name }}</h3>
+    <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white px-8 pb-8 rounded-none mb-8 overflow-hidden">
+      <div class="h-2 bg-blueprint -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
+      <h3 class="text-3xl font-black mb-6 text-blueprint">{{ university.name }}</h3>
       
       {{ for semester of university.semesters }}
         <div class="mb-6">
