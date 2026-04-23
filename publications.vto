@@ -36,17 +36,17 @@ metas:
         <!-- Venue and Year -->
         <div class="flex flex-wrap gap-2 items-center text-xs mt-auto">
           {{ if publication.journal }}
-            <span class="px-2 py-1 bg-neo-blue border-2 border-black font-semibold">
+            <span class="px-2 py-1 bg-blueprint text-paper border-2 border-black font-semibold">
               {{ publication.journal }}
             </span>
           {{ else if publication.booktitle }}
-            <span class="px-2 py-1 bg-neo-yellow border-2 border-black font-semibold">
+            <span class="px-2 py-1 bg-blueprint text-paper border-2 border-black font-semibold">
               {{ publication.booktitle }}
             </span>
           {{ /if }}
-          
+
           {{ if publication.year }}
-            <span class="px-2 py-1 bg-neo-pink border-2 border-black font-bold">
+            <span class="px-2 py-1 bg-paper border-2 border-black font-bold">
               {{ publication.year }}
             </span>
           {{ /if }}
