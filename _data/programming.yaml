@@ -192,7 +192,7 @@ categories:
         learned_recently: false
 
   - name: Databases & Query Languages
-    color: neo-pink
+    color: riso-red
     technologies:
       - name: SQL
         url: https://en.wikipedia.org/wiki/SQL
@@ -403,7 +403,7 @@ categories:
         learned_recently: false
 
   - name: Legacy & Business Software
-    color: neo-pink
+    color: riso-red
     technologies:
       - name: 1C
         url: https://en.wikipedia.org/wiki/1C_Company
