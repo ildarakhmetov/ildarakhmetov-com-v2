@@ -12,6 +12,30 @@ metas:
     Short, practical tips for junior developers — released one at a time, each with an accompanying YouTube Short.
   </p>
 
+  {{ set allTips = search.pages("tip") }}
+  {{ set shipped = allTips.length }}
+  {{ set remaining = 256 - shipped }}
+  {{ set percent = Math.round((shipped / 256) * 100) }}
+  {{ set cells = Array.from({length: 256}, function(_, i) { return i; }) }}
+
+  <!-- Progress meter: 16x16 grid, one cell per tip -->
+  <section class="not-prose mb-12">
+    <div class="border-4 border-black bg-white shadow-neo p-8">
+      <div class="flex flex-col md:flex-row md:items-center gap-8">
+        <div class="grid grid-cols-[repeat(16,minmax(0,1fr))] gap-[2px] flex-shrink-0 w-full max-w-[340px] md:w-[340px]">
+          {{ for i of cells }}
+            <span class="aspect-square border border-black {{ allTips.some(function(t) { return t.tip_number === i; }) ? 'bg-riso-red' : 'bg-paper' }}" title="Tip {{ i }}"></span>
+          {{ /for }}
+        </div>
+        <div class="md:flex-1">
+          <p class="text-xs font-bold uppercase tracking-widest text-riso-red mb-3">Progress</p>
+          <p class="font-display text-6xl font-black leading-none mb-3" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ shipped }}<span class="opacity-25"> / 256</span></p>
+          <p class="text-lg font-semibold">{{ remaining }} tips to go · {{ percent }}%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Channel Links -->
   <div class="not-prose flex flex-wrap gap-4 mb-12">
     <a href="https://www.youtube.com/@256tipsdev" target="_blank" rel="noopener noreferrer"
