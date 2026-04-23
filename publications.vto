@@ -12,7 +12,7 @@ metas:
   <!-- Publications Grid -->
   <div class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {{ for publication of publications }}
-      <article class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-white p-6 rounded-none flex flex-col">
+      <article class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-6 rounded-none flex flex-col">
         <!-- Title -->
         <h2 class="text-base font-bold mb-3 leading-tight flex-1">
           {{ if publication.url }}

@@ -17,7 +17,7 @@ metas:
     {{ set posts = search.pages("post", "date=desc") }}
     
     {{ for post of posts }}
-    <article class="blog-post-card border-4 border-black shadow-neo hover:shadow-none transition-all bg-white rounded-none overflow-hidden flex flex-col">
+    <article class="blog-post-card border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white rounded-none overflow-hidden flex flex-col">
       <!-- Thumbnail -->
       {{ if post.thumbnail }}
       <a href="{{ post.url }}" class="block leading-none">
