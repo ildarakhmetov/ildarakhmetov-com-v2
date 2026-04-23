@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+h1, h2, h3, h4 {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  font-variation-settings: "SOFT" 70, "opsz" 144;
+}
