@@ -5,7 +5,7 @@ title: Ildar Akhmetov
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
   <!-- About Me - Large card spanning 2 columns -->
-  <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-8 rounded-none">
+  <div class="md:col-span-2 border-4 border-black shadow-neo bg-white p-8 rounded-none">
     <div class="flex flex-col md:flex-row gap-8 items-start">
       <div class="flex-shrink-0 mx-auto md:mx-0">
         <img src="/assets/img/ildar.jpg" alt="Ildar Akhmetov" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-black shadow-neo object-cover">
@@ -24,7 +24,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Links/Socials - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-neo-yellow p-8 rounded-none">
+  <div class="border-4 border-black shadow-neo bg-neo-yellow p-8 rounded-none">
     <h3 class="text-2xl font-black mb-4">Connect</h3>
     <ul class="space-y-3">
       <li>
@@ -56,7 +56,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- 256 Tips - Large card spanning 2 columns -->
-  <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white px-8 pb-8 rounded-none overflow-hidden">
+  <div class="md:col-span-2 border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none overflow-hidden">
     <div class="h-2 bg-riso-red -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
     <p class="text-xs font-bold uppercase tracking-widest text-riso-red mb-2">Ongoing series</p>
     <h3 class="text-2xl font-black mb-1">256 Tips for Junior Devs</h3>
@@ -83,7 +83,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Teaching - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-6 rounded-none">
+  <div class="border-4 border-black shadow-neo bg-white p-6 rounded-none">
     {{ set currentUniversity = teaching.universities[0] }}
     {{ set currentSemester = currentUniversity.semesters[0] }}
     
@@ -106,7 +106,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Current Focus - Medium card -->
-  <div class="md:col-span-2 border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-8 rounded-none">
+  <div class="md:col-span-2 border-4 border-black shadow-neo bg-white p-8 rounded-none">
     <h3 class="text-2xl font-black mb-6">Current Roles</h3>
     <div class="grid md:grid-cols-2 gap-8">
       <div>
@@ -127,7 +127,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Programming - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+  <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
     <h3 class="text-2xl font-black mb-4">Programming</h3>
     {{ set activeCount = 0 }}
     {{ for category of programming.categories }}
@@ -144,7 +144,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Traveling - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+  <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
     <h3 class="text-2xl font-black mb-4">Traveling</h3>
     {{ set countryCount = traveling.visited.length }}
     <p class="mb-4 font-semibold">{{ countryCount }} countries explored</p>
@@ -154,7 +154,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Running - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+  <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
     <h3 class="text-2xl font-black mb-4">Running</h3>
     {{ set marathonCount = 0 }}
     {{ for marathon of running.marathons }}
@@ -170,7 +170,7 @@ title: Ildar Akhmetov
   </div>
 
   <!-- Publications - Small card -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all bg-white px-8 pb-8 rounded-none flex flex-col justify-center items-center text-center overflow-hidden">
+  <div class="border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none flex flex-col justify-center items-center text-center overflow-hidden">
     <div class="h-2 bg-blueprint -mx-8 mb-6 border-b-[3px] border-black self-stretch" aria-hidden="true"></div>
     <p class="text-xs font-bold uppercase tracking-widest text-blueprint mb-2">Research</p>
     <h3 class="text-2xl font-black mb-4">Publications</h3>
