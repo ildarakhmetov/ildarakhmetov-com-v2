@@ -5,6 +5,7 @@ import date from "lume/plugins/date.ts";
 import metas from "lume/plugins/metas.ts";
 import picture from "lume/plugins/picture.ts";
 import transformImages from "lume/plugins/transform_images.ts";
+import sitemap from "lume/plugins/sitemap.ts";
 import { BibtexParser } from "./_lib/bibtex-parser.ts";
 
 // Use environment variable for location, or default to production URL
@@ -20,6 +21,7 @@ site.use(date());
 site.use(picture());
 site.use(transformImages());
 site.use(metas());
+site.use(sitemap());
 
 // Custom BibTeX loader for publications
 async function bibLoader(path: string) {
@@ -36,6 +38,8 @@ site.copy("assets");
 
 // Copy CNAME file for GitHub Pages custom domain
 site.copy("CNAME");
+
+site.ignore("CLAUDE.md", "LICENSE.md", "README.md");
 
 // Append site name to page titles for SEO (in meta tags only, not display)
 site.preprocess([".html"], (pages) => {
