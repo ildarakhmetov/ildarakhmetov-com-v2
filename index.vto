@@ -185,8 +185,7 @@ title: Ildar Akhmetov
     <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
       <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Places</p>
       <h3 class="text-2xl font-black mb-4">Traveling</h3>
-      {{ set countryCount = traveling.visited.length }}
-      <span class="font-display font-black text-7xl leading-none mb-2" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ countryCount }}</span>
+      <span class="font-display font-black text-7xl leading-none mb-2" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ traveling_view.stats.countries }}</span>
       <p class="text-sm opacity-75 font-semibold mb-4">countries explored</p>
       <a href="/traveling/" class="px-6 py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
         View Countries
