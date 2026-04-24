@@ -138,6 +138,7 @@ title: Ildar Akhmetov
 
     <!-- Programming -->
     <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+      <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Stack</p>
       <h3 class="text-2xl font-black mb-4">Programming</h3>
       {{ set activeCount = 0 }}
       {{ for category of programming.categories }}
@@ -147,7 +148,8 @@ title: Ildar Akhmetov
           {{ /if }}
         {{ /for }}
       {{ /for }}
-      <p class="mb-4 font-semibold">actively using {{ activeCount }} technologies</p>
+      <span class="font-display font-black text-7xl leading-none mb-2" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ activeCount }}</span>
+      <p class="text-sm opacity-75 font-semibold mb-4">technologies in active use</p>
       <a href="/programming/" class="px-6 py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
         View Stack
       </a>
@@ -155,9 +157,11 @@ title: Ildar Akhmetov
 
     <!-- Traveling -->
     <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+      <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Places</p>
       <h3 class="text-2xl font-black mb-4">Traveling</h3>
       {{ set countryCount = traveling.visited.length }}
-      <p class="mb-4 font-semibold">{{ countryCount }} countries explored</p>
+      <span class="font-display font-black text-7xl leading-none mb-2" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ countryCount }}</span>
+      <p class="text-sm opacity-75 font-semibold mb-4">countries explored</p>
       <a href="/traveling/" class="px-6 py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
         View Countries
       </a>
@@ -165,6 +169,7 @@ title: Ildar Akhmetov
 
     <!-- Running -->
     <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+      <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Racing</p>
       <h3 class="text-2xl font-black mb-4">Running</h3>
       {{ set marathonCount = 0 }}
       {{ for marathon of running.marathons }}
@@ -173,7 +178,16 @@ title: Ildar Akhmetov
         {{ /if }}
       {{ /for }}
       {{ set halfMarathonCount = running.half_marathons.length }}
-      <p class="mb-4 font-semibold">{{ marathonCount }} marathon • {{ halfMarathonCount }} half-marathons</p>
+      <div class="flex items-baseline gap-6 mb-4">
+        <div>
+          <span class="font-display font-black text-6xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ marathonCount }}</span>
+          <p class="text-xs opacity-75 font-semibold mt-1">marathon</p>
+        </div>
+        <div>
+          <span class="font-display font-black text-6xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ halfMarathonCount }}</span>
+          <p class="text-xs opacity-75 font-semibold mt-1">halfs</p>
+        </div>
+      </div>
       <a href="/running/" class="px-6 py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
         View Races
       </a>
@@ -182,12 +196,15 @@ title: Ildar Akhmetov
     <!-- Publications — full width -->
     <div class="md:col-span-3 border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none overflow-hidden">
       <div class="h-2 bg-blueprint -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <div>
           <p class="text-xs font-bold uppercase tracking-widest text-blueprint mb-2">Research</p>
-          <h3 class="text-2xl font-black">Publications</h3>
+          <h3 class="text-2xl font-black mb-4">Publications</h3>
           {{ set publicationCount = publications.length }}
-          <p class="mt-2 font-semibold">{{ publicationCount }} research papers</p>
+          <div class="flex items-baseline gap-4">
+            <span class="font-display font-black text-7xl md:text-8xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ publicationCount }}</span>
+            <p class="text-sm font-semibold">research papers</p>
+          </div>
         </div>
         <a href="/publications/" class="inline-block px-6 py-3 bg-blueprint text-paper border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all self-start md:self-auto">
           View Publications →
