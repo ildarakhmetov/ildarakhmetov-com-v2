@@ -22,3 +22,24 @@ h1, h2, h3, h4 {
 body {
   background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='1' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.05 0 0 0 0 0.05 0 0 0 0 0.05 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .bento-reveal > * {
+    opacity: 0;
+    animation: bento-reveal 620ms cubic-bezier(.2, .7, .3, 1) forwards;
+  }
+  .bento-reveal > *:nth-child(1) { animation-delay: 40ms; }
+  .bento-reveal > *:nth-child(2) { animation-delay: 110ms; }
+  .bento-reveal > *:nth-child(3) { animation-delay: 180ms; }
+  .bento-reveal > *:nth-child(4) { animation-delay: 250ms; }
+  .bento-reveal > *:nth-child(5) { animation-delay: 320ms; }
+  .bento-reveal > *:nth-child(6) { animation-delay: 390ms; }
+  .bento-reveal > *:nth-child(7) { animation-delay: 460ms; }
+  .bento-reveal > *:nth-child(8) { animation-delay: 530ms; }
+  .bento-reveal > *:nth-child(9) { animation-delay: 600ms; }
+}
+
+@keyframes bento-reveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
