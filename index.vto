@@ -249,23 +249,47 @@ title: Ildar Akhmetov
       </a>
     </div>
 
-    <!-- Publications — full width -->
-    <div class="md:col-span-3 border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none overflow-hidden">
-      <div class="h-2 bg-blueprint -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-widest text-blueprint mb-2">Research</p>
-          <h3 class="text-2xl font-black mb-4">Publications</h3>
-          {{ set publicationCount = publications.length }}
-          <div class="flex items-baseline gap-4">
-            <span class="font-display font-black text-7xl md:text-8xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ publicationCount }}</span>
-            <p class="text-sm font-semibold">research papers</p>
+    <!-- Talks + Publications — paired output row -->
+    <div class="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
+      <!-- Talks -->
+      <div class="border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none overflow-hidden">
+        <div class="h-2 bg-neo-yellow -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
+        <div class="flex flex-col gap-6">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest mb-2">Speaking</p>
+            <h3 class="text-2xl font-black mb-4">Talks</h3>
+            {{ set talksCount = talks.entries.length }}
+            <div class="flex items-baseline gap-4">
+              <span class="font-display font-black text-7xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ talksCount }}</span>
+              <p class="text-sm font-semibold">talks &amp; appearances</p>
+            </div>
           </div>
+          <a href="/talks/" class="inline-block px-6 py-3 bg-neo-yellow border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all self-start">
+            View Talks →
+          </a>
         </div>
-        <a href="/publications/" class="inline-block px-6 py-3 bg-blueprint text-paper border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all self-start md:self-auto">
-          View Publications →
-        </a>
       </div>
+
+      <!-- Publications -->
+      <div class="border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none overflow-hidden">
+        <div class="h-2 bg-blueprint -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
+        <div class="flex flex-col gap-6">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-blueprint mb-2">Research</p>
+            <h3 class="text-2xl font-black mb-4">Publications</h3>
+            {{ set publicationCount = publications.length }}
+            <div class="flex items-baseline gap-4">
+              <span class="font-display font-black text-7xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ publicationCount }}</span>
+              <p class="text-sm font-semibold">research papers</p>
+            </div>
+          </div>
+          <a href="/publications/" class="inline-block px-6 py-3 bg-blueprint text-paper border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all self-start">
+            View Publications →
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
