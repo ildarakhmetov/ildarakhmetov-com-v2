@@ -20,7 +20,7 @@ metas:
           <h4 class="text-xl font-bold border-b-2 border-black pb-2 mb-3">{{ semester.term }}</h4>
           <ul class="space-y-2">
             {{ for course of semester.courses }}
-              <li class="hover:bg-white/50 px-3 py-2 transition-colors rounded">
+              <li class="hover:bg-paper px-3 py-2 transition-colors">
                 <span class="font-bold">{{ course.code }}:</span> {{ course.name }}
               </li>
             {{ /for }}
