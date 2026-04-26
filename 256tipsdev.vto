@@ -18,6 +18,10 @@ metas:
   {{ set percent = Math.round((shipped / 256) * 100) }}
   {{ set cells = Array.from({length: 256}, function(_, i) { return i; }) }}
 
+  {{ set teaserCount = Math.min(3, remaining) }}
+  {{ set bitReverse8 = function(n) { let r = 0; for (let i = 0; i < 8; i++) { r = (r << 1) | (n & 1); n = n >>> 1; } return r; } }}
+  {{ set teaserNumbers = Array.from({length: teaserCount}, function(_, i) { return bitReverse8(shipped + i); }) }}
+
   <!-- Progress meter: 16x16 grid, one cell per tip -->
   <section class="not-prose mb-12">
     <div class="border-4 border-black bg-white shadow-neo p-6 md:p-8">
@@ -25,12 +29,19 @@ metas:
         <div data-grid class="grid grid-cols-[repeat(16,minmax(0,1fr))] gap-[2px] flex-shrink-0 w-full max-w-[240px] md:max-w-[340px]">
           {{ for i of cells }}
             {{ set tip = allTips.find(function(t) { return t.tip_number === i; }) }}
+            {{ set isTeaser = teaserNumbers.includes(i) }}
             {{ if tip }}
               <a href="{{ tip.url }}"
                  data-tip-number="{{ i }}"
                  data-tip-title="{{ tip.title }}"
                  aria-label="Read tip {{ i }}: {{ tip.title }}"
                  class="aspect-square border border-black bg-riso-red cursor-pointer hover:translate-x-px hover:-translate-y-px transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"></a>
+            {{ else if isTeaser }}
+              <a href="#subscribe"
+                 data-tip-number="{{ i }}"
+                 data-tip-title="Coming soon"
+                 aria-label="Tip {{ i }}: coming soon — subscribe to be notified"
+                 class="aspect-square border border-black bg-neo-yellow cursor-pointer hover:translate-x-px hover:-translate-y-px transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"></a>
             {{ else }}
               <span aria-hidden="true" class="aspect-square border border-black bg-paper"></span>
             {{ /if }}
@@ -135,12 +146,22 @@ metas:
   <!-- Tips List -->
   {{ set tips = search.pages("tip", "date=desc") }}
 
-  {{ if tips.length === 0 }}
-  <div class="border-4 border-black bg-neo-yellow p-8 text-center">
-    <p class="text-xl font-bold">No tips yet — the first one is coming soon.</p>
-  </div>
-  {{ else }}
   <ol class="not-prose list-none p-0 m-0 border-4 border-black shadow-neo bg-white">
+    {{ for n of teaserNumbers }}
+    <li class="border-b-4 border-black last:border-b-0">
+      <a href="#subscribe" class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 p-4 hover:bg-neo-yellow transition-colors">
+        <span class="inline-block px-3 py-1 bg-neo-yellow border-2 border-black font-black text-sm shrink-0 w-fit">
+          Tip {{ n }}
+        </span>
+        <span class="font-bold text-lg flex-1 opacity-75">
+          Coming soon
+        </span>
+        <span class="text-sm opacity-60 font-semibold shrink-0">
+          Subscribe to be notified
+        </span>
+      </a>
+    </li>
+    {{ /for }}
     {{ for tip of tips }}
     <li class="border-b-4 border-black last:border-b-0">
       <a href="{{ tip.url }}" class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 p-4 hover:bg-neo-yellow transition-colors">
@@ -159,7 +180,6 @@ metas:
     </li>
     {{ /for }}
   </ol>
-  {{ /if }}
 
   <!-- Newsletter Signup -->
   {{ include "newsletter-signup.vto" }}
