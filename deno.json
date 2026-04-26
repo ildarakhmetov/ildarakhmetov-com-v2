@@ -47,6 +47,10 @@
     "test": {
       "description": "Run tests",
       "command": "deno test --allow-read --allow-env --allow-net"
+    },
+    "og": {
+      "description": "Render Open Graph social-share cards from _og/*.html into assets/img/og/",
+      "command": "google-chrome --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,720 --screenshot=_og/home.png \"file://$(pwd)/_og/home.html\" && magick _og/home.png -crop 1200x630+0+0 +repage -strip -quality 88 -sampling-factor 4:2:0 -interlace JPEG assets/img/og/home.jpg && echo 'Rendered: assets/img/og/home.jpg'"
     }
   },
   "compilerOptions": {

@@ -153,6 +153,20 @@ Add a BibTeX entry to `_data/publications.bib`. The parser handles rendering aut
 ### New Data Page Entry
 Edit the relevant YAML file in `_data/` and update the corresponding `.vto` template if new fields are added.
 
+## Open Graph Social Cards
+
+Per-page social-share cards (LinkedIn, X, iMessage previews) are wired through Lume's `metas` plugin via `_data.yml`. The home page has a purpose-built **1200×630** card at `assets/img/og/home.jpg`, rendered from a source HTML template at `_og/home.html`.
+
+**If you change the home page hero (name, headshot, tagline), you MUST regenerate the OG card:**
+
+```bash
+deno task og
+```
+
+The task screenshots `_og/home.html` via headless Chrome (oversized to 1200×720 to work around Chrome's headless-mode chrome reservation), crops to 1200×630, and writes an optimized JPG. The source HTML is the source of truth — edit `_og/home.html` if the design needs to change, then re-run `deno task og` and commit the resulting JPG.
+
+Other pages currently get the default fallback description and no image; to give one a custom card, set `thumbnail:` in its front matter (Lume's metas plugin maps this to `og:image`).
+
 ## Dependency Management
 
 Dependencies are locked in `deno.lock`. The `.github/workflows/update-dependencies.yml` workflow runs weekly to create automated PRs for updates.

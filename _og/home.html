@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG card — home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+
+  body {
+    background: #F3EDE1;            /* paper */
+    color: #0D0D0D;                  /* ink */
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    gap: 56px;
+    position: relative;              /* containing block for .mark */
+    min-height: 0;
+  }
+
+  /* favicon-style red bar at the bottom */
+  .bar {
+    height: 56px;
+    background: #FF4133;             /* riso-red */
+    border-top: 4px solid #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 32px;
+    flex-shrink: 0;
+  }
+
+  .bar .url {
+    color: #F3EDE1;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* divider-style red square in top-left, references the homepage divider motif */
+  .mark {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 18px;
+    height: 18px;
+    background: #FF4133;
+    border: 3px solid #0D0D0D;
+  }
+
+  .photo {
+    width: 320px;
+    height: 320px;
+    border: 4px solid #0D0D0D;
+    box-shadow: 8px 8px 0 0 #0D0D0D; /* shadow-neo-lg riff */
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    font-size: 132px;
+    line-height: 0.86;
+    letter-spacing: -0.04em;
+    font-variation-settings: 'SOFT' 90, 'opsz' 144, 'WONK' 1;
+    white-space: nowrap;
+  }
+
+  h1 .red { color: #FF4133; }
+
+  .tagline {
+    margin-top: 28px;
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: -0.015em;
+  }
+
+  .tagline .dot {
+    color: #FF4133;
+    font-weight: 700;
+    margin: 0 10px;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <span class="mark" aria-hidden="true"></span>
+
+    <img class="photo" src="../assets/img/ildar.jpg" alt="">
+
+    <div class="text">
+      <h1>Ildar<br>Akhmetov<span class="red">.</span></h1>
+      <p class="tagline">Educator <span class="dot">·</span> Builder <span class="dot">·</span> Leader</p>
+    </div>
+  </main>
+
+  <div class="bar">
+    <span class="url">ildarakhmetov.com</span>
+  </div>
+</body>
+</html>
