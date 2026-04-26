@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/CCACH-app/
 thumbnail: assets/img/blog/2021/ccach-screenshot-compressed.png
+kind: note
 ---
 Another truly exciting project implemented by CMPUT 401 students! No doubt, one of the most successful projects of Winter 2021.
 

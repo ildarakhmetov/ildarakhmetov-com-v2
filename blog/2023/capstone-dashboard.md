@@ -12,6 +12,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/capstone-dashboard/
 thumbnail: assets/img/blog/2023/capstone-dashboard-screenshot.png
+kind: note
 ---
 Managing a capstone course requires many spreadsheets. I mean, A WHOLE LOTTA spreadsheets. We take our data seriously, and we want to get the most out of students' reflections, TAs' notes, peer feedback and GitHub analytics.
 

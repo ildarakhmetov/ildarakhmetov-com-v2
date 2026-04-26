@@ -10,6 +10,7 @@ tags:
 - tools
 thumbnail: assets/img/blog/2025/know-thy-time-cta.png
 url: /blog/2025/know-thy-time/
+kind: post
 ---
 
 ![Know Thy Time — cartoon illustration of the author holding a coffee cup](/assets/img/blog/2025/know-thy-time-cta.png)

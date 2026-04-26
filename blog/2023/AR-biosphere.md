@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/AR-biosphere/
 thumbnail: assets/img/blog/2023/AR-biosphere-portrait.png
+kind: post
 ---
 🌱 Introducing the AR Biosphere project by CMPUT 401 students at the [University of Alberta](https://www.linkedin.com/school/university-of-alberta/)! 🌿
 

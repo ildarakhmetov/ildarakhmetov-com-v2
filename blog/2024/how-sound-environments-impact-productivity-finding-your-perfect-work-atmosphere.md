@@ -12,6 +12,7 @@ tags:
 categories: productivity
 url: /blog/2024/how-sound-environments-impact-productivity-finding-your-perfect-work-atmosphere/
 thumbnail: assets/img/blog/2024/2024-06-14-how-sound-environments-impact-productivity-finding-your-perfect-work-atmosphere.png
+kind: note
 ---
 Have you ever noticed how the sound environment impacts your productivity? For me, it makes a significant difference. I find that I can be very productive in a coffee shop -- and the noisier, the better. The background chatter and the sounds of a bustling cafe help me stay focused.
 

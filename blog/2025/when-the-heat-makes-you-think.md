@@ -12,6 +12,7 @@ tags:
 - games
 thumbnail: assets/img/blog/2025/magdalena-river.png
 url: /blog/2025/when-the-heat-makes-you-think/
+kind: post
 ---
 
 ![View of the Magdalena River from our cabin in La Dorada, Colombia](/assets/img/blog/2025/magdalena-river.png)

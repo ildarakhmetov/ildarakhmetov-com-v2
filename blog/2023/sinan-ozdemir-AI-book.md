@@ -12,6 +12,7 @@ tags:
 categories: books ai
 url: /blog/2023/sinan-ozdemir-AI-book/
 thumbnail: assets/img/blog/2023/sinan-ozdemir-AI-book-post-image.jpg
+kind: note
 ---
 With LLMs, the world just moves too fast. I'm not an AI guy, so I felt like I was falling further and further behind. As a nerd, I wanted to play with the new tools, but hey, the amount of information out there is just overwhelming!
 

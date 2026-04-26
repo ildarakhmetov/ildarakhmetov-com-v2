@@ -11,6 +11,7 @@ tags:
 - AI
 thumbnail: assets/img/blog/2025/toastmasters.png
 url: /blog/2025/one-decision-to-level-up-your-tech/
+kind: post
 ---
 
 ![Cartoon of the author at a Toastmasters International podium wearing a "NEVER" t-shirt](/assets/img/blog/2025/toastmasters.png)

@@ -9,6 +9,7 @@ tags:
 categories: programming
 url: /blog/2023/programming-languages-popularity/
 thumbnail: assets/img/blog/2023/top-ten-programming-languages.PNG
+kind: note
 ---
 Pretty insightful data on [programming languages' popularity](https://octoverse.github.com/2022/top-programming-languages) from GitHub.
 

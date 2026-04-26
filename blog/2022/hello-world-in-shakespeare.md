@@ -8,6 +8,7 @@ tags:
 - programming
 categories: programming
 url: /blog/2022/hello-world-in-shakespeare/
+kind: note
 ---
 Here's the Hello World program in Shakespeare.
 

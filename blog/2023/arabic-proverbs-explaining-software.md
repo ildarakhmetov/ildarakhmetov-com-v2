@@ -8,6 +8,7 @@ tags:
 - programming
 categories: programming
 url: /blog/2023/arabic-proverbs-explaining-software/
+kind: post
 ---
 There's nothing new in the world, and the software engineering principles we teach today have been known to mankind for centuries.
 

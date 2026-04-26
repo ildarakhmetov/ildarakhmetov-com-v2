@@ -10,6 +10,7 @@ tags:
 categories: books
 url: /blog/2023/pitching-ideas-book/
 thumbnail: assets/img/blog/2023/pitching-ideas-book.jpeg
+kind: note
 ---
 You have a cool idea, but people don't seem to get it.
 

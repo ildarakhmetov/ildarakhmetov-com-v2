@@ -10,6 +10,7 @@ tags:
 categories: languages
 url: /blog/2023/non-native-speaker-struggles/
 thumbnail: assets/img/blog/2023/non-native-speakers-post-image.jpg
+kind: note
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

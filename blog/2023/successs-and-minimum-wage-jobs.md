@@ -12,6 +12,7 @@ tags:
 categories: careers opinion
 url: /blog/2023/successs-and-minimum-wage-jobs/
 thumbnail: assets/img/blog/2023/minimum-wage-job-post-image.jpg
+kind: note
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

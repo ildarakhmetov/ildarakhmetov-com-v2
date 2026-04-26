@@ -5,8 +5,11 @@ layout: layout.vto
 <article class="max-w-4xl mx-auto">
   <!-- Post Header -->
   <header class="mb-8">
-    <h1 class="text-3xl md:text-5xl font-black mb-4">{{ title }}</h1>
-    
+    {{ if kind === "note" }}
+    <p class="font-mono text-[11px] uppercase tracking-widest font-bold text-riso-red mb-3">Note</p>
+    {{ /if }}
+    <h1 class="font-black mb-4 {{ kind === 'note' ? 'text-2xl md:text-3xl' : 'text-3xl md:text-5xl' }}">{{ title }}</h1>
+
     {{ if date }}
     <div class="mb-4 flex flex-wrap items-center gap-3">
       <time class="px-3 py-1 bg-neo-yellow border-2 border-black font-bold text-sm">
@@ -15,9 +18,9 @@ layout: layout.vto
       <span class="text-sm text-ink opacity-60">by Ildar Akhmetov</span>
     </div>
     {{ /if }}
-    
+
     {{ if description }}
-    <p class="text-xl mt-6 opacity-75 font-semibold">{{ description }}</p>
+    <p class="mt-6 opacity-75 font-semibold {{ kind === 'note' ? 'text-base md:text-lg' : 'text-xl' }}">{{ description }}</p>
     {{ /if }}
   </header>
   

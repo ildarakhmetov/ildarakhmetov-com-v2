@@ -11,6 +11,7 @@ tags:
 categories: books
 url: /blog/2023/peopleware-book/
 thumbnail: assets/img/blog/2023/peopleware-book.jpg
+kind: note
 ---
 > "For the overwhelming majority of the bankrupt projects we studied, **there was not a single technological issue to explain the failure**."
 

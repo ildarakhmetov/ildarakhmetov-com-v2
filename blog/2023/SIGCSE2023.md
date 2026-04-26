@@ -9,6 +9,7 @@ tags:
 categories: symposium
 url: /blog/2023/SIGCSE2023/
 thumbnail: assets/img/blog/2023/ildar-at-SIGSCE2023.jpg
+kind: note
 ---
 The SIGCSE 2023 Technical Symposium was phenomenal.
 

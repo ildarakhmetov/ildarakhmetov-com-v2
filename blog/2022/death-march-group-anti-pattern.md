@@ -10,6 +10,7 @@ tags:
 categories: project-management teamwork
 url: /blog/2022/death-march-group-anti-pattern/
 thumbnail: assets/img/blog/2022/death-march-book.jpg
+kind: note
 ---
 In CMPUT 401, we learn common group anti-patterns. You probably know many of them: analysis paralysis, gold plating, fire drill, etc.
 

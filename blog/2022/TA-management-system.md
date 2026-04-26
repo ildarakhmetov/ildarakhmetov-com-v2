@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/TA-management-system/
 thumbnail: assets/img/blog/2022/TA-management-system-screenshot.png
+kind: note
 ---
 With >30 courses and >200 teaching assistants, coordination is never easy. Each instructor has their preferences for TAs, each candidate has their skills and constraints. Is it possible to automate this work?
 

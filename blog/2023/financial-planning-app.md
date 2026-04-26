@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/financial-planning-app/
 thumbnail: assets/img/blog/2023/financial-planning-app-screenshot.png
+kind: note
 ---
 Some student teams in CMPUT 401 accomplish such amazing results that it's hard to believe it's possible. Meet one of these teams.
 

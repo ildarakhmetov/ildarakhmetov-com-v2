@@ -10,6 +10,7 @@ tags:
 - smart-tools
 categories: opinion
 url: /blog/2023/smart-tools-and-freelancers/
+kind: note
 ---
 Smart tools replace freelancers.
 

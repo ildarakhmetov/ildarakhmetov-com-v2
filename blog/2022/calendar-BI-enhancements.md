@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/calendar-BI-enhancements/
 thumbnail: assets/img/blog/2022/calendar-BI-enhancements-screenshot.png
+kind: note
 ---
 The Winter term is over, and finally, it's time to showcase the amazing CMPUT 401 projects we've had. Celebrating each other's success is what LinkedIn is all about, right?
 

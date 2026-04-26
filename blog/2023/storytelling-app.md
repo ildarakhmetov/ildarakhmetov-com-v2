@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/storytelling-app/
 thumbnail: assets/img/blog/2023/storytelling-app.png
+kind: post
 ---
 📚 Introducing another fantastic project from last semester's CMPUT 401 students at the [University of Alberta](https://www.linkedin.com/school/university-of-alberta/)! 💫
 

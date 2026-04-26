@@ -12,6 +12,7 @@ tags:
 categories: books gadgets
 url: /blog/2023/onyx-boox/
 thumbnail: assets/img/blog/2023/onyx-boox-post-image.jpg
+kind: note
 ---
 A new gadget caught my heart.
 

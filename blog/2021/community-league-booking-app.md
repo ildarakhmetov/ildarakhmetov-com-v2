@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/community-league-booking-app/
 thumbnail: assets/img/blog/2021/community-league-booking-app-screenshot.png
+kind: note
 ---
 CMPUT 401 students developed the Community League Booking App for Avonmore Community League. With this app, community leagues can manage skating rink bookings.
 

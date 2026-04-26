@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/paradigm-layouts/
 thumbnail: assets/img/blog/2022/paradigm-layouts.png
+kind: note
 ---
 Showcasing impressive apps developed by talented CMPUT 401 students is likely the best part of my job at the U of A :-)
 

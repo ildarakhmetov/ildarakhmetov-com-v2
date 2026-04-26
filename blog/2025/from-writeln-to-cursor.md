@@ -12,6 +12,7 @@ tags:
 - education
 thumbnail: assets/img/blog/2025/turbo-pascal.png
 url: /blog/2025/from-writeln-to-cursor/
+kind: post
 ---
 
 ![Turbo Pascal 7.0 IDE showing a writeln('Hello World!') program](/assets/img/blog/2025/turbo-pascal.png)

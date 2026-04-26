@@ -12,6 +12,7 @@ tags:
 categories: career-development
 url: /blog/2024/choosing-between-technical-depth-and-breadth-in-software-development/
 thumbnail: assets/img/blog/2024/choosing-between-technical-depth-and-breadth-in-software-development.png
+kind: post
 ---
 Check out this graphic (from Chapter 2 of the awesome book "Fundamentals of Software Architecture"). For every developer, there's a choice between technical depth and technical breadth.
 

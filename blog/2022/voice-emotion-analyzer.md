@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/voice-emotion-analyzer/
 thumbnail: assets/img/blog/2022/voice-emotion-analyzer-screenshot.png
+kind: note
 ---
 Many subtleties come into play when we speak. We can convey hundreds of different emotions, and people can understand what we want to say not only from the words we use but from how we say them.
 

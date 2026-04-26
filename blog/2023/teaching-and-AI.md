@@ -13,6 +13,7 @@ tags:
 categories: opinion
 url: /blog/2023/teaching-and-AI/
 thumbnail: assets/img/blog/2023/dall-e-canva-image.png
+kind: post
 ---
 How do we teach computing science in the brave new world of GitHub Copilot and ChatGPT?
 

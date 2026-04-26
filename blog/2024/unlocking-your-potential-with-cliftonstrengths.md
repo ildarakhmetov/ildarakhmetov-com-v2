@@ -11,6 +11,7 @@ tags:
 - self-awareness
 categories: personal-development
 url: /blog/2024/unlocking-your-potential-with-cliftonstrengths/
+kind: note
 ---
 What are your CliftonStrengths?
 

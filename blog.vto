@@ -5,168 +5,239 @@ metas:
   description: "Ildar's thoughts on technology, education, leadership, and life."
 ---
 
-<div class="max-w-none">
-  <h1 class="text-4xl font-black mb-8">Blog</h1>
-  
-  <p class="text-xl mb-8 opacity-75">
-    Thoughts on technology, education, leadership, and life.
-  </p>
-  
-  <!-- Blog Posts Grid -->
-  <div id="blog-grid" class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {{ set posts = search.pages("post", "date=desc") }}
-    
-    {{ for post of posts }}
-    <article class="blog-post-card border-4 border-black shadow-neo bg-white rounded-none overflow-hidden flex flex-col">
-      <!-- Thumbnail -->
-      {{ if post.thumbnail }}
-      <a href="{{ post.url }}" class="block leading-none">
-        <img
-          src="/{{ post.thumbnail }}"
-          alt="{{ post.title }}"
-          loading="lazy"
-          decoding="async"
-          sizes="(min-width: 1024px) 22rem, (min-width: 768px) 50vw, 100vw"
-          transform-images="avif webp jpg 480 768"
-          class="w-full h-48 object-cover border-b-4 border-black block"
-        />
-      </a>
-      {{ else }}
-      <a href="{{ post.url }}" class="block">
-        <div class="w-full h-48 bg-paper border-b-4 border-black flex items-center justify-center">
-          <span class="text-3xl opacity-20 select-none" aria-hidden="true">✦</span>
-        </div>
-      </a>
-      {{ /if }}
-      
-      <!-- Content -->
-      <div class="p-6 flex-1 flex flex-col">
-        {{ if post.description }}
-        <p class="text-sm mb-4 flex-1">{{ post.description }}</p>
-        {{ /if }}
-        
-        {{ if post.date }}
-        <div class="mt-auto mb-4">
-          <time class="px-2 py-1 bg-neo-yellow border border-black font-bold text-xs">
-            {{ post.date |> date("HUMAN_DATE") }}
-          </time>
-        </div>
-        {{ /if }}
-        
-        <a href="{{ post.url }}" class="inline-block px-4 py-2 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-center">
-          Read More →
-        </a>
-      </div>
-    </article>
-    {{ /for }}
-  </div>
-  
-  <!-- Loading indicator -->
-  <div id="loading-indicator" class="text-center mt-8">
-    <div class="inline-block px-6 py-3 bg-neo-yellow border-4 border-black font-bold">
-      Loading more posts...
-    </div>
-  </div>
-  
-  {{ if posts.length === 0 }}
+{{ set posts = search.pages("post", "date=desc") }}
+
+<div class="not-prose">
+{{ if posts.length === 0 }}
+
   <div class="border-4 border-black bg-neo-yellow p-8 text-center">
-    <p class="text-xl font-bold">No posts found. Check back soon!</p>
+    <p class="text-xl font-bold">No posts yet.</p>
   </div>
+
+{{ else }}
+
+  {{ set realPosts = posts.filter((p) => p.kind !== "note") }}
+  {{ set notes = posts.filter((p) => p.kind === "note") }}
+  {{ set latest = realPosts[0] || posts[0] }}
+  {{ set archive = posts.filter((p) => p !== latest) }}
+  {{ set yearGroups = archive |> groupByYear }}
+  {{ set firstEntry = posts[posts.length - 1] }}
+  {{ set latestTags = latest.tags |> displayTags }}
+  {{ set latestRt = latest.readingTime }}
+
+  <!-- ========== HEADER STRIP ========== -->
+  <header class="mb-12 md:mb-16">
+    <div class="flex items-end justify-between gap-6 mb-4">
+      <div class="min-w-0">
+        <p class="font-mono text-xs uppercase tracking-widest opacity-60 mb-2 font-bold">Writing</p>
+        <h1 class="font-display font-black italic leading-[0.86] tracking-[-0.04em] m-0 text-[clamp(56px,10vw,120px)]"
+            style="font-variation-settings: 'SOFT' 90, 'opsz' 144, 'WONK' 1;">
+          Blog<span class="text-riso-red not-italic">.</span>
+        </h1>
+      </div>
+      <div class="flex-shrink-0 text-right">
+        <span class="font-display font-black italic leading-none block text-[clamp(40px,7vw,72px)]"
+              style="font-variation-settings: 'SOFT' 80, 'opsz' 144, 'WONK' 1;">
+          {{ realPosts.length }}
+        </span>
+        <p class="font-mono text-[10px] uppercase tracking-widest opacity-60 mt-1 font-bold whitespace-nowrap">
+          posts since {{ firstEntry.date |> date("yyyy") }}
+        </p>
+        {{ if notes.length > 0 }}
+        <p class="font-mono text-[10px] uppercase tracking-widest opacity-50 mt-0.5 whitespace-nowrap">
+          + {{ notes.length }} note{{ if notes.length !== 1 }}s{{ /if }}
+        </p>
+        {{ /if }}
+      </div>
+    </div>
+    <div class="relative">
+      <div class="border-t-2 border-black"></div>
+      <div class="absolute -top-[7px] left-0 w-3 h-3 bg-riso-red border-2 border-black"></div>
+    </div>
+  </header>
+
+  <!-- ========== FEATURED SPREAD ========== -->
+  <article class="mb-16 md:mb-24 border-4 border-black shadow-neo-lg bg-white">
+    <a href="{{ latest.url }}" class="block group">
+      <div class="grid {{ if latest.thumbnail }}md:grid-cols-[1fr_1.15fr]{{ /if }}">
+        {{ if latest.thumbnail }}
+        <div class="relative border-b-4 md:border-b-0 md:border-r-4 border-black overflow-hidden bg-paper">
+          <img
+            src="/{{ latest.thumbnail }}"
+            alt=""
+            decoding="async"
+            sizes="(min-width: 1024px) 32rem, (min-width: 768px) 48vw, 100vw"
+            transform-images="avif webp jpg 768 1280"
+            class="w-full h-full object-cover aspect-[4/3] block"
+          />
+        </div>
+        {{ /if }}
+        <div class="p-6 md:p-10 flex flex-col justify-center">
+          <p class="font-mono text-[11px] uppercase tracking-widest font-bold mb-4">
+            <span class="text-riso-red">Latest</span>
+            <span class="opacity-40 mx-1.5">·</span>
+            <time>{{ latest.date |> date("d MMM yyyy") }}</time>
+            <span class="opacity-40 mx-1.5">·</span>
+            <span>{{ latestRt }} min read</span>
+          </p>
+          <h2 class="font-display font-black italic leading-[0.95] tracking-[-0.03em] mb-5 m-0 text-[clamp(32px,5.5vw,72px)] group-hover:text-riso-red transition-colors"
+              style="font-variation-settings: 'SOFT' 85, 'opsz' 144, 'WONK' 1;">
+            {{ latest.title }}
+          </h2>
+          {{ if latest.description }}
+          <p class="text-base md:text-lg italic opacity-75 leading-snug mb-5 max-w-[58ch]">
+            {{ latest.description }}
+          </p>
+          {{ /if }}
+          {{ if latestTags.length > 0 }}
+          <div class="flex flex-wrap gap-1.5 mt-1">
+            {{ for tag of latestTags }}
+            <span class="font-mono text-[10px] uppercase tracking-widest font-bold px-2 py-1 border border-black bg-paper">
+              {{ tag }}
+            </span>
+            {{ /for }}
+          </div>
+          {{ /if }}
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <!-- ========== ARCHIVE ========== -->
+  {{ if yearGroups.length > 0 }}
+  <section class="mb-16">
+    <header class="mb-10 md:mb-12 flex items-baseline gap-4">
+      <p class="font-mono text-[11px] uppercase tracking-widest font-bold opacity-60">
+        Archive
+      </p>
+      <span class="border-t-2 border-black flex-1 opacity-40"></span>
+      <p class="font-mono text-[11px] uppercase tracking-widest font-bold opacity-60">
+        {{ archive.length }} earlier entr{{ if archive.length !== 1 }}ies{{ else }}y{{ /if }}
+      </p>
+    </header>
+
+    <div class="space-y-14 md:space-y-20">
+      {{ for group of yearGroups }}
+      <section class="year-section flex flex-col md:flex-row md:gap-10" aria-labelledby="year-{{ group.year }}">
+        <header class="md:flex-shrink-0 md:w-[200px] md:sticky md:top-6 md:self-start mb-3 md:mb-0">
+          <h2 id="year-{{ group.year }}"
+              class="font-display font-black italic leading-none m-0 text-[clamp(48px,7vw,88px)]"
+              style="font-variation-settings: 'SOFT' 80, 'opsz' 144, 'WONK' 1;">
+            {{ group.year }}
+          </h2>
+          <p class="font-mono text-[10px] uppercase tracking-widest font-bold opacity-50 mt-2">
+            {{ group.posts.length }} post{{ if group.posts.length !== 1 }}s{{ /if }}
+          </p>
+        </header>
+
+        {{ set showAnnotation = group.year >= 2025 }}
+        <ol class="flex-1 min-w-0 list-none p-0 m-0 border-t-2 border-black">
+          {{ for post of group.posts }}
+          {{ set rt = post.readingTime }}
+          <li class="border-b border-black/40 last:border-b-2 last:border-black">
+            <a href="{{ post.url }}"
+               class="group block py-4 md:py-5 px-1 md:px-2 transition-colors hover:bg-neo-yellow md:grid md:grid-cols-[88px_1fr_88px] md:gap-6 md:items-baseline">
+              <time class="block font-mono text-[11px] uppercase tracking-widest font-bold opacity-60 mb-1 md:mb-0">
+                {{ post.date |> date("dd MMM") }}
+              </time>
+              <div class="min-w-0">
+                <h3 class="m-0 font-display font-bold leading-tight text-lg md:text-xl tracking-[-0.005em]"
+                    style="font-variation-settings: 'opsz' 24;">
+                  <span aria-hidden="true"
+                        class="inline-block w-[0.9em] text-riso-red font-black opacity-0 group-hover:opacity-100 transition-opacity">▸</span>{{ post.title }}
+                </h3>
+                {{ if showAnnotation && post.description }}
+                <p class="mt-1.5 text-sm italic opacity-60 leading-snug line-clamp-2 max-w-[60ch]">
+                  {{ post.description }}
+                </p>
+                {{ /if }}
+              </div>
+              <span class="block font-mono text-[10px] uppercase tracking-widest font-bold mt-2 md:mt-0 md:text-right">
+                {{ if post.kind === "note" }}
+                <span class="opacity-70">Note</span>
+                {{ else if rt >= 10 }}
+                <span class="inline-block bg-blueprint text-paper px-2 py-1 border-2 border-black">{{ rt }} min</span>
+                {{ else }}
+                <span class="opacity-70">{{ rt }} min</span>
+                {{ /if }}
+              </span>
+            </a>
+          </li>
+          {{ /for }}
+        </ol>
+      </section>
+      {{ /for }}
+    </div>
+  </section>
+
+  <!-- Sentinel for infinite-scroll reveal of older year-sections -->
+  <div id="archive-sentinel" class="text-center mb-12 mt-4">
+    <p class="font-mono text-xs uppercase tracking-widest font-bold opacity-50">
+      Loading earlier posts…
+    </p>
+  </div>
+
+  <!-- End-of-archive note (hidden until last year-section is revealed) -->
+  <footer id="archive-end" class="text-center mt-12 mb-4 hidden" aria-hidden="true">
+    <p class="font-mono text-[11px] uppercase tracking-widest font-bold opacity-50">
+      End of archive · First entry {{ firstEntry.date |> date("d MMM yyyy") }}
+    </p>
+  </footer>
   {{ /if }}
+
+{{ /if }}
 </div>
 
 <script>
-  // Infinite scroll with lazy loading
-  (function() {
-    const POSTS_PER_BATCH = 12;
-    const cards = document.querySelectorAll('.blog-post-card');
-    const loadingIndicator = document.getElementById('loading-indicator');
-    let currentBatch = 0;
-    let isLoading = false;
-    
-    // Initially hide all posts except the first batch
-    function initializePosts() {
-      cards.forEach((card, index) => {
-        if (index >= POSTS_PER_BATCH) {
-          card.style.display = 'none';
-        }
-      });
-      currentBatch = 1;
-    }
-    
-    // Show next batch of posts
-    function showNextBatch() {
-      if (isLoading) return;
-      
-      const startIndex = currentBatch * POSTS_PER_BATCH;
-      const endIndex = startIndex + POSTS_PER_BATCH;
-      
-      // Check if there are more posts to show
-      if (startIndex >= cards.length) {
-        if (loadingIndicator) {
-          loadingIndicator.style.display = 'none';
-        }
-        return;
+(function() {
+  const sections = Array.from(document.querySelectorAll('.year-section'));
+  const sentinel = document.getElementById('archive-sentinel');
+  const endNote = document.getElementById('archive-end');
+  const INITIAL_VISIBLE = 2;
+  const REVEAL_BATCH = 2;
+
+  function showEndNote() {
+    if (!endNote) return;
+    endNote.classList.remove('hidden');
+    endNote.removeAttribute('aria-hidden');
+  }
+
+  if (!sentinel) return;
+
+  if (sections.length <= INITIAL_VISIBLE) {
+    sentinel.style.display = 'none';
+    showEndNote();
+    return;
+  }
+
+  for (let i = INITIAL_VISIBLE; i < sections.length; i++) {
+    sections[i].style.display = 'none';
+  }
+  let nextIndex = INITIAL_VISIBLE;
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      for (let i = 0; i < REVEAL_BATCH && nextIndex < sections.length; i++) {
+        sections[nextIndex].style.display = '';
+        nextIndex++;
       }
-      
-      isLoading = true;
-      
-      // Simulate slight delay for better UX
-      setTimeout(() => {
-        for (let i = startIndex; i < endIndex && i < cards.length; i++) {
-          cards[i].style.display = 'flex';
-        }
-        
-        currentBatch++;
-        isLoading = false;
-        
-        // Hide loading indicator if we've shown all posts
-        if (currentBatch * POSTS_PER_BATCH >= cards.length) {
-          if (loadingIndicator) {
-            loadingIndicator.style.display = 'none';
-          }
-        }
-      }, 300);
-    }
-    
-    // Set up Intersection Observer for infinite scroll
-    function setupInfiniteScroll() {
-      const options = {
-        root: null,
-        rootMargin: '400px',
-        threshold: 0.1
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !isLoading && currentBatch * POSTS_PER_BATCH < cards.length) {
-            showNextBatch();
-          }
-        });
-      }, options);
-      
-      // Observe the loading indicator
-      if (loadingIndicator) {
-        observer.observe(loadingIndicator);
+      if (nextIndex >= sections.length) {
+        observer.disconnect();
+        sentinel.style.display = 'none';
+        showEndNote();
       }
     }
-    
-    // Initialize on page load
-    if (cards.length > POSTS_PER_BATCH) {
-      initializePosts();
-      setupInfiniteScroll();
-    } else if (loadingIndicator) {
-      // Hide loading indicator if we have fewer posts than one batch
-      loadingIndicator.style.display = 'none';
-    }
-  })();
+  }, { rootMargin: '600px' });
+
+  observer.observe(sentinel);
+})();
 </script>
 
 <noscript>
   <style>
-    /* Show all posts if JavaScript is disabled */
-    .blog-post-card {
-      display: flex !important;
-    }
+    .year-section { display: flex !important; }
+    #archive-sentinel { display: none !important; }
+    #archive-end { display: block !important; }
   </style>
 </noscript>

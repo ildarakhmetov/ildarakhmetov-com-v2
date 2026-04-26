@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/lingrow/
 thumbnail: assets/img/blog/2023/linGrow.png
+kind: note
 ---
 🌐 Language barriers between parents and teachers of preschool children can lead to communication breakdowns that impact the learning experience.
 

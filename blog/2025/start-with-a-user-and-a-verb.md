@@ -11,6 +11,7 @@ tags:
 - scoping
 thumbnail: assets/img/blog/2025/ta-management-system.png
 url: /blog/2025/start-with-a-user-and-a-verb/
+kind: post
 ---
 
 When I joined the University of Alberta, I inherited a course called CMPUT 401 — Software Process and Product Management. Designed by Dr. Eleni Stroulia and now taught by Mark Polak, the course pairs students with real clients to build real software. During my time with 401, I ran over 60 projects with more than 40 unique community partners. All of them were completed. That sounds like a brag, but it's not — because not all of them were always smooth, and not all of them were truly *used*.

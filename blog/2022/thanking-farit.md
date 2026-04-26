@@ -8,6 +8,7 @@ tags:
 - stories
 categories: stories
 url: /blog/2022/thanking-farit/
+kind: post
 ---
 I was 19. A fourth-year student. At that point, I'd worked at the university for three years as a tech support guy. Reinstalling Windows, fixing cables, that kind of stuff. I loved the job and took on more and more responsibility, eventually evolving my job into a full-time system administrator role, taking care of LAN and a few Linux and Windows NT servers.
 

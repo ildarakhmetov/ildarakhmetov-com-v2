@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/PyMigBenchWeb/
 thumbnail: assets/img/blog/2023/PyMigBenchWeb.png
+kind: note
 ---
 🎓 Showcasing one of the fantastic projects from last semester's CMPUT 401 students at the [University of Alberta](https://www.linkedin.com/school/university-of-alberta/)! 🌟
 

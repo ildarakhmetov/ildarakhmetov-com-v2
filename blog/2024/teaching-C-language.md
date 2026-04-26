@@ -11,6 +11,7 @@ tags:
 categories: continuous-learning
 url: /blog/2024/teaching-C-language/
 thumbnail: assets/img/blog/2024/teaching-C-language-post-image.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

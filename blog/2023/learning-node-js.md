@@ -12,6 +12,7 @@ tags:
 categories: continuous-learning programming
 url: /blog/2023/learning-node-js/
 thumbnail: assets/img/blog/2023/learning-node-js-post-image.jpg
+kind: note
 ---
 It's that time of year when classes are in full swing and free time seems like a distant memory from another life. Yet here I am, finding that teaching CS 5001 isn't just a job; it's a joy ride.
 

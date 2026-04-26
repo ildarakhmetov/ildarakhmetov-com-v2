@@ -10,6 +10,7 @@ tags:
 - opinion
 categories: AI opinion
 url: /blog/2024/AI-competition/
+kind: note
 ---
 As everyone’s talking about OpenAI’s o3 and Google’s Gemini 2.0 -- their crazy new capabilities, and the wave of startups and prototypes they’re inspiring -- I can’t help but wonder...
 

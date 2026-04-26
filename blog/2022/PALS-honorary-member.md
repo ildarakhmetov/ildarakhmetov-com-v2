@@ -10,6 +10,7 @@ tags:
 categories: certification
 url: /blog/2022/PALS-honorary-member/
 thumbnail: assets/img/blog/2022/PALS-membership.jpg
+kind: note
 ---
 I’m honoured and grateful to be recognized as an honorary member of P.A.L.S. - Project Adult Literacy Society.
 

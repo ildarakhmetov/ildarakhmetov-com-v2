@@ -12,6 +12,7 @@ tags:
 categories: personal-development
 url: /blog/2024/embracing-antifragility-thriving-in-the-face-of-adversity/
 thumbnail: assets/img/blog/2024/2024-06-12-embracing-antifragility-thriving-in-the-face-of-adversity.png
+kind: note
 ---
 A few years ago, I started reading Nassim Nicholas Taleb’s "Antifragile: Things That Gain from Disorder". Like many of us, life got in the way, and I never finished it. Now, on my second attempt, I'm realizing just how fragile we — how fragile I — can be. And I want to change that, for myself.
 

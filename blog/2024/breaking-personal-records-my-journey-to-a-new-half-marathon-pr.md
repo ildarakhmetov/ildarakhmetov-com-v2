@@ -12,6 +12,7 @@ tags:
 categories: fitness
 url: /blog/2024/breaking-personal-records-my-journey-to-a-new-half-marathon-pr/
 thumbnail: assets/img/blog/2024/breaking-personal-records-my-journey-to-a-new-half-marathon-pr.png
+kind: post
 ---
 I just finished my 8th half marathon, and I'm thrilled to share that I set a new personal record! My previous PR was 02:03:39, set in Warsaw in 2019. I was younger then and didn't have two screws in my right hip. Today, in Ottawa, I ran 01:57:56 - more than 5 minutes off my previous best!
 

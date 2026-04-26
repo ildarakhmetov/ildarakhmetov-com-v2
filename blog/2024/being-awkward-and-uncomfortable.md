@@ -11,6 +11,7 @@ tags:
 categories: learning
 url: /blog/2024/being-awkward-and-uncomfortable/
 thumbnail: assets/img/blog/2024/being-awkward-and-uncomfortable-post-image.jpg
+kind: note
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

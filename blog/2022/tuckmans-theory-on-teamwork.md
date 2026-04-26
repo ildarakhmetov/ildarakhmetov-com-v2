@@ -10,6 +10,7 @@ tags:
 categories: project-management
 url: /blog/2022/tuckmans-theory-on-teamwork/
 thumbnail: assets/img/blog/2022/tuckmans-theory.jpg
+kind: post
 ---
 In CMPUT 401, effective teamwork is essential. You know the twist. A team of super-stars always loses to a super-star team.
 

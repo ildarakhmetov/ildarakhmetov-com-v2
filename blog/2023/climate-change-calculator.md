@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/climate-change-calculator/
 thumbnail: assets/img/blog/2023/climate-change-calculator.png
+kind: note
 ---
 Climate change is real. But abstract numbers like tons of carbon dioxide don't tell the story. What if, instead of meaningless cubic metres, we measured our choices by how many gallons of water are saved, how many cars are taken off the road, or how many meals are saved to combat food waste?
 

@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/knead-chat/
 thumbnail: assets/img/blog/2023/knead-chat-screenshot.png
+kind: note
 ---
 This is the second time [Claudia Wong](https://www.linkedin.com/in/claudia-wong-858a2588/) has brought a project to CMPUT 401, and it's always a blast working with her and her team at [Knead Technologies](https://www.linkedin.com/company/knead-technologies/)!
 

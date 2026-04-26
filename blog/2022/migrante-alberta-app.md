@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/migrante-alberta-app/
 thumbnail: assets/img/blog/2022/migrante-alberta-app-screenshot.png
+kind: note
 ---
 Another amazing CMPUT 401 project of Winter 2022: Migrante Alberta App!
 

@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/CMPUT-401-projects-portal/
 thumbnail: assets/img/blog/2021/CMPUT-401-projects-portal-screenshot.png
+kind: note
 ---
 For a long time, I’ve dreamed of having a web portal to showcase all the fantastic projects that CMPUT 401 students create. Finally, my dream has come true -- we have the CMPUT 401 Projects Portal!
 

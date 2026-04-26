@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/e-signature-app/
 thumbnail: assets/img/blog/2023/e-signature-app.png
+kind: note
 ---
 CMPUT 401 is fortunate to be part of the [University of Alberta](https://www.linkedin.com/school/university-of-alberta/)'s Community Service-Learning program. The fantastic CSL team connects the course with community partners so that our students can help non-profit organizations by developing software applications for them.
 

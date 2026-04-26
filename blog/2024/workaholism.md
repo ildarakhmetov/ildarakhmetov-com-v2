@@ -10,6 +10,7 @@ tags:
 - work-life-balance
 categories: personal-development
 url: /blog/2024/workaholism/
+kind: post
 ---
 I’m writing this post from my office at 7:40 p.m. on a Friday evening — a perfect time to reflect on workaholism, right? The irony isn’t lost on me. It’s one of those moments that makes you think, “Am I living what I’m writing about?” But here I am, contemplating balance while staying late at the office.
 

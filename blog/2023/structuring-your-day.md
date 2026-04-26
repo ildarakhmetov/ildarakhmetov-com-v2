@@ -12,6 +12,7 @@ tags:
 categories: productivity
 url: /blog/2023/structuring-your-day/
 thumbnail: assets/img/blog/2023/drawing-of-young-caucasian-man-at-computer.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

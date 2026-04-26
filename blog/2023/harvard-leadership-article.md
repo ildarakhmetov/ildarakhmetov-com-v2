@@ -10,6 +10,7 @@ tags:
 - harvard
 categories: article
 url: /blog/2023/harvard-leadership-article/
+kind: note
 ---
 This [article](https://hbr.org/2005/04/seven-transformations-of-leadership), published in the Harvard Business Review in 2005, is one of the few true masterpieces. You will read and reread it as you grow and develop as a leader (and many of you will).
 

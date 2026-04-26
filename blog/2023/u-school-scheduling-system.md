@@ -12,6 +12,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/u-school-scheduling-system/
 thumbnail: assets/img/blog/2023/u-school-screenshot.png
+kind: note
 ---
 🎓 Introducing the U School Scheduling System project from last semester's CMPUT 401 students at the [University of Alberta](https://www.linkedin.com/school/university-of-alberta/)! 🌟
 

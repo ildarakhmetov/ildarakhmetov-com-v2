@@ -12,6 +12,7 @@ tags:
 categories: tech-myths
 url: /blog/2024/the-myth-of-perfect-software-embracing-continuous-improvement/
 thumbnail: assets/img/blog/2024/2024-07-10-the-myth-of-perfect-software-embracing-continuous-improvement.png
+kind: post
 ---
 > "You Can't Write Perfect Software.
 >

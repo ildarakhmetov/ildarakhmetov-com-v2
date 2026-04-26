@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/helping-hands/
 thumbnail: assets/img/blog/2022/helping-hands-screenshot.png
+kind: post
 ---
 Community leagues are an essential part of the City of Edmonton. I'm a big fan of our local community garden, and I'm always thrilled to see the initiatives of different community leagues.
 

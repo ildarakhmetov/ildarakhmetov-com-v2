@@ -12,6 +12,7 @@ tags:
 categories: careers communication
 url: /blog/2023/office-hours/
 thumbnail: assets/img/blog/2023/office-hours-post-image.jpg
+kind: note
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

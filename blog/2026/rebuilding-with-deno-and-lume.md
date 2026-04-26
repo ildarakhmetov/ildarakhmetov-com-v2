@@ -11,6 +11,7 @@ tags:
 - learning
 thumbnail: assets/img/blog/2026/deno-dinosaur.png
 url: /blog/2026/rebuilding-with-deno-and-lume/
+kind: note
 ---
 
 ![Deno is a dinosaur](/assets/img/blog/2026/deno-dinosaur.png)

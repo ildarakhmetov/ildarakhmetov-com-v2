@@ -12,6 +12,7 @@ tags:
 categories: stories
 url: /blog/2022/MUD-story/
 thumbnail: assets/img/blog/2022/MUD-screenshot.jpg
+kind: post
 ---
 In the early 2000s, while doing my undergrad, I worked full-time as a system administrator, spending most of my time in the server room. We had enough machines but never enough screens and keyboards. So the only screen I could use belonged to an ancient Linux server that we used as a router. I used it to play MUD.
 
