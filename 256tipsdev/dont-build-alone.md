@@ -18,7 +18,7 @@ Programming requires deep thinking. We tend to work solo a lot -- for long stret
 
 But. During those long stretches of focused time:
 
-a) What do you build?
+a) What do you build?  
 b) Why do you build it?
 
 Getting the "what" and the "why" requires a very different mode of work — one with collaboration and an exchange of ideas and energy. And this mode, naturally, can't happen without other people working with you.
