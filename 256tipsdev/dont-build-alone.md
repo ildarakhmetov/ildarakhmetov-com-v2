@@ -9,6 +9,7 @@ tags:
 - collaboration
 - teamwork
 - junior-devs
+youtube_url: "https://youtube.com/shorts/10HmOUlmmkw"
 url: /256tipsdev/dont-build-alone/
 ---
 
