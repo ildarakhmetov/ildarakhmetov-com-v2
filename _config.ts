@@ -103,6 +103,14 @@ site.preprocess([".html"], (pages) => {
       // Default any unflagged entry to "post"; explicit "note" wins.
       if (data.kind !== "note") data.kind = "post";
     }
+
+    // Auto-wire per-tip Open Graph cards. `deno task tip-cards` renders
+    // /assets/img/og/tips/<slug>.jpg from each tip's title + tip_number;
+    // this hook surfaces it via metas plugin as og:image.
+    if (data.layout === "tip.vto" && !data.thumbnail && typeof data.url === "string") {
+      const slug = data.url.replace(/^\/256tipsdev\//, "").replace(/\/$/, "");
+      if (slug) data.thumbnail = `/assets/img/og/tips/${slug}.jpg`;
+    }
   }
 });
 

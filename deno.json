@@ -59,6 +59,14 @@
     "banner": {
       "description": "Render YouTube channel banner from _og/banner.html into assets/img/banner/256-banner.jpg",
       "command": "mkdir -p assets/img/banner && google-chrome --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=2560,1530 --screenshot=_og/banner.png \"file://$(pwd)/_og/banner.html\" && magick _og/banner.png -crop 2560x1440+0+0 +repage -strip -quality 90 -sampling-factor 4:2:0 -interlace JPEG assets/img/banner/256-banner.jpg && echo 'Rendered: assets/img/banner/256-banner.jpg'"
+    },
+    "tip-cards": {
+      "description": "Render per-tip Open Graph cards from 256tipsdev/*.md into assets/img/og/tips/",
+      "command": "deno run --allow-read --allow-write --allow-run _og/render-tip-cards.ts"
+    },
+    "archive-card": {
+      "description": "Render the /256tipsdev/ archive page Open Graph card with current progress grid",
+      "command": "deno run --allow-read --allow-write --allow-run _og/render-archive-card.ts"
     }
   },
   "compilerOptions": {
