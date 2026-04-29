@@ -9,6 +9,7 @@ tags:
 - productivity
 - tools
 - junior-devs
+youtube_url: "https://youtube.com/shorts/jMlDy2EIOtM"
 url: /256tipsdev/spend-a-day-with-keyboard-only/
 ---
 
