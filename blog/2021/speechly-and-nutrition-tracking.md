@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/speechly-and-nutrition-tracking/
 thumbnail: assets/img/blog/2021/speechly-screenshot-compressed.png
+kind: note
 ---
 Voice. It's one of the most powerful ways to connect to the world around us. And now, Speechly can leverage its power to help you with important things, like nutrition tracking.
 

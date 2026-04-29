@@ -11,6 +11,7 @@ tags:
 - skills
 categories: personal-growth
 url: /blog/2024/the-power-of-memory-revisiting-forgotten-skills/
+kind: note
 ---
 I just realized that I still remember these in sequence, even though the last time I needed them for my job was about 20 years ago. It's fascinating how our memory works!
 

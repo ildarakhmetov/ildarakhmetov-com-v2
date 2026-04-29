@@ -134,7 +134,7 @@ categories:
         learned_recently: true
 
   - name: Web Frameworks
-    color: neo-green
+    color: neo-yellow
     technologies:
       - name: FastAPI
         url: https://fastapi.tiangolo.com/
@@ -192,7 +192,7 @@ categories:
         learned_recently: false
 
   - name: Databases & Query Languages
-    color: neo-pink
+    color: riso-red
     technologies:
       - name: SQL
         url: https://en.wikipedia.org/wiki/SQL
@@ -330,7 +330,7 @@ categories:
         learned_recently: false
 
   - name: Cloud & Infrastructure
-    color: neo-green
+    color: neo-yellow
     technologies:
       - name: Docker
         url: https://www.docker.com/
@@ -403,7 +403,7 @@ categories:
         learned_recently: false
 
   - name: Legacy & Business Software
-    color: neo-pink
+    color: riso-red
     technologies:
       - name: 1C
         url: https://en.wikipedia.org/wiki/1C_Company

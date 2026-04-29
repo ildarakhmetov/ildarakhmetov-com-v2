@@ -9,6 +9,7 @@ tags:
 categories: stories
 url: /blog/2022/finding-knowledge/
 thumbnail: assets/img/blog/2022/html32.png
+kind: post
 ---
 We’re so lucky to have unlimited access to knowledge now. Want to learn Rust? Clojure? Svelte? Just google something and start reading.
 

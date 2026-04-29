@@ -14,6 +14,7 @@ tags:
 categories: cloud-technology
 url: /blog/2024/learning-cloud-technologies/
 thumbnail: assets/img/blog/2024/learning-cloud-technologies-post-image.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

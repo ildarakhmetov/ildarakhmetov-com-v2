@@ -13,6 +13,7 @@ tags:
 categories: education-technology
 url: /blog/2024/ai-in-education-the-unique-role-of-human-teachers/
 thumbnail: assets/img/blog/2024/2024-08-10-ai-in-education-the-unique-role-of-human-teachers.png
+kind: post
 ---
 Yesterday, I had the pleasure of attending an AI meetup (thank you for organizing, Kris Krüg!). The energy in the room was palpable. AI applications are permeating every facet of our lives, and education is no exception. From apps and services to chatbots—text-based, voice, and even video—the pace of innovation is dizzying.
 

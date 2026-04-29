@@ -12,6 +12,7 @@ tags:
 - big-shift
 categories: stories
 url: /blog/2021/mid-pandemic-big-shift/
+kind: post
 ---
 Now, when the pandemic is almost over, we're starting to think about shaking things up. I made #TheBigShift in the middle of the pandemic when I got back to academia. Despite remote learning, I'm enjoying every single moment of teaching at the University of Alberta.
 

@@ -11,6 +11,7 @@ tags:
 categories: communityservice
 url: /blog/2023/CSL-apalooza/
 thumbnail: assets/img/blog/2023/ildar-at-CSL-apalooza.jpg
+kind: note
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

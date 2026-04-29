@@ -11,6 +11,7 @@ tags:
 categories: motivation
 url: /blog/2024/coding-spark/
 thumbnail: assets/img/blog/2024/coding-spark-post-image.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

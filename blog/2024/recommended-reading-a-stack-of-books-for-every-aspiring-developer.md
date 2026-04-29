@@ -13,6 +13,7 @@ tags:
 categories: learning
 url: /blog/2024/recommended-reading-a-stack-of-books-for-every-aspiring-developer/
 thumbnail: assets/img/blog/2024/2024-06-24-recommended-reading-a-stack-of-books-for-every-aspiring-developer.png
+kind: note
 ---
 I love this new stack of books on my desk. 
 

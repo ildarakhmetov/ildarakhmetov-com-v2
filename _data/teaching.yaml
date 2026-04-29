@@ -35,7 +35,7 @@ universities:
             name: Intensive Foundations of Computer Science
 
   - name: University of Alberta
-    color: neo-green
+    color: neo-yellow
     semesters:
       - term: Winter 2023
         courses:

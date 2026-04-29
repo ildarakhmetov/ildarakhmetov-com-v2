@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/finovo-well/
 thumbnail: assets/img/blog/2021/finovo-well-screenshot-compressed.png
+kind: note
 ---
 Financial, physical and mental wellness go hand-in-hand. And I'm glad that CMPUT 401 students had a chance to work on this tool that can help employees manage their financial wellness. 
 

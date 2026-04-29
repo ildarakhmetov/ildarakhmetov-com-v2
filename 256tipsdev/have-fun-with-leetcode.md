@@ -1,9 +1,9 @@
 ---
 layout: tip.vto
-title: "Have fun with Leetcode"
+title: "LeetCode is supposed to be fun!"
 tip_number: 64
 date: 2026-04-22 12:00:00
-description: "Leetcode problems are fun puzzles — treat them that way, don't memorize solutions, and let yourself think out loud about trade-offs."
+description: "Leetcode problems are fun puzzles — not a wall of solutions to memorize. Minimize the anxiety, keep the curiosity."
 tags:
 - tip
 - leetcode

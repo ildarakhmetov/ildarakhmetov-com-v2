@@ -10,7 +10,7 @@ layout: layout.vto
   <header class="mb-8">
     {{ if tip_number !== undefined }}
     <div class="mb-4">
-      <span class="inline-block px-4 py-2 bg-neo-pink border-4 border-black shadow-neo font-black text-2xl">
+      <span class="inline-block px-4 py-2 bg-riso-red border-4 border-black shadow-neo font-black text-2xl">
         Tip {{ tip_number }}
       </span>
     </div>
@@ -23,7 +23,7 @@ layout: layout.vto
       <time class="px-3 py-1 bg-neo-yellow border-2 border-black font-bold text-sm">
         {{ date |> date("HUMAN_DATE") }}
       </time>
-      <span class="text-sm text-gray-600">by Ildar Akhmetov</span>
+      <span class="text-sm text-ink opacity-60">by Ildar Akhmetov</span>
     </div>
     {{ /if }}
   </header>
@@ -32,7 +32,7 @@ layout: layout.vto
   {{ if youtube_url }}
   <div class="mb-8">
     <a href="{{ youtube_url }}" target="_blank" rel="noopener noreferrer"
-       class="inline-block px-6 py-3 bg-neo-pink border-4 border-black shadow-neo hover:shadow-none transition-all font-black">
+       class="inline-block px-6 py-3 bg-riso-red border-4 border-black shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all font-black">
       ▶ Watch on YouTube
     </a>
   </div>
@@ -48,9 +48,9 @@ layout: layout.vto
               prose-a:text-black prose-a:underline prose-a:font-bold hover:prose-a:bg-neo-yellow
               prose-strong:font-black
               prose-img:border-4 prose-img:border-black prose-img:shadow-neo
-              prose-code:bg-neo-blue prose-code:px-1 prose-code:py-0.5 prose-code:rounded-none prose-code:border prose-code:border-black
+              prose-code:bg-paper prose-code:text-ink prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-none prose-code:border prose-code:border-ink/30
               prose-pre:border-4 prose-pre:border-black prose-pre:shadow-neo prose-pre:bg-white
-              prose-blockquote:border-l-4 prose-blockquote:border-black prose-blockquote:bg-neo-yellow prose-blockquote:italic
+              prose-blockquote:border-l-4 prose-blockquote:border-riso-red prose-blockquote:bg-paper prose-blockquote:italic
               prose-ul:list-disc prose-ul:ml-6
               prose-ol:list-decimal prose-ol:ml-6">
     {{ content }}
@@ -63,7 +63,7 @@ layout: layout.vto
   {{ if prevTip || nextTip }}
   <nav class="mt-12 pt-8 border-t-4 border-black grid grid-cols-1 md:grid-cols-2 gap-4">
     {{ if prevTip }}
-    <a href="{{ prevTip.url }}" class="block p-4 border-4 border-black bg-white hover:bg-neo-yellow hover:shadow-neo transition-all">
+    <a href="{{ prevTip.url }}" class="block p-4 border-4 border-black bg-white hover:bg-neo-yellow shadow-neo transition-colors">
       <div class="text-xs font-bold opacity-60 mb-1">← Previous</div>
       <div class="font-black">Tip {{ prevTip.tip_number }}: {{ prevTip.title }}</div>
     </a>
@@ -72,7 +72,7 @@ layout: layout.vto
     {{ /if }}
 
     {{ if nextTip }}
-    <a href="{{ nextTip.url }}" class="block p-4 border-4 border-black bg-white hover:bg-neo-yellow hover:shadow-neo transition-all text-right">
+    <a href="{{ nextTip.url }}" class="block p-4 border-4 border-black bg-white hover:bg-neo-yellow shadow-neo transition-colors text-right">
       <div class="text-xs font-bold opacity-60 mb-1">Next →</div>
       <div class="font-black">Tip {{ nextTip.tip_number }}: {{ nextTip.title }}</div>
     </a>
@@ -82,7 +82,7 @@ layout: layout.vto
 
   <!-- Back to Index Link -->
   <div class="mt-12 pt-8 border-t-4 border-black">
-    <a href="/256tipsdev/" class="inline-block px-6 py-3 bg-neo-yellow border-2 border-black font-bold hover:shadow-neo transition-all">
+    <a href="/256tipsdev/" class="inline-block px-6 py-3 bg-riso-red border-2 border-black font-bold shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
       ← Back to 256 Tips
     </a>
   </div>

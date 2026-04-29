@@ -9,6 +9,7 @@ tags:
 categories: career
 url: /blog/2022/how-to-become-a-game-developer/
 thumbnail: assets/img/blog/2022/talk.jpg
+kind: note
 ---
 Today I talked about it with a group of kids at the Edmonton Immigrant Services Association Summer Camp.
 

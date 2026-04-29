@@ -12,6 +12,7 @@ tags:
 - AI
 categories: AI careers
 url: /blog/2025/joining-tech-during-AI/
+kind: note
 ---
 Stepping into tech during the AI revolution brings both opportunities and questions. After reading [Addy Osmani](https://www.linkedin.com/in/addyosmani/)'s recent [insights on the future of software engineering](https://addyo.substack.com/p/future-proofing-your-software-engineering), I want to share what truly matters for those beginning their journey.
 

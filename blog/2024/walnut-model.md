@@ -10,6 +10,7 @@ tags:
 categories: models
 url: /blog/2024/walnut-model/
 thumbnail: assets/img/blog/2024/walnut-model-post-image.jpg
+kind: post
 ---
 The Walnut Model (Process & Content Model), which I first heard about from [Natalia Babaeva](https://www.linkedin.com/in/natalia-babaeva-a3633734/), offers a really practical way to think about teamwork. It was originally shared by [Ola Möller](https://www.linkedin.com/in/olamoller/) ([MethodKit](https://www.linkedin.com/company/methodkit/)) and comes from [Hyper Island](https://www.linkedin.com/school/hyper-island/), where it’s used to help teams work better together.
 

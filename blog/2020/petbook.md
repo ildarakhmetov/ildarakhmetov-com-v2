@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2020/petbook/
 thumbnail: assets/img/blog/2020/petbook-screenshot-compressed.png
+kind: note
 ---
 Walt Disney used to say that it’s kind of fun to do the impossible. Well, CMPUT 401 teams can totally relate to that. Is it even possible to develop a product in three months if NO ONE in the team knows the chosen programming language?
 

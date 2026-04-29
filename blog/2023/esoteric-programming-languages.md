@@ -11,6 +11,7 @@ tags:
 categories: books
 url: /blog/2023/esoteric-programming-languages/
 thumbnail: assets/img/blog/2023/strange-code-book.jpg
+kind: note
 ---
 I'm a huge fan of esoteric programming languages, or "esolangs," which challenge conventional coding with humor and artistry. The other day, I met [Wayne Malkin](https://www.linkedin.com/in/wayne-malkin-45b9304/) at a hackathon, and he mentioned Forth, sparking my curiosity.
 

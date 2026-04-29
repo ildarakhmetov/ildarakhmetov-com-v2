@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/imagine-cities-learning-guides/
 thumbnail: assets/img/blog/2022/learning-guides.png
+kind: note
 ---
 This is the second CMPUT 401 project hosted by Imagine Cities and certainly a great success!
 

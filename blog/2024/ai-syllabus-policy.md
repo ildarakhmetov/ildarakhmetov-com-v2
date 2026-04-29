@@ -12,6 +12,7 @@ tags:
 categories: education-technology
 url: /blog/2024/ai-syllabus-policy/
 thumbnail: assets/img/blog/2024/ai-syllabus-post-image.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

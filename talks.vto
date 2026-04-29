@@ -1,0 +1,67 @@
+---
+layout: layout.vto
+title: Talks
+metas:
+  description: "Talks, workshops, panels, and podcast appearances by Ildar Akhmetov."
+---
+
+<div class="not-prose">
+
+  <!-- Hero -->
+  <section class="mb-10 md:mb-14">
+    <h1 class="font-display font-black leading-[0.85] tracking-[-0.04em] text-[clamp(56px,11vw,148px)] m-0" style="font-variation-settings: 'SOFT' 90, 'opsz' 144, 'WONK' 1;">
+      Talks<em class="not-italic text-riso-red" style="font-style: italic; font-variation-settings: 'SOFT' 90, 'opsz' 144, 'WONK' 1;">.</em>
+    </h1>
+    <p class="mt-6 text-base md:text-lg opacity-75 max-w-[58ch] leading-relaxed">
+      {{ talks.intro }}
+    </p>
+  </section>
+
+  <!-- Topics -->
+  <section class="mb-14 max-w-3xl">
+    <div class="font-mono text-xs uppercase tracking-[0.22em] font-bold opacity-55 mb-2">Topics</div>
+    <p class="font-display italic font-medium text-[clamp(16px,1.5vw,19px)] leading-relaxed" style="font-variation-settings: 'SOFT' 60, 'opsz' 48;">
+      {{ for i, topic of talks.topics }}{{ if i > 0 }}<span class="inline-block w-[5px] h-[5px] bg-riso-red mx-3 align-middle relative -top-[2px]"></span>{{ /if }}{{ topic }}{{ /for }}
+    </p>
+  </section>
+
+  <!-- Entries -->
+  <section class="max-w-3xl">
+    {{ for index, entry of talks.entries }}
+      {{ if index === 0 || talks.entries[index - 1].year !== entry.year }}
+        <div class="flex items-baseline gap-4 mt-10 mb-3 first:mt-4">
+          <span class="font-display font-black italic text-[clamp(40px,5vw,56px)] leading-none tracking-[-0.02em]" style="font-variation-settings: 'SOFT' 80, 'opsz' 144, 'WONK' 1;">{{ entry.year }}</span>
+        </div>
+      {{ /if }}
+
+      <article class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-baseline gap-4 md:gap-6 py-5 border-b border-black/10 last:border-b-0">
+        <div>
+          <div class="flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] font-bold mb-1.5 flex-wrap">
+            {{ if entry.type === "talk" }}
+              <span>Talk</span>
+            {{ else if entry.type === "invited" }}
+              <span>Invited lecture</span>
+            {{ else if entry.type === "workshop" }}
+              <span class="inline-flex items-center px-2 py-0.5 border-[1.5px] border-black bg-blueprint text-paper text-[0.66rem] tracking-[0.2em]">Workshop</span>
+            {{ else if entry.type === "panel" }}
+              <span class="inline-flex items-center px-2 py-0.5 border-2 border-black border-dashed bg-white text-[0.66rem] tracking-[0.2em]">Panel</span>
+            {{ else if entry.type === "podcast" }}
+              <span class="inline-flex items-center px-2 py-0.5 border-[1.5px] border-black bg-neo-yellow text-[0.66rem] tracking-[0.2em]">Podcast</span>
+            {{ /if }}
+            <span class="opacity-35">·</span>
+            <span class="opacity-60">{{ entry.location }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-[clamp(17px,1.6vw,20px)] leading-snug tracking-[-0.005em] mb-1" style="font-variation-settings: 'SOFT' 40, 'opsz' 24;">{{ entry.title }}</h3>
+          <div class="text-[0.95rem] font-semibold opacity-[0.78]">{{ entry.venue }}</div>
+        </div>
+        {{ if entry.url }}
+          <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 bg-riso-red text-ink border-2 border-black font-mono text-[0.72rem] uppercase tracking-[0.16em] font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all whitespace-nowrap flex-shrink-0 self-start md:self-center">
+            <span class="inline-block w-0 h-0 border-y-[6px] border-y-transparent border-l-[8px] border-l-ink" aria-hidden="true"></span>
+            <span>Watch</span>
+          </a>
+        {{ /if }}
+      </article>
+    {{ /for }}
+  </section>
+
+</div>

@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/daycare-management-app/
 thumbnail: assets/img/blog/2023/daycare-management-app-screenshot.png
+kind: note
 ---
 In CMPUT 401, we **LOVE** working with early-stage startups!
 

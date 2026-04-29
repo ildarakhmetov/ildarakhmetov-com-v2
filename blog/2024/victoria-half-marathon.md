@@ -13,6 +13,7 @@ tags:
 categories: stories motivation
 url: /blog/2024/victoria-half-marathon/
 thumbnail: assets/img/blog/2024/victoria-half-marathon-post-image.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

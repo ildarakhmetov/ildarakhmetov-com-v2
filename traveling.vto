@@ -2,33 +2,135 @@
 layout: layout.vto
 title: Traveling
 metas:
-  description: "Countries explored and travel adventures by Ildar Akhmetov."
+  description: "Countries I've been to (so far), with the years I went."
 ---
 
-<div class="max-w-none">
-  <h1 class="text-4xl font-black mb-8">Traveling</h1>
-  <p class="text-lg mb-8 opacity-75">Countries I've been to (so far)</p>
+<div class="not-prose">
 
-  <!-- All Countries -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-blue p-8 rounded-none mb-8">
-    <h2 class="text-3xl font-black mb-6">All Countries</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">
-      {{ for country of traveling.visited }}
-        <div class="py-1 flex items-baseline gap-2">
-          <span class="font-semibold flex-shrink-0">{{ country.name }}</span>
-          <span class="opacity-60 text-sm">{{ country.years }}</span>
-        </div>
-      {{ /for }}
+  <!-- Hero -->
+  <section class="mb-10 md:mb-14">
+    <h1 class="font-display font-black leading-[0.85] tracking-[-0.04em] text-[clamp(56px,11vw,148px)] m-0" style="font-variation-settings: 'SOFT' 90, 'opsz' 144, 'WONK' 1;">
+      Travel<em class="not-italic text-riso-red" style="font-style: italic; font-variation-settings: 'SOFT' 90, 'opsz' 144, 'WONK' 1;">.</em><br>ing
+    </h1>
+    <p class="mt-5 text-base md:text-lg opacity-75 max-w-[52ch]">
+      Countries I&rsquo;ve been to (so far), with the years I went.
+    </p>
+  </section>
+
+  <!-- Stats -->
+  <section class="travel-stats mb-12">
+    <div class="travel-stat">
+      <div class="travel-stat__num travel-stat__num--accent">{{ traveling_view.stats.countries }}<span class="travel-stat__num-of"> / {{ traveling_view.stats.worldTotal }}</span></div>
+      <div class="travel-stat__label">Countries &middot; {{ traveling_view.stats.percentOfWorld }}% of the world</div>
     </div>
+    <div class="travel-stat">
+      <div class="travel-stat__num travel-stat__num--narrow">{{ traveling_view.stats.firstYearAbroad }} &ndash; {{ traveling_view.stats.latestYear }}</div>
+      <div class="travel-stat__label">Years Abroad</div>
+    </div>
+    <div class="travel-stat">
+      <div class="travel-stat__num">{{ traveling_view.stats.homes }}</div>
+      <div class="travel-stat__label">Called Home</div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="mapcard mb-8" aria-label="World map">
+    <div class="mapcard__header">
+      <span>Atlas</span>
+      <strong>Where I&rsquo;ve been</strong>
+      <span>Natural Earth</span>
+    </div>
+    <div class="mapcard__canvas" id="travel-map">
+      <div class="map-tooltip" id="map-tooltip" role="status"><span id="tip-name"></span><span class="map-tooltip__years" id="tip-years"></span></div>
+      {{ traveling_view.mapSvg }}
+    </div>
+    <div class="mapcard__legend">
+      <div class="mapcard__legend-item"><span class="mapcard__swatch mapcard__swatch--unvisited"></span> Not yet</div>
+      <div class="mapcard__legend-item"><span class="mapcard__swatch mapcard__swatch--visited"></span> Been there</div>
+      <div class="mapcard__legend-item" style="margin-left:auto; opacity:0.6;">Hover a country for years</div>
+    </div>
+  </section>
+
+  <!-- Stamps -->
+  <div class="travel-head">
+    <h2>Stamps</h2>
+    <span class="travel-head__meta">{{ traveling_view.stamps.length }} countries &middot; A&ndash;Z</span>
   </div>
+  <section class="archive">
+    {{ for stamp of traveling_view.stamps }}
+      <article class="stamp" data-continent="{{ stamp.continent }}" style="transform: rotate({{ stamp.rotation }}deg);">
+        <div class="stamp__iso">{{ stamp.alpha3 }}</div>
+        {{ if stamp.isCanadaLeaf }}
+          <div class="stamp__postmark stamp__postmark--leaf">
+            <span class="stamp__postmark-glyph" role="img" aria-label="Maple leaf">🍁</span>
+          </div>
+        {{ else }}
+          <div class="stamp__postmark"><span>&rsquo;{{ stamp.firstYearShort }}</span></div>
+        {{ /if }}
+        {{ if stamp.isLongName }}
+          <h3 class="stamp__name stamp__name--long">{{ stamp.name }}</h3>
+        {{ else }}
+          <h3 class="stamp__name">{{ stamp.name }}</h3>
+        {{ /if }}
+        {{ if stamp.isCanadaLeaf }}
+          <div class="stamp__years">currently</div>
+        {{ else }}
+          <div class="stamp__years">{{ stamp.years }}</div>
+        {{ /if }}
+        <div class="stamp__continent">{{ stamp.subContinent }}</div>
+        {{ if stamp.isHome }}<div class="stamp__home-flag">Home</div>{{ /if }}
+      </article>
+    {{ /for }}
+  </section>
 
   <!-- Called Home -->
-  <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-neo-pink p-8 rounded-none mb-8">
-    <h2 class="text-3xl font-black mb-6">Called Home</h2>
-    <div class="flex flex-wrap gap-3">
-      {{ for country of traveling.lived }}
-        <span class="px-4 py-2 bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">{{ country }}</span>
-      {{ /for }}
-    </div>
+  <div class="travel-head">
+    <h2>Called Home</h2>
+    <span class="travel-head__meta">in order encountered</span>
   </div>
+  <section class="homes mb-8">
+    {{ for home of traveling_view.homes }}
+      <div class="home">
+        <span class="home__dot"></span>
+        <div class="home__iso">{{ home.alpha3 }}</div>
+        <div class="home__name">{{ home.name }}</div>
+        <div class="home__years">{{ home.years }}</div>
+      </div>
+    {{ /for }}
+  </section>
+
 </div>
+
+<script>
+(function () {
+  const map = document.getElementById('travel-map');
+  if (!map) return;
+  const svg = map.querySelector('svg.chart');
+  const tip = document.getElementById('map-tooltip');
+  const tipName = document.getElementById('tip-name');
+  const tipYears = document.getElementById('tip-years');
+  if (!svg || !tip) return;
+
+  function show(name, years) {
+    tipName.textContent = name || '';
+    tipYears.textContent = years || '';
+    tip.classList.add('is-visible');
+  }
+  function hide() { tip.classList.remove('is-visible'); }
+  function move(e) {
+    const rect = map.getBoundingClientRect();
+    tip.style.left = (e.clientX - rect.left) + 'px';
+    tip.style.top  = (e.clientY - rect.top)  + 'px';
+  }
+
+  function bind(el) {
+    el.addEventListener('mouseenter', () => {
+      show(el.getAttribute('data-name'), el.getAttribute('data-years'));
+    });
+    el.addEventListener('mousemove', move);
+    el.addEventListener('mouseleave', hide);
+  }
+
+  svg.querySelectorAll('path[data-name], g.citydot-group[data-name]').forEach(bind);
+})();
+</script>

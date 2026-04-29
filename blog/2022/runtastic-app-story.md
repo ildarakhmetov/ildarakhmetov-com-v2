@@ -10,6 +10,7 @@ tags:
 categories: stories
 url: /blog/2022/runtastic-app-story/
 thumbnail: assets/img/blog/2022/runtastic-post-image.jpg
+kind: post
 ---
 2016 was not easy for me. I lost my mother in September 2015. My father passed a month later. My grandparents could barely support themselves, so my wife and I temporarily moved in with them for the whole summer to help, and every day I saw how quickly they were getting older.
 

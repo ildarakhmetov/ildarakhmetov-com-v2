@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/immigrant-sexual-health-knowledge-portal/
 thumbnail: assets/img/blog/2021/immigrant-sexual-health-screenshot-compressed.png
+kind: note
 ---
 Knowledge Portal for Immigrant Youth is an informational tool that provides young immigrants from all over the world with comprehensive knowledge about sexual and reproductive health.
 

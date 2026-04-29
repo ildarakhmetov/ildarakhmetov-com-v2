@@ -11,6 +11,7 @@ tags:
 - personal-development
 categories: personal-development
 url: /blog/2024/understanding-and-leveraging-your-mbti-type-for-personal-growth/
+kind: post
 ---
 At some point in my life, I was a big fan of the Myers-Briggs Type Indicator (MBTI). It seemed like the perfect tool to solve all interpersonal communication puzzles. I even met my wife when I discovered that we have compatible MBTI types. Fast forward 17 years: perhaps, we really do.
 

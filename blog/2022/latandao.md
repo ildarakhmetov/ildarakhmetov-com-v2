@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/latandao/
 thumbnail: assets/img/blog/2022/latandao.png
+kind: note
 ---
 Hands down, one of the most impressive CMPUT 401 projects of all time.
 

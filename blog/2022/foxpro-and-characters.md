@@ -9,6 +9,7 @@ tags:
 categories: programming
 url: /blog/2022/foxpro-and-characters/
 thumbnail: assets/img/blog/2022/foxpro.jpg
+kind: note
 ---
 Did you know that in FoxPro (a database management system by Microsoft from the 1990s), the interpreter cared only about the first four characters of any keyword?
 

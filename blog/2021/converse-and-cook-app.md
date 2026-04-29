@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/converse-and-cook-app/
 thumbnail: assets/img/blog/2021/converse-and-cook-screenshot.png
+kind: note
 ---
 It's the best time of the year. Fourteen amazing MVPs are completed by CMPUT 401 students, and all fourteen are production-ready. What a blast we had this semester!
 

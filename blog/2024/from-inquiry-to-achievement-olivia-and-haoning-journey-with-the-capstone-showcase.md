@@ -12,6 +12,7 @@ tags:
 - student-achievements
 categories: student-success
 url: /blog/2024/from-inquiry-to-achievement-olivia-and-haoning-journey-with-the-capstone-showcase/
+kind: post
 ---
 A few weeks ago, two of my former teaching assistants, Olivia Xie and Haoning Wang, reached out to me. They were looking for more hands-on experience and wondered if I had any projects in mind. Their timing couldn’t have been better.
 

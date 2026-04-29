@@ -12,6 +12,7 @@ tags:
 categories: personal-development
 url: /blog/2024/finding-life-balance-in-a-dynamic-world/
 thumbnail: assets/img/blog/2024/2024-06-05-finding-life-balance-in-a-dynamic-world.png
+kind: post
 ---
 We always aim to find life balance. Some call it work-life balance, but if you love your work, there's just life balance, because work is such an important part of life. It’s all about harmonizing the different facets that make up our lives, from professional endeavors to personal passions.
 

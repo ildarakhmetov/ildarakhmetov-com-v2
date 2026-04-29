@@ -9,6 +9,7 @@ tags:
 categories: programming
 url: /blog/2022/time-to-learn-react/
 thumbnail: assets/img/blog/2022/react-jquery-trends.jpg
+kind: note
 ---
 2022: Time to learn React, it's so popular!
 ... or not?

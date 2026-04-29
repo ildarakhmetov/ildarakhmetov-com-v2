@@ -10,6 +10,7 @@ tags:
 - teaching
 thumbnail: assets/img/blog/2025/cursor.png
 url: /blog/2025/cs1-in-the-age-of-ai/
+kind: post
 ---
 
 

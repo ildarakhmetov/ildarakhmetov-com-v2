@@ -10,6 +10,7 @@ tags:
 categories: stories
 url: /blog/2023/helping-grandma-story/
 thumbnail: assets/img/blog/2023/little-ildar-helping-grandma.png
+kind: note
 ---
 It's 1986, and I'm "helping" my grandma prep for a lecture 😉
 

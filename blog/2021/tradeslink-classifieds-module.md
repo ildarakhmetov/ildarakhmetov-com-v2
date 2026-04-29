@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/tradeslink-classifieds-module/
 thumbnail: assets/img/blog/2021/tradeslink-classifieds-module-screenshot.png
+kind: note
 ---
 "TradesLink Marketplace, an app designed to facilitate a second-hand goods market for everyone who uses the tools and equipment of the trades."
 

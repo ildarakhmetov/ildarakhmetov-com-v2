@@ -1,0 +1,151 @@
+intro: |
+  Presentations, workshops, panels, and podcast appearances — at academic conferences, industry meetups, and community events.
+
+topics:
+  - Computing education
+  - AI in teaching & assessment
+  - Scaling intro CS courses
+  - Startup engineering
+  - Developer learning paths
+
+# Podcast entries follow the same shape as talks. Example:
+#   - year: 2026
+#     title: The Pragmatic Engineer (guest appearance)
+#     venue: The Pragmatic Engineer Podcast
+#     location: Remote
+#     type: podcast
+#     url: https://youtube.com/...
+
+entries:
+  - year: 2026
+    title: "Making the Stack Visible: A Forth-Based Shell for Teaching Stack-Based Computation"
+    venue: WCCCE 2026
+    location: Vancouver, BC
+    type: talk
+
+  - year: 2026
+    title: "The Skills AI Can't Replace"
+    venue: Northeastern Global Study Expo
+    location: São Paulo, Brazil
+    type: workshop
+
+  - year: 2026
+    title: "AI-Driven Development: How Coding is Changing"
+    venue: "TOEFL Destinations: Northeastern University"
+    location: Remote
+    type: talk
+
+  - year: 2026
+    title: "The Solo Orchestrator: Managing AI Agents and Mentoring Future Talent"
+    venue: Women in Tech Regatta
+    location: Vancouver, BC
+    type: talk
+
+  - year: 2025
+    title: "Mastering AI with Cursor: Code Smarter, Test Better, Eat Pizza (with Juancho Buchanan)"
+    venue: Northeastern University
+    location: Vancouver, BC
+    type: workshop
+
+  - year: 2025
+    title: Adapting Computing Curricula in the Era of Automated Software Development
+    venue: CompEd 2025
+    location: Gaborone, Botswana
+    type: panel
+
+  - year: 2025
+    title: AI-Powered Workplace (moderator)
+    venue: Northeastern University
+    location: Vancouver, BC
+    type: panel
+
+  - year: 2025
+    title: "Can You Get Hired Without a Degree in 2025?"
+    venue: Think Forward Podcast
+    location: Remote
+    type: podcast
+    url: https://www.youtube.com/watch?v=auneuM4ZHvI
+
+  - year: 2025
+    title: Formal Methods in Software Engineering
+    venue: Ashesi University, Ghana
+    location: Remote
+    type: invited
+
+  - year: 2025
+    title: "I Don't Know TypeScript, I Built a Startup in it"
+    venue: Vancouver.dev
+    location: Vancouver, BC
+    type: talk
+
+  - year: 2025
+    title: "When Lyrics Become Code: Programming Like a Rock Star"
+    venue: Women in Tech Regatta
+    location: Vancouver, BC
+    type: talk
+
+  - year: 2025
+    title: "Teaching Together: Faculty Peer Visits in Action"
+    venue: WCCCE 2025
+    location: Calgary, AB
+    type: talk
+
+  - year: 2024
+    title: "Excelling Without Excel: Navigating Data Analysis with ChatGPT"
+    venue: Women in Tech Regatta
+    location: Vancouver, BC
+    type: talk
+
+  - year: 2024
+    title: Using GitHub Copilot as a Pair Instructional Designer
+    venue: WCCCE 2024
+    location: Edmonton, AB
+    type: talk
+
+  - year: 2023
+    title: "Supporting Lost Students in CS1: A Data-Driven Approach"
+    venue: WCCCE 2023
+    location: Vancouver, BC
+    type: talk
+
+  - year: 2022
+    title: Stack Overflow as a Class Communication Platform
+    venue: WCCCE 2022
+    location: Remote
+    type: talk
+
+  - year: 2022
+    title: Visualizing Data in Python with Bokeh and GitHub Pages
+    venue: APIC Energy Hackathon
+    location: Edmonton, AB
+    type: workshop
+
+  - year: 2022
+    title: How to Become a Game Developer?
+    venue: Edmonton Immigrant Services Association Summer Camp
+    location: Edmonton, AB
+    type: talk
+
+  - year: 2022
+    title: Lifelong Learning (Professor Talk)
+    venue: IEEE Welcome Event
+    location: Edmonton, AB
+    type: talk
+
+  - year: 2021
+    title: "Tableau: How to Create an Interactive Dashboard in 45 Min"
+    venue: APIC Energy Hackathon
+    location: Edmonton, AB
+    type: workshop
+
+  - year: 2021
+    title: Intro to UX Design
+    venue: Ladies Learning Code
+    location: Remote
+    type: workshop
+
+  - year: 2019
+    title: "Learning Flutter & Dart: Pros and Cons"
+    venue: DevEdmonton Mobile Development Meetup
+    location: Edmonton, AB
+    type: talk

@@ -10,6 +10,7 @@ tags:
 categories: books
 url: /blog/2023/database-internals-and-dostoyevsky-books/
 thumbnail: assets/img/blog/2023/database-internals-and-dostoyevsky.jpg
+kind: note
 ---
 What are you reading this week?
 

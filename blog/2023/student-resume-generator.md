@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/student-resume-generator/
 thumbnail: assets/img/blog/2023/student-resume-generator-screenshot.png
+kind: note
 ---
 Crafting a resume can be painful. Especially if you're a student and it's your first resume. Word templates are confusing. Online resume-generation tools require a paid subscription.
 

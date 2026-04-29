@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2020/housing-affordability-dashboard/
 thumbnail: assets/img/blog/2020/housing-affordability-dashboard-compressed.png
+kind: note
 ---
 Happy to showcase another cool CMPUT 401 project!
 

@@ -9,6 +9,7 @@ tags:
 - esoteric languages
 categories: programming
 url: /blog/2022/rockstar/
+kind: note
 ---
 I love esoteric programming languages.
 

@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/virtual-gym-dashboard/
 thumbnail: assets/img/blog/2022/virtual-gym-dashboard-screenshot.png
+kind: note
 ---
 With Virtual Gym, health practitioners can provide older adults with game-like exercises with individualized configurations to match their abilities.
 

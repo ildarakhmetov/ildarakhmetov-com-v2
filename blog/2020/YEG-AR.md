@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2020/YEG-AR/
 thumbnail: assets/img/blog/2020/YEG-AR-screenshot-compressed.png
+kind: note
 ---
 Another exciting CMPUT 401 project.
 

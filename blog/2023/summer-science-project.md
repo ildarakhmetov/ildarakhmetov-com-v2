@@ -10,6 +10,7 @@ tags:
 categories: projects
 url: /blog/2023/summer-science-project/
 thumbnail: assets/img/blog/2023/summer-science-project-post-image.jpg
+kind: note
 ---
 This is my summer science project :-)
 

@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/development-in-a-box/
 thumbnail: assets/img/blog/2023/dev-in-a-box.png
+kind: note
 ---
 I love it when CMPUT 401 alumni come back as CMPUT 401 clients.
 

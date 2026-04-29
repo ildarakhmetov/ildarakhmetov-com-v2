@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/smart-blinds/
 thumbnail: assets/img/blog/2022/smart-blinds-screenshot.png
+kind: note
 ---
 AI Shading uses machine learning models to create shades that automatically adjust based on the current weather. Last Winter, CMPUT 401 students worked with Zack Zhang and his team on a data analytics module for their product.
 

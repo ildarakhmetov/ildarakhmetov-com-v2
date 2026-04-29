@@ -22,39 +22,40 @@ metas:
     <h2 class="text-xl font-black mb-4">Legend</h2>
     <div class="flex flex-wrap gap-6">
       <div class="flex items-center gap-2">
-        <span class="w-3 h-3 bg-green-500 rounded-full border-2 border-black"></span>
+        <span class="w-3 h-3 bg-riso-red rounded-full border-2 border-black"></span>
         <span class="font-semibold">Actively using</span>
       </div>
       <div class="flex items-center gap-2">
-        <span class="w-3 h-3 bg-blue-500 rounded-full border-2 border-black"></span>
+        <span class="w-3 h-3 bg-blueprint rounded-full border-2 border-black"></span>
         <span class="font-semibold">Teaching</span>
       </div>
       <div class="flex items-center gap-2">
-        <span class="w-3 h-3 bg-purple-500 rounded-full border-2 border-black"></span>
+        <span class="w-3 h-3 bg-neo-yellow rounded-full border-2 border-black"></span>
         <span class="font-semibold">Learned recently</span>
       </div>
     </div>
   </div>
 
   {{ for category of programming.categories }}
-    <div class="border-4 border-black shadow-neo hover:shadow-none transition-all bg-{{ category.color }} p-8 rounded-none mb-8">
-      <h2 class="text-3xl font-black mb-6">{{ category.name }}</h2>
+    <div class="border-4 border-black shadow-neo bg-white px-8 pb-8 rounded-none mb-8 overflow-hidden">
+      <div class="h-2 bg-blueprint -mx-8 mb-6 border-b-[3px] border-black" aria-hidden="true"></div>
+      <h2 class="text-3xl font-black mb-6 text-blueprint">{{ category.name }}</h2>
       <div class="flex flex-wrap gap-3">
         {{ for tech of category.technologies }}
-          <a href="{{ tech.url }}" target="_blank" rel="noopener noreferrer" class="relative px-4 py-2 h-[2.75rem] bg-white border-2 border-black font-bold hover:bg-black hover:text-white transition-colors inline-flex items-center gap-2 group">
+          <a href="{{ tech.url }}" target="_blank" rel="noopener noreferrer" class="relative px-4 py-2 h-[2.75rem] bg-paper border-2 border-black font-bold hover:bg-ink hover:text-paper transition-colors inline-flex items-center gap-2 group">
             {{ if tech.icon }}
               <img src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/{{ tech.icon }}.svg" alt="{{ tech.name }}" class="w-5 h-5 inline-block flex-shrink-0 tech-icon" />
             {{ /if }}
             <span>{{ tech.name }}</span>
             <span class="flex gap-1 ml-1">
               {{ if tech.actively_using }}
-                <span class="w-2 h-2 bg-green-500 rounded-full border border-black flex-shrink-0" title="Actively using"></span>
+                <span class="w-2 h-2 bg-riso-red rounded-full border border-black flex-shrink-0" title="Actively using"></span>
               {{ /if }}
               {{ if tech.teaching }}
-                <span class="w-2 h-2 bg-blue-500 rounded-full border border-black flex-shrink-0" title="Teaching"></span>
+                <span class="w-2 h-2 bg-blueprint rounded-full border border-black flex-shrink-0" title="Teaching"></span>
               {{ /if }}
               {{ if tech.learned_recently }}
-                <span class="w-2 h-2 bg-purple-500 rounded-full border border-black flex-shrink-0" title="Learned recently"></span>
+                <span class="w-2 h-2 bg-neo-yellow rounded-full border border-black flex-shrink-0" title="Learned recently"></span>
               {{ /if }}
             </span>
           </a>

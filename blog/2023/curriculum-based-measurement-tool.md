@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/curriculum-based-measurement-tool/
 thumbnail: assets/img/blog/2023/curriculum-based-measurement-screenshot.png
+kind: note
 ---
 Each CMPUT 401 project is developed in just two and a half months, so the scope should be reasonable. That is why it's so important to prioritize features.
 

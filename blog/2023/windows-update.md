@@ -10,6 +10,7 @@ tags:
 categories: ai
 url: /blog/2023/windows-update/
 thumbnail: assets/img/blog/2023/windows-update-1-post-image.jpg
+kind: note
 ---
 Windows got updated last night, and here's what I got!
 

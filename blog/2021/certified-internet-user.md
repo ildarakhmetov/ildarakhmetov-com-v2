@@ -12,6 +12,7 @@ tags:
 categories: stories
 url: /blog/2021/certified-internet-user/
 thumbnail: assets/img/blog/2021/ildar-akhmetov-internet-user-certificate.jpg
+kind: note
 ---
 No one would certify you as an Internet User now, right? Well, it was a bit different 20 years ago ;) So, I am an Internet User, and I have a proof.
 

@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2021/moodle-plugin/
 thumbnail: assets/img/blog/2021/moodle-plugin-screenshot.png
+kind: note
 ---
 The very first version of Moodle was developed 20 years ago, and since then, Moodle has become an increasingly complex learning management system. Developing plug-ins requires a good understanding of Moodle legacy architecture. It's never easy.
 

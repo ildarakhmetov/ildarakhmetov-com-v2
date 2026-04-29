@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/communakit-app/
 thumbnail: assets/img/blog/2023/communakit-app-screenshot.png
+kind: note
 ---
 Unveiling the Speech & Language Learning Kit Companion App, developed by CMPUT 401 students at the [University of Alberta](https://www.linkedin.com/school/university-of-alberta/).
 

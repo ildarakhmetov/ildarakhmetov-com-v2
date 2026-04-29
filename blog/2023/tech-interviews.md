@@ -13,6 +13,7 @@ tags:
 categories: careers
 url: /blog/2023/tech-interviews/
 thumbnail: assets/img/blog/2023/tech-interviews-post-image.jpg
+kind: post
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

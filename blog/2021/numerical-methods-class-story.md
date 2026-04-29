@@ -9,6 +9,7 @@ tags:
 - matlab
 categories: programming
 url: /blog/2021/numerical-methods-class-story/
+kind: note
 ---
 When I was a student, in my Numerical Methods class, we were allowed to choose any programming language to do the assignments.
 

@@ -10,6 +10,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2022/fencesee-user-experience/
 thumbnail: assets/img/blog/2022/fencesee-screenshot.png
+kind: note
 ---
 Happy to share another fantastic project made by CMPUT 401 students. Meet the FenceSee User Experience project!
 

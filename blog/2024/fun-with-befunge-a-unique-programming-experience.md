@@ -13,6 +13,7 @@ tags:
 categories: coding-fun
 url: /blog/2024/fun-with-befunge-a-unique-programming-experience/
 thumbnail: assets/img/blog/2024/2024-07-03-fun-with-befunge-a-unique-programming-experience.png
+kind: post
 ---
 What a fun Friday night I had.
 

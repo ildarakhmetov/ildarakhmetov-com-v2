@@ -11,6 +11,7 @@ tags:
 categories: cmput401-projects
 url: /blog/2023/becoming-paraready-audit-tool/
 thumbnail: assets/img/blog/2023/becoming-para-ready-screenshot.png
+kind: note
 ---
 🚀 Introducing the Becoming Para REady Audit Tool: Empowering Sports Clubs to Foster Inclusivity! 🌟
 

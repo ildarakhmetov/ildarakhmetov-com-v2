@@ -10,6 +10,7 @@ tags:
 categories: books
 url: /blog/2022/phoenix-project-devops/
 thumbnail: assets/img/blog/2022/phoenix-project-book.jpg
+kind: note
 ---
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
