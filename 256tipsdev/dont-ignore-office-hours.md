@@ -9,6 +9,7 @@ tags:
 - mentorship
 - career
 - junior-devs
+youtube_url: "https://youtube.com/shorts/GY0okidPvKs"
 url: /256tipsdev/dont-ignore-office-hours/
 ---
 
