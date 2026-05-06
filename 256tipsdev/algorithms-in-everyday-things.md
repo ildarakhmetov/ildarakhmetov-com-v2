@@ -9,6 +9,7 @@ tags:
 - algorithms
 - data-structures
 - junior-devs
+youtube_url: "https://youtube.com/shorts/FUChSILK7FU"
 url: /256tipsdev/algorithms-in-everyday-things/
 ---
 
