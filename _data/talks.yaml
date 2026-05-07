@@ -18,6 +18,13 @@ topics:
 
 entries:
   - year: 2026
+    title: BC AI Research-to-Adoption Summit (panelist)
+    venue: BC AI Research-to-Adoption Summit
+    location: Vancouver, BC
+    type: panel
+    url: https://sites.google.com/view/bc-ai-research-to-adoption-sum/home
+
+  - year: 2026
     title: "Making the Stack Visible: A Forth-Based Shell for Teaching Stack-Based Computation"
     venue: WCCCE 2026
     location: Vancouver, BC
