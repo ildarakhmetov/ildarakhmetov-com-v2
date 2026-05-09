@@ -249,13 +249,8 @@ og_image_alt: Ildar Akhmetov — Educator, Builder, Leader
     <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
       <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Racing</p>
       <h3 class="text-2xl font-black mb-4">Running</h3>
-      {{ set marathonCount = 0 }}
-      {{ for marathon of running.marathons }}
-        {{ if marathon.status === "completed" }}
-          {{ set marathonCount = marathonCount + 1 }}
-        {{ /if }}
-      {{ /for }}
-      {{ set halfMarathonCount = running.half_marathons.length }}
+      {{ set marathonCount = running.marathons.filter((m) => m.status !== "training").length }}
+      {{ set halfMarathonCount = running.half_marathons.filter((h) => h.status !== "training").length }}
       <div class="flex items-baseline gap-6 mb-4">
         <div>
           <span class="font-display font-black text-6xl leading-none" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ marathonCount }}</span>
