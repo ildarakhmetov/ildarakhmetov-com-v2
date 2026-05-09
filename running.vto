@@ -43,6 +43,9 @@ metas:
         <li class="hover:bg-paper px-3 py-2 transition-colors flex items-center gap-2">
           <span class="font-bold">{{ race.name }}</span>
           <span class="opacity-75">({{ race.year }})</span>
+          {{ if race.status === "training" }}
+            <span class="text-sm px-2 py-1 bg-ink text-paper font-bold border border-ink">Currently Training</span>
+          {{ /if }}
         </li>
       {{ /for }}
     </ul>

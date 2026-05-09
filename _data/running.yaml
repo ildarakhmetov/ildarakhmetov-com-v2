@@ -1,12 +1,13 @@
 marathons:
-  - name: BMO Vancouver Marathon 2026
+  - name: BMO Vancouver Marathon
     year: 2026
-    status: training
   - name: Chicago Marathon
     year: 2018
-    status: completed
 
 half_marathons:
+  - name: Regina Half-Marathon
+    year: 2026
+    status: training
   - name: Bogota Half-Marathon
     year: 2025
   - name: Victoria Half-Marathon
