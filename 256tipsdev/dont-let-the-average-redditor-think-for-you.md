@@ -10,6 +10,7 @@ tags:
 - ai
 - creativity
 - junior-devs
+youtube_url: "https://youtube.com/shorts/w_xpKpdMrDA"
 url: /256tipsdev/dont-let-the-average-redditor-think-for-you/
 ---
 
