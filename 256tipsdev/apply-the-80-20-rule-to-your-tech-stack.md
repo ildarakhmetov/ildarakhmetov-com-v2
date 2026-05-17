@@ -10,6 +10,7 @@ tags:
 - learning
 - tech-stack
 - junior-devs
+youtube_url: "https://youtube.com/shorts/OMkQS1uy4Ew"
 url: /256tipsdev/apply-the-80-20-rule-to-your-tech-stack/
 ---
 
