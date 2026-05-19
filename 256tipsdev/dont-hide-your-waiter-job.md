@@ -9,6 +9,7 @@ tags:
 - career
 - resume
 - junior-devs
+youtube_url: "https://youtube.com/shorts/i5zS9QqWWj8"
 url: /256tipsdev/dont-hide-your-waiter-job/
 ---
 
