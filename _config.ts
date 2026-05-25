@@ -59,19 +59,22 @@ site.filter("displayTags", (tags: unknown): string[] => {
 
 // Bucket posts by publication year, newest year first.
 type PostLike = { date?: Date | string };
-site.filter("groupByYear", (posts: unknown): { year: number; posts: PostLike[] }[] => {
-  const list = Array.isArray(posts) ? (posts as PostLike[]) : [];
-  const groups = new Map<number, PostLike[]>();
-  for (const p of list) {
-    const d = p.date ? new Date(p.date) : null;
-    const y = d && !isNaN(d.getTime()) ? d.getFullYear() : 0;
-    if (!groups.has(y)) groups.set(y, []);
-    groups.get(y)!.push(p);
-  }
-  return Array.from(groups.entries())
-    .sort((a, b) => b[0] - a[0])
-    .map(([year, posts]) => ({ year, posts }));
-});
+site.filter(
+  "groupByYear",
+  (posts: unknown): { year: number; posts: PostLike[] }[] => {
+    const list = Array.isArray(posts) ? (posts as PostLike[]) : [];
+    const groups = new Map<number, PostLike[]>();
+    for (const p of list) {
+      const d = p.date ? new Date(p.date) : null;
+      const y = d && !isNaN(d.getTime()) ? d.getFullYear() : 0;
+      if (!groups.has(y)) groups.set(y, []);
+      groups.get(y)!.push(p);
+    }
+    return Array.from(groups.entries())
+      .sort((a, b) => b[0] - a[0])
+      .map(([year, posts]) => ({ year, posts }));
+  },
+);
 
 // Add the CSS file to be processed
 site.add("styles.css");
@@ -107,7 +110,10 @@ site.preprocess([".html"], (pages) => {
     // Auto-wire per-tip Open Graph cards. `deno task tip-cards` renders
     // /assets/img/og/tips/<slug>.jpg from each tip's title + tip_number;
     // this hook surfaces it via metas plugin as og:image.
-    if (data.layout === "tip.vto" && !data.thumbnail && typeof data.url === "string") {
+    if (
+      data.layout === "tip.vto" && !data.thumbnail &&
+      typeof data.url === "string"
+    ) {
       const slug = data.url.replace(/^\/256tipsdev\//, "").replace(/\/$/, "");
       if (slug) data.thumbnail = `/assets/img/og/tips/${slug}.jpg`;
     }

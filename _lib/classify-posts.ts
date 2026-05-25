@@ -70,7 +70,9 @@ console.log("");
 
 for (const d of decisions.sort((a, b) => a.path.localeCompare(b.path))) {
   const glyph = d.kind === "note" ? "·" : "■";
-  console.log(`${glyph} ${d.kind.padEnd(4)} ${String(d.words).padStart(5)}w  ${d.path}`);
+  console.log(
+    `${glyph} ${d.kind.padEnd(4)} ${String(d.words).padStart(5)}w  ${d.path}`,
+  );
 }
 
 if (DRY_RUN) console.log("\n  (dry run — no files written)");
