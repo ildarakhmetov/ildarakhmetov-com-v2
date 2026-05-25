@@ -99,7 +99,7 @@ function projectUnit(lng: number, lat: number): [number, number] {
     phi4 * (-0.013791 + phi4 * (0.003971 * phi2 - 0.001529 * phi4)));
   const y = phi * (1.007226 +
     phi2 * (0.015085 +
-      phi4 * (-0.044475 + 0.028874 * phi2 - 0.005916 * phi4)));
+        phi4 * (-0.044475 + 0.028874 * phi2 - 0.005916 * phi4)));
   return [x, y];
 }
 
@@ -177,7 +177,9 @@ function graticulePath(vp: Viewport, stepDeg = 30): string {
     const seg: string[] = [];
     for (let lat = -90; lat <= 90; lat += 5) {
       const [x, y] = project(vp, lng, lat);
-      seg.push(`${seg.length === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`);
+      seg.push(
+        `${seg.length === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`,
+      );
     }
     parts.push(seg.join(""));
   }
@@ -186,7 +188,9 @@ function graticulePath(vp: Viewport, stepDeg = 30): string {
     const seg: string[] = [];
     for (let lng = -180; lng <= 180; lng += 5) {
       const [x, y] = project(vp, lng, lat);
-      seg.push(`${seg.length === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`);
+      seg.push(
+        `${seg.length === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`,
+      );
     }
     parts.push(seg.join(""));
   }
@@ -199,7 +203,9 @@ function spherePath(vp: Viewport): string {
   // trace the equator then the antimeridians to approximate the sphere edge
   for (let lat = 90; lat >= -90; lat -= 2) {
     const [x, y] = project(vp, 180, lat);
-    parts.push(`${parts.length === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`);
+    parts.push(
+      `${parts.length === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`,
+    );
   }
   for (let lat = -90; lat <= 90; lat += 2) {
     const [x, y] = project(vp, -180, lat);
@@ -216,7 +222,9 @@ function spherePath(vp: Viewport): string {
 export interface BuildMapOptions {
   /** numeric ISO code (zero-padded) → display name + years string for tooltips */
   visited: Map<string, { name: string; years: string }>;
-  overlays: Array<{ name: string; alpha3: string; lng: number; lat: number; years: string }>;
+  overlays: Array<
+    { name: string; alpha3: string; lng: number; lat: number; years: string }
+  >;
   width?: number;
 }
 
@@ -244,11 +252,17 @@ export function buildTravelingMap(
     const entry = opts.visited.get(g.id);
     if (entry) {
       visited.push(
-        `<path class="country country--visited" data-name="${escape(entry.name)}" data-years="${escape(entry.years)}" d="${d}"><title>${escape(entry.name)}</title></path>`,
+        `<path class="country country--visited" data-name="${
+          escape(entry.name)
+        }" data-years="${escape(entry.years)}" d="${d}"><title>${
+          escape(entry.name)
+        }</title></path>`,
       );
     } else {
       unvisited.push(
-        `<path class="country" data-name="${escape(geoName)}" d="${d}"><title>${escape(geoName)}</title></path>`,
+        `<path class="country" data-name="${escape(geoName)}" d="${d}"><title>${
+          escape(geoName)
+        }</title></path>`,
       );
     }
   }
@@ -258,7 +272,9 @@ export function buildTravelingMap(
   for (const ov of opts.overlays) {
     const [x, y] = project(vp, ov.lng, ov.lat);
     dots.push(
-      `<g class="citydot-group" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})" data-name="${escape(ov.name)}" data-years="${escape(ov.years)}">` +
+      `<g class="citydot-group" transform="translate(${x.toFixed(1)} ${
+        y.toFixed(1)
+      })" data-name="${escape(ov.name)}" data-years="${escape(ov.years)}">` +
         `<rect class="citydot" x="-3" y="-3" width="6" height="6" transform="rotate(45)"/>` +
         `<text class="citydot-label" x="8" y="3">${escape(ov.name)}</text>` +
         `<title>${escape(ov.name)}</title>` +
@@ -302,7 +318,9 @@ export function buildMapFromTravelData(
   data: TravelingData,
 ): { svg: string; width: number; height: number } {
   const visited = new Map<string, { name: string; years: string }>();
-  const overlays: Array<{ name: string; alpha3: string; lng: number; lat: number; years: string }> = [];
+  const overlays: Array<
+    { name: string; alpha3: string; lng: number; lat: number; years: string }
+  > = [];
 
   // yearsByName: so home-only countries (Canada) still show in the map even
   // though they have no visited-years entry
