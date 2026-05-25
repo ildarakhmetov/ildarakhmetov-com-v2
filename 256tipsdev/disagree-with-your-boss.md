@@ -10,6 +10,7 @@ tags:
 - communication
 - judgment
 - junior-devs
+youtube_url: "https://youtube.com/shorts/_tmW-zWsBa0"
 url: /256tipsdev/disagree-with-your-boss/
 ---
 
