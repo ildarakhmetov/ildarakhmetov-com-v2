@@ -10,7 +10,7 @@ visited:
   - name: Botswana
     years: 2025
   - name: Brazil
-    years: 2013
+    years: 2014, 2026
   - name: Cambodia
     years: 2010
   - name: Chile
@@ -51,6 +51,8 @@ visited:
     years: 2010
   - name: North Korea
     years: 2016
+  - name: Paraguay
+    years: 2026
   - name: Peru
     years: 2013
   - name: Poland

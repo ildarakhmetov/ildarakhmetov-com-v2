@@ -187,6 +187,12 @@ export const COUNTRIES: Record<string, CountryMeta> = {
     continent: "asia",
     subContinent: "Asia",
   },
+  "Paraguay": {
+    alpha3: "PRY",
+    numeric: "600",
+    continent: "americas",
+    subContinent: "S. America",
+  },
   "Peru": {
     alpha3: "PER",
     numeric: "604",
