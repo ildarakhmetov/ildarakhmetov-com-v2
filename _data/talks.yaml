@@ -41,7 +41,25 @@ entries:
     title: "The Skills AI Can't Replace"
     venue: Northeastern Global Study Expo
     location: São Paulo, Brazil
-    type: workshop
+    type: keynote
+
+  - year: 2026
+    title: "The Skills AI Can't Replace (technical variant)"
+    venue: Universidade Presbiteriana Mackenzie
+    location: São Paulo, Brazil
+    type: talk
+
+  - year: 2026
+    title: "The Skills AI Can't Replace"
+    venue: Ibmec
+    location: Rio de Janeiro, Brazil
+    type: talk
+
+  - year: 2026
+    title: "AI and Education (moderator)"
+    venue: Pontifícia Universidade Católica do Rio de Janeiro
+    location: Rio de Janeiro, Brazil
+    type: panel
 
   - year: 2026
     title: "AI-Driven Development: How Coding is Changing"

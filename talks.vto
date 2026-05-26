@@ -39,6 +39,8 @@ metas:
           <div class="flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.18em] font-bold mb-1.5 flex-wrap">
             {{ if entry.type === "talk" }}
               <span>Talk</span>
+            {{ else if entry.type === "keynote" }}
+              <span>Keynote</span>
             {{ else if entry.type === "invited" }}
               <span>Invited lecture</span>
             {{ else if entry.type === "workshop" }}
@@ -55,7 +57,7 @@ metas:
           <div class="text-[0.95rem] font-semibold opacity-[0.78]">{{ entry.venue }}</div>
         </div>
         {{ if entry.url }}
-          {{ if entry.type === "talk" || entry.type === "podcast" || entry.url.includes("youtube.com") || entry.url.includes("youtu.be") }}
+          {{ if entry.type === "talk" || entry.type === "keynote" || entry.type === "podcast" || entry.url.includes("youtube.com") || entry.url.includes("youtu.be") }}
             <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 bg-riso-red text-ink border-2 border-black font-mono text-[0.72rem] uppercase tracking-[0.16em] font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all whitespace-nowrap flex-shrink-0 self-start md:self-center">
               <span class="inline-block w-0 h-0 border-y-[6px] border-y-transparent border-l-[8px] border-l-ink" aria-hidden="true"></span>
               <span>Watch</span>
