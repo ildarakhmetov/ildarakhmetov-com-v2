@@ -10,6 +10,7 @@ tags:
 - mindset
 - resilience
 - junior-devs
+youtube_url: "https://youtube.com/shorts/9z9QV37Hy1c"
 url: /256tipsdev/become-antifragile/
 ---
 
