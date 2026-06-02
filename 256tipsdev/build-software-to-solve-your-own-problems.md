@@ -10,6 +10,7 @@ tags:
 - side-projects
 - learning
 - junior-devs
+youtube_url: "https://youtube.com/shorts/0lm2UEImR4Y"
 url: /256tipsdev/build-software-to-solve-your-own-problems/
 ---
 
