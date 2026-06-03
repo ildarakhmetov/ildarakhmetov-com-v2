@@ -10,6 +10,7 @@ tags:
 - communication
 - career
 - junior-devs
+youtube_url: "https://youtube.com/shorts/GxSifUBBuNs"
 url: /256tipsdev/english-is-not-your-first-language/
 ---
 
