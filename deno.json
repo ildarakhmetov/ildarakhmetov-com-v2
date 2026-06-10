@@ -67,6 +67,10 @@
     "archive-card": {
       "description": "Render the /256tipsdev/ archive page Open Graph card with current progress grid",
       "command": "deno run --allow-read --allow-write --allow-run _og/render-archive-card.ts"
+    },
+    "related": {
+      "description": "Compute the per-tip 'Related Tips' index from OpenRouter embeddings into _og/related.json (reads OPENROUTER_API_KEY from .env or the environment)",
+      "command": "deno run --env-file --allow-read --allow-write --allow-env --allow-net _og/build-related.ts"
     }
   },
   "compilerOptions": {
