@@ -71,6 +71,10 @@
     "related": {
       "description": "Compute the per-tip 'Related Tips' index from OpenRouter embeddings into _og/related.json (reads OPENROUTER_API_KEY from .env or the environment)",
       "command": "deno run --env-file --allow-read --allow-write --allow-env --allow-net _og/build-related.ts"
+    },
+    "reel-cover": {
+      "description": "Render a vertical 1080x1920 video cover for a tip (YT Shorts / Reels / TikTok): deno task reel-cover <slug> --video <path> [--at <seconds>]",
+      "command": "deno run --allow-read --allow-write --allow-run _og/render-reel-cover.ts"
     }
   },
   "compilerOptions": {

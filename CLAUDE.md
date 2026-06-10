@@ -172,6 +172,7 @@ Tips live in `256tipsdev/<slug>.md` and use `layout: tip.vto`. New tips ship rou
    - Body is plain markdown.
    - **Cross-link other tips.** Tips are cross-listed: whenever the body mentions another tip (e.g. "see Tip 176"), make it a markdown link to that tip's `url` — `[Tip 176](/256tipsdev/build-software-to-solve-your-own-problems/)`. Scan the body for any such references and find the target by its `tip_number` in `256tipsdev/*.md`. If the referenced tip doesn't exist yet, leave it as plain text (it can be linked once that tip ships).
    - **Optional `related:`** — a "Related Tips" section is normally auto-computed from embeddings (step 3). To hand-pick instead, add `related: [176, 16]` (an array of `tip_number`s); it overrides the computed list for that tip.
+   - **Optional `cover_at:`** — the timestamp (in seconds, e.g. `cover_at: 3.5`) of the video frame to use for the vertical social cover (see "Vertical Video Covers" below). Optional; defaults to 1.0s and is overridable per run.
 
 2. **Regenerate the two affected OG cards** (requires headless `google-chrome` **and** ImageMagick's `magick` on PATH):
    ```bash
@@ -213,6 +214,20 @@ deno task og
 The task screenshots `_og/home.html` via headless Chrome (oversized to 1200×720 to work around Chrome's headless-mode chrome reservation), crops to 1200×630, and writes an optimized JPG. The source HTML is the source of truth — edit `_og/home.html` if the design needs to change, then re-run `deno task og` and commit the resulting JPG.
 
 Other pages currently get the default fallback description and no image; to give one a custom card, set `thumbnail:` in its front matter (Lume's metas plugin maps this to `og:image`).
+
+## Vertical Video Covers
+
+Each tip's YouTube Short is cross-posted to Instagram Reels and TikTok — all **9:16 (1080×1920)**, so one cover image serves all three. `deno task reel-cover` generates a branded cover: it pulls a frame from the source video and overlays a neo-style floating card (red `Tip N` badge + italic title + `@256tipsdev` handle), matching the OG cards.
+
+```bash
+deno task reel-cover <slug> --video <path-to-video> [--at <seconds>]
+```
+
+- **Requires `ffmpeg`** (frame extraction) plus the same headless `google-chrome` + ImageMagick `magick` used by the other render tasks.
+- **Frame timestamp precedence:** `--at` flag → the tip's `cover_at` front matter → `1.0s` default.
+- **Video isn't in the repo** — pass its local path each run (`--video`). Output goes to `_covers/<slug>.jpg` (gitignored; it's an upload asset, not site content).
+- **Layout safe zones:** the card sits in the upper-middle, leaving the bottom ~30% clear for the platform caption/username UI and keeping clear of right-edge action buttons.
+- Source of truth is `_og/reel-cover.html`; the renderer is `_og/render-reel-cover.ts`. Edit the HTML to change the design, then re-run.
 
 ## Dependency Management
 

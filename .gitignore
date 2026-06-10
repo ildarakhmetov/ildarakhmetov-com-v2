@@ -10,3 +10,6 @@ _og/*.png
 
 # Local embedding cache for `deno task related` (vectors re-fetched on demand)
 _og/.cache/
+
+# Generated vertical video covers (`deno task reel-cover`) — upload assets
+_covers/
