@@ -64,6 +64,17 @@ function computeReadingTime(content: unknown): number {
   return Math.max(1, Math.round(words / 200));
 }
 
+// Escape a string for safe use inside an HTML attribute value. Vento does not
+// auto-escape interpolations, so titles containing quotes (e.g. Tip 240's
+// `"+1"`) would otherwise break `attr="{{ ... }}"`.
+site.filter("attr", (value: unknown): string =>
+  String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;"));
+
 // Drop the routing-only "post" tag and cap the visible list.
 site.filter("displayTags", (tags: unknown): string[] => {
   const list = Array.isArray(tags) ? (tags as string[]) : [];

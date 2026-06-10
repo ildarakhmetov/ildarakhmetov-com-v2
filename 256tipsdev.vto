@@ -34,8 +34,8 @@ metas:
             {{ if tip }}
               <a href="{{ tip.url }}"
                  data-tip-number="{{ i }}"
-                 data-tip-title="{{ tip.title }}"
-                 aria-label="Read tip {{ i }}: {{ tip.title }}"
+                 data-tip-title="{{ tip.title |> attr }}"
+                 aria-label="Read tip {{ i }}: {{ tip.title |> attr }}"
                  class="aspect-square border border-black bg-riso-red cursor-pointer hover:translate-x-px hover:-translate-y-px transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"></a>
             {{ else if isTeaser }}
               <a href="#subscribe"
