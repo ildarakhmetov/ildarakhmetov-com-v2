@@ -10,6 +10,7 @@ tags:
 - github
 - portfolio
 - junior-devs
+youtube_url: "https://youtube.com/shorts/N7lkpPmhsDE"
 url: /256tipsdev/your-github-profile-is-your-resume/
 ---
 
