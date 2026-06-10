@@ -169,6 +169,7 @@ Tips live in `256tipsdev/<slug>.md` and use `layout: tip.vto`. New tips ship rou
    - **`date`** controls actual publish order — it drives the site's prev/next nav and the archive's "shipped" count. Use today's date (or the user's stated date).
    - **Omit `youtube_url` at creation.** The YouTube Short is published separately; the link is added in a *later, dedicated commit* (e.g. "add YouTube short link to tip N") once it's live.
    - Body is plain markdown.
+   - **Cross-link other tips.** Tips are cross-listed: whenever the body mentions another tip (e.g. "see Tip 176"), make it a markdown link to that tip's `url` — `[Tip 176](/256tipsdev/build-software-to-solve-your-own-problems/)`. Scan the body for any such references and find the target by its `tip_number` in `256tipsdev/*.md`. If the referenced tip doesn't exist yet, leave it as plain text (it can be linked once that tip ships).
 
 2. **Regenerate the two affected OG cards** (requires headless `google-chrome` **and** ImageMagick's `magick` on PATH):
    ```bash
