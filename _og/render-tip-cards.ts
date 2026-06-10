@@ -4,7 +4,11 @@
 // placeholders in _og/tip.html, screenshots each via headless Chrome, then
 // crops + compresses to JPG into assets/img/og/tips/<slug>.jpg.
 //
-// Run via: deno task tip-cards
+// Run via:
+//   deno task tip-cards                 # render every tip card
+//   deno task tip-cards <slug>          # render only one tip (the .md basename)
+//
+// When adding a single new tip, pass its slug so you don't re-render all cards.
 
 const TEMPLATE_PATH = "_og/tip.html";
 const TIPS_DIR = "256tipsdev";
@@ -61,6 +65,10 @@ async function run(cmd: string, args: string[]): Promise<void> {
   }
 }
 
+// Optional CLI arg: a single tip slug (with or without the .md extension).
+// When present, only that tip's card is rendered.
+const targetSlug = Deno.args[0]?.replace(/\.md$/, "");
+
 await Deno.mkdir(TMP_DIR, { recursive: true });
 await Deno.mkdir(OUT_DIR, { recursive: true });
 
@@ -72,6 +80,7 @@ for await (const entry of Deno.readDir(TIPS_DIR)) {
   if (!entry.isFile || !entry.name.endsWith(".md")) continue;
 
   const slug = entry.name.replace(/\.md$/, "");
+  if (targetSlug && slug !== targetSlug) continue;
   const raw = await Deno.readTextFile(`${TIPS_DIR}/${entry.name}`);
   const fm = parseFrontmatter(raw);
 
@@ -115,4 +124,10 @@ for await (const entry of Deno.readDir(TIPS_DIR)) {
 }
 
 await Deno.remove(TMP_DIR, { recursive: true });
+
+if (targetSlug && count === 0) {
+  console.error(`No tip found for slug "${targetSlug}" in ${TIPS_DIR}/.`);
+  Deno.exit(1);
+}
+
 console.log(`\nDone — rendered ${count} tip card${count === 1 ? "" : "s"}.`);

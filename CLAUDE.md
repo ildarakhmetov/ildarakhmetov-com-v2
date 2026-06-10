@@ -147,6 +147,40 @@ When adding new Lume plugins or loaders, modify `_config.ts`.
 2. Add thumbnail image to `assets/img/blog/` if needed
 3. Run `deno task serve` to preview
 
+### New 256tipsdev Tip
+
+Tips live in `256tipsdev/<slug>.md` and use `layout: tip.vto`. New tips ship roughly **biweekly**. Full procedure:
+
+1. **Create the file** `256tipsdev/<slug>.md`. The filename slug **must equal** the `url` slug — `_config.ts` auto-derives each tip's `og:image` from its url (`/assets/img/og/tips/<slug>.jpg`), and the card renderer keys off the filename, so a mismatch breaks the social card. Front matter:
+   ```yaml
+   ---
+   layout: tip.vto
+   title: "Tip Title in Title Case"
+   tip_number: 8
+   date: 2026-06-10 12:00:00
+   description: "One-sentence summary (SEO + the tip's own OG description)."
+   tags:
+   - tip            # always include `tip` — that's how pages are found
+   - career         # plus topical tags
+   url: /256tipsdev/<slug>/
+   ---
+   ```
+   - **`tip_number`** (0–255) is the tip's fixed *identity*, **not** its publish order. It only decides which cell the tip occupies in the 16×16 grid on the archive page. Use the number the user gives.
+   - **`date`** controls actual publish order — it drives the site's prev/next nav and the archive's "shipped" count. Use today's date (or the user's stated date).
+   - **Omit `youtube_url` at creation.** The YouTube Short is published separately; the link is added in a *later, dedicated commit* (e.g. "add YouTube short link to tip N") once it's live.
+   - Body is plain markdown.
+
+2. **Regenerate the two affected OG cards** (requires headless `google-chrome` **and** ImageMagick's `magick` on PATH):
+   ```bash
+   deno task tip-cards <slug>   # per-tip card → assets/img/og/tips/<slug>.jpg
+   deno task archive-card       # catalog grid → assets/img/og/256tipsdev.jpg
+   ```
+   - Pass the slug to `tip-cards` to render **only the new tip** — omitting it re-renders every tip card.
+   - Always run `archive-card` too: adding a tip changes the shipped/remaining counts and shifts the three "coming soon" teaser cells (computed by bit-reversal of the tip count).
+   - Commit both generated JPGs alongside the new `.md`.
+
+3. Preview with `deno task serve`.
+
 ### New Publication
 Add a BibTeX entry to `_data/publications.bib`. The parser handles rendering automatically.
 
