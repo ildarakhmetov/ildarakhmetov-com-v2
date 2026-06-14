@@ -10,6 +10,7 @@ tags:
 - soft-skills
 - career
 - junior-devs
+youtube_url: "https://youtu.be/bty_SVWgj58"
 url: /256tipsdev/join-toastmasters/
 ---
 
