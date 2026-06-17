@@ -223,6 +223,20 @@
       "tip_number": 64
     }
   ],
+  "your-github-profile-is-your-resume": [
+    {
+      "slug": "dont-hide-your-waiter-job",
+      "tip_number": 80
+    },
+    {
+      "slug": "join-toastmasters",
+      "tip_number": 136
+    },
+    {
+      "slug": "apply-the-80-20-rule-to-your-tech-stack",
+      "tip_number": 144
+    }
+  ],
   "join-toastmasters": [
     {
       "slug": "dont-build-alone",
@@ -237,18 +251,18 @@
       "tip_number": 224
     }
   ],
-  "your-github-profile-is-your-resume": [
-    {
-      "slug": "dont-hide-your-waiter-job",
-      "tip_number": 80
-    },
-    {
-      "slug": "join-toastmasters",
-      "tip_number": 136
-    },
+  "try-an-esoteric-programming-language": [
     {
       "slug": "apply-the-80-20-rule-to-your-tech-stack",
       "tip_number": 144
+    },
+    {
+      "slug": "play",
+      "tip_number": 224
+    },
+    {
+      "slug": "algorithms-in-everyday-things",
+      "tip_number": 96
     }
   ]
 }
