@@ -10,6 +10,7 @@ tags:
 - fun
 - programming-languages
 - junior-devs
+youtube_url: "https://youtube.com/shorts/rjFQn050Uso"
 url: /256tipsdev/try-an-esoteric-programming-language/
 ---
 
