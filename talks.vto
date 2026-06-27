@@ -49,6 +49,8 @@ metas:
               <span class="inline-flex items-center px-2 py-0.5 border-2 border-black border-dashed bg-white text-[0.66rem] tracking-[0.2em]">Panel</span>
             {{ else if entry.type === "podcast" }}
               <span class="inline-flex items-center px-2 py-0.5 border-[1.5px] border-black bg-neo-yellow text-[0.66rem] tracking-[0.2em]">Podcast</span>
+            {{ else if entry.type === "organizer" }}
+              <span class="inline-flex items-center px-2 py-0.5 border-[1.5px] border-black bg-ink text-paper text-[0.66rem] tracking-[0.2em]">Organizer</span>
             {{ /if }}
             <span class="opacity-35">·</span>
             <span class="opacity-60">{{ entry.location }}</span>

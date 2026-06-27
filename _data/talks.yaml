@@ -38,6 +38,13 @@ entries:
     type: talk
 
   - year: 2026
+    title: "WCCCE 2026 (organizing committee co-chair)"
+    venue: Western Canadian Conference on Computing Education
+    location: Vancouver, BC
+    type: organizer
+    url: https://www.khoury.northeastern.edu/northeastern-innovation-on-display-as-vancouver-hosts-computing-education-conference/
+
+  - year: 2026
     title: "The Skills AI Can't Replace"
     venue: Northeastern Global Study Expo
     location: São Paulo, Brazil
