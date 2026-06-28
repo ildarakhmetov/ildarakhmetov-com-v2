@@ -15,16 +15,16 @@
   ],
   "buy-junk-from-facebook-marketplace": [
     {
+      "slug": "deploy-your-project-three-ways",
+      "tip_number": 40
+    },
+    {
       "slug": "algorithms-in-everyday-things",
       "tip_number": 96
     },
     {
       "slug": "apply-the-80-20-rule-to-your-tech-stack",
       "tip_number": 144
-    },
-    {
-      "slug": "build-software-to-solve-your-own-problems",
-      "tip_number": 176
     }
   ],
   "have-fun-with-leetcode": [
@@ -79,18 +79,18 @@
       "tip_number": 16
     },
     {
-      "slug": "disagree-with-your-boss",
-      "tip_number": 208
+      "slug": "think-about-yourself-in-1-2-5-10-50-years",
+      "tip_number": 200
     }
   ],
   "algorithms-in-everyday-things": [
     {
-      "slug": "have-fun-with-leetcode",
-      "tip_number": 64
-    },
-    {
       "slug": "think-about-yourself-in-1-2-5-10-50-years",
       "tip_number": 200
+    },
+    {
+      "slug": "have-fun-with-leetcode",
+      "tip_number": 64
     },
     {
       "slug": "play",
@@ -127,16 +127,16 @@
   ],
   "apply-the-80-20-rule-to-your-tech-stack": [
     {
+      "slug": "deploy-your-project-three-ways",
+      "tip_number": 40
+    },
+    {
       "slug": "learn-in-your-plus-one-zone",
       "tip_number": 240
     },
     {
       "slug": "play",
       "tip_number": 224
-    },
-    {
-      "slug": "build-software-to-solve-your-own-problems",
-      "tip_number": 176
     }
   ],
   "disagree-with-your-boss": [
@@ -177,8 +177,8 @@
       "tip_number": 136
     },
     {
-      "slug": "algorithms-in-everyday-things",
-      "tip_number": 96
+      "slug": "think-about-yourself-in-1-2-5-10-50-years",
+      "tip_number": 200
     }
   ],
   "build-software-to-solve-your-own-problems": [
@@ -191,8 +191,8 @@
       "tip_number": 144
     },
     {
-      "slug": "think-about-yourself-in-1-2-5-10-50-years",
-      "tip_number": 200
+      "slug": "disagree-with-your-boss",
+      "tip_number": 208
     }
   ],
   "english-is-not-your-first-language": [
@@ -243,12 +243,12 @@
       "tip_number": 192
     },
     {
-      "slug": "become-antifragile",
-      "tip_number": 48
+      "slug": "think-about-yourself-in-1-2-5-10-50-years",
+      "tip_number": 200
     },
     {
-      "slug": "play",
-      "tip_number": 224
+      "slug": "become-antifragile",
+      "tip_number": 48
     }
   ],
   "try-an-esoteric-programming-language": [
@@ -267,16 +267,30 @@
   ],
   "think-about-yourself-in-1-2-5-10-50-years": [
     {
-      "slug": "learn-in-your-plus-one-zone",
-      "tip_number": 240
-    },
-    {
       "slug": "algorithms-in-everyday-things",
       "tip_number": 96
     },
     {
+      "slug": "learn-in-your-plus-one-zone",
+      "tip_number": 240
+    },
+    {
       "slug": "apply-the-80-20-rule-to-your-tech-stack",
       "tip_number": 144
+    }
+  ],
+  "deploy-your-project-three-ways": [
+    {
+      "slug": "apply-the-80-20-rule-to-your-tech-stack",
+      "tip_number": 144
+    },
+    {
+      "slug": "buy-junk-from-facebook-marketplace",
+      "tip_number": 128
+    },
+    {
+      "slug": "play",
+      "tip_number": 224
     }
   ]
 }
