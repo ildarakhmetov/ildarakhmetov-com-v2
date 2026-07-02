@@ -19,7 +19,7 @@ og_image_alt: Ildar Akhmetov — Educator, Builder, Leader
           Educator <span class="text-riso-red font-bold mx-1">·</span> Builder <span class="text-riso-red font-bold mx-1">·</span> Leader
         </p>
         <p class="mt-4 text-base md:text-lg opacity-75 max-w-[62ch] leading-relaxed">
-          Based in Vancouver. <strong class="font-bold opacity-100">Director of Computing Programs at Northeastern University</strong> and the maker behind <strong class="font-bold opacity-100"><a href="https://mynextproject.dev" target="_blank" class="hover:text-riso-red transition-colors">MyNextProject.dev</a></strong>. When not at a keyboard, usually out for a long run.
+          Based in Edmonton, Canada. Educator and the maker behind <strong class="font-bold opacity-100"><a href="https://mynextproject.dev" target="_blank" class="hover:text-riso-red transition-colors">MyNextProject.dev</a></strong>. When not at a keyboard, usually out for a long run.
         </p>
       </div>
       <div class="flex-shrink-0 mx-auto md:mx-0 mb-6 md:mb-0">
@@ -177,24 +177,16 @@ og_image_alt: Ildar Akhmetov — Educator, Builder, Leader
     </div>
 
     <!-- Teaching -->
-    <div class="border-4 border-black shadow-neo bg-white p-6 rounded-none">
-      {{ set currentUniversity = teaching.universities[0] }}
-      {{ set currentSemester = currentUniversity.semesters[0] }}
-
-      <h3 class="text-2xl font-black mb-3 text-center">Teaching</h3>
-      <div class="mb-4">
-        <p class="font-bold text-center mb-2">{{ currentSemester.term }}</p>
-        <p class="text-sm text-center opacity-75 mb-3">{{ currentUniversity.name }}</p>
-        <div class="space-y-2">
-          {{ for course of currentSemester.courses }}
-          <div class="text-sm">
-            <span class="font-bold">{{ course.code }}</span>
-            <span class="block opacity-75">{{ course.name }}</span>
-          </div>
-          {{ /for }}
-        </div>
-      </div>
-      <a href="/teaching/" class="block text-center px-6 py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+    <div class="border-4 border-black shadow-neo bg-white p-8 rounded-none flex flex-col justify-center items-center text-center">
+      <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Classroom</p>
+      <h3 class="text-2xl font-black mb-4">Teaching</h3>
+      {{ set termCount = 0 }}
+      {{ for university of teaching.universities }}
+        {{ set termCount = termCount + university.semesters.length }}
+      {{ /for }}
+      <span class="font-display font-black text-7xl leading-none mb-2" style="font-variation-settings: 'SOFT' 80, 'opsz' 144;">{{ termCount }}</span>
+      <p class="text-sm opacity-75 font-semibold mb-4">terms taught</p>
+      <a href="/teaching/" class="px-6 py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0_0_#0D0D0D] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
         View All Courses
       </a>
     </div>
@@ -202,14 +194,7 @@ og_image_alt: Ildar Akhmetov — Educator, Builder, Leader
     <!-- Current Roles -->
     <div class="md:col-span-3 border-4 border-black shadow-neo bg-white p-8 rounded-none">
       <h3 class="text-2xl font-black mb-6">Current Roles</h3>
-      <div class="grid md:grid-cols-3 md:grid-rows-[auto_auto_1fr] gap-8 md:gap-y-0">
-        <div class="md:grid md:grid-rows-subgrid md:row-span-3">
-          <h4 class="text-xl font-bold mb-1"><a href="https://www.khoury.northeastern.edu/people/ildar-akhmetov/" target="_blank" class="hover:underline font-bold">Northeastern University</a></h4>
-          <p class="font-bold text-sm uppercase tracking-wide opacity-75 mb-3">Associate Teaching Professor & Director</p>
-          <p class="text-sm leading-relaxed">
-            I lead the computing programs and teach. I stay at the bleeding edge of the field to bring real-world innovation into the classroom, ensuring students are ready for what's next.
-          </p>
-        </div>
+      <div class="grid md:grid-cols-2 md:grid-rows-[auto_auto_1fr] gap-8 md:gap-y-0">
         <div class="md:grid md:grid-rows-subgrid md:row-span-3">
           <h4 class="text-xl font-bold mb-1"><a href="https://mynextproject.dev" target="_blank" class="hover:underline font-bold">MyNextProject.dev</a></h4>
           <p class="font-bold text-sm uppercase tracking-wide opacity-75 mb-3">Founder & Builder</p>
