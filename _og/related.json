@@ -159,12 +159,12 @@
       "tip_number": 8
     },
     {
-      "slug": "dont-ignore-office-hours",
-      "tip_number": 160
+      "slug": "do-a-hackathon",
+      "tip_number": 168
     },
     {
-      "slug": "algorithms-in-everyday-things",
-      "tip_number": 96
+      "slug": "dont-ignore-office-hours",
+      "tip_number": 160
     }
   ],
   "become-antifragile": [
@@ -229,15 +229,19 @@
       "tip_number": 80
     },
     {
-      "slug": "think-about-yourself-in-1-2-5-10-50-years",
-      "tip_number": 200
+      "slug": "do-a-hackathon",
+      "tip_number": 168
     },
     {
-      "slug": "join-toastmasters",
-      "tip_number": 136
+      "slug": "think-about-yourself-in-1-2-5-10-50-years",
+      "tip_number": 200
     }
   ],
   "join-toastmasters": [
+    {
+      "slug": "do-a-hackathon",
+      "tip_number": 168
+    },
     {
       "slug": "dont-build-alone",
       "tip_number": 192
@@ -245,10 +249,6 @@
     {
       "slug": "think-about-yourself-in-1-2-5-10-50-years",
       "tip_number": 200
-    },
-    {
-      "slug": "become-antifragile",
-      "tip_number": 48
     }
   ],
   "try-an-esoteric-programming-language": [
@@ -291,6 +291,20 @@
     {
       "slug": "play",
       "tip_number": 224
+    }
+  ],
+  "do-a-hackathon": [
+    {
+      "slug": "join-toastmasters",
+      "tip_number": 136
+    },
+    {
+      "slug": "your-github-profile-is-your-resume",
+      "tip_number": 8
+    },
+    {
+      "slug": "dont-build-alone",
+      "tip_number": 192
     }
   ]
 }
