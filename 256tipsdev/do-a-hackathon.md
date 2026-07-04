@@ -11,6 +11,7 @@ tags:
 - projects
 - junior-devs
 url: /256tipsdev/do-a-hackathon/
+youtube_url: "https://youtube.com/shorts/MLLrNfVfAxA"
 ---
 
 As a junior developer, if you want only **ONE** thing to advance your career -- this is it. Join a hackathon.
