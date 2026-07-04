@@ -31,6 +31,6 @@ Now, where to look for hackathons?
 
 I recommend you start by looking at your local tech scene: your university chat, or local meetups are good places to start. Local hackathons have the best energy, and are best for meeting people. 
 
-For larger-scale hackathons (mostly online), check out Devpost (https://devpost.com/) and MLH (https://www.mlh.com/).
+For larger-scale hackathons (mostly online), check out [Devpost](https://devpost.com/) and [MLH](https://www.mlh.com/).
 
 So, just go ahead, find a hackathon that's happening this month -- and show up!
