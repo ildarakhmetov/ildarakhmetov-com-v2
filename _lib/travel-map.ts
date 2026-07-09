@@ -10,7 +10,7 @@
  * high latitudes, keeps Russia at an honest size relative to Africa.
  */
 
-import { COUNTRIES, metaFor } from "./country-codes.ts";
+import { metaFor } from "./country-codes.ts";
 
 /* ------------------------------------------------------------------
    TopoJSON types — only the subset we use
