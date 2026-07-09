@@ -16,6 +16,10 @@ youtube_url: "https://youtube.com/shorts/8IQIYa_-nws"
 
 What was the inspiration for me to start "256 Tips"? This book.
 
+<img src="/assets/img/256tipsdev/pragmatic-programmer.jpg"
+     alt="The Pragmatic Programmer, 20th Anniversary Edition -- David Thomas and Andrew Hunt"
+     class="w-64 mx-auto" />
+
 Some books teach you algorithms, others teach programming language syntax. This book teaches you what it *means* to be a programmer. The *meaning*, the *philosophy* of being a programmer is the foundation of *everything* else.
 
 I read *The Pragmatic Programmer* way too late in my career -- I wish I'd read it 20 years earlier.
