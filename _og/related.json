@@ -306,5 +306,19 @@
       "slug": "dont-build-alone",
       "tip_number": 192
     }
+  ],
+  "read-the-pragmatic-programmer": [
+    {
+      "slug": "play",
+      "tip_number": 224
+    },
+    {
+      "slug": "algorithms-in-everyday-things",
+      "tip_number": 96
+    },
+    {
+      "slug": "apply-the-80-20-rule-to-your-tech-stack",
+      "tip_number": 144
+    }
   ]
 }
