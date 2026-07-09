@@ -11,6 +11,7 @@ tags:
 - craft
 - junior-devs
 url: /256tipsdev/read-the-pragmatic-programmer/
+youtube_url: "https://youtube.com/shorts/8IQIYa_-nws"
 ---
 
 What was the inspiration for me to start "256 Tips"? This book.
