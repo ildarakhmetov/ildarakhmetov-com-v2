@@ -121,7 +121,6 @@ BibTeX format. The custom loader in `_config.ts` parses this via `_lib/bibtex-pa
 | Variable             | Default                      | Purpose                         |
 |----------------------|------------------------------|---------------------------------|
 | `SITE_URL`           | `https://ildarakhmetov.com/` | Full base URL for the site |
-| `OPENROUTER_API_KEY` | _(none)_                     | Only for `deno task related` (tip embeddings). Not needed for build/deploy. |
 
 ## Deployment
 
@@ -148,52 +147,13 @@ When adding new Lume plugins or loaders, modify `_config.ts`.
 2. Add thumbnail image to `assets/img/blog/` if needed
 3. Run `deno task serve` to preview
 
-### New 256tipsdev Tip
+### 256 Tips (moved)
 
-Tips live in `256tipsdev/<slug>.md` and use `layout: tip.vto`. New tips ship roughly **biweekly**. Full procedure:
-
-1. **Create the file** `256tipsdev/<slug>.md`. The filename slug **must equal** the `url` slug — `_config.ts` auto-derives each tip's `og:image` from its url (`/assets/img/og/tips/<slug>.jpg`), and the card renderer keys off the filename, so a mismatch breaks the social card. Front matter:
-   ```yaml
-   ---
-   layout: tip.vto
-   title: "Tip Title in Title Case"
-   tip_number: 8
-   date: 2026-06-10 12:00:00
-   description: "One-sentence summary (SEO + the tip's own OG description)."
-   tags:
-   - tip            # always include `tip` — that's how pages are found
-   - career         # plus topical tags
-   url: /256tipsdev/<slug>/
-   ---
-   ```
-   - **`tip_number`** (0–255) is the tip's fixed *identity*, **not** its publish order. It only decides which cell the tip occupies in the 16×16 grid on the archive page. Use the number the user gives.
-   - **`date`** controls actual publish order — it drives the site's prev/next nav and the archive's "shipped" count. Use today's date (or the user's stated date).
-   - **Omit `youtube_url` at creation.** The YouTube Short is published separately; the link is added in a *later, dedicated commit* (e.g. "add YouTube short link to tip N") once it's live.
-   - Body is plain markdown.
-   - **Cross-link other tips.** Tips are cross-listed: whenever the body mentions another tip (e.g. "see Tip 176"), make it a markdown link to that tip's `url` — `[Tip 176](/256tipsdev/build-software-to-solve-your-own-problems/)`. Scan the body for any such references and find the target by its `tip_number` in `256tipsdev/*.md`. If the referenced tip doesn't exist yet, leave it as plain text (it can be linked once that tip ships).
-   - **Optional `related:`** — a "Related Tips" section is normally auto-computed from embeddings (step 3). To hand-pick instead, add `related: [176, 16]` (an array of `tip_number`s); it overrides the computed list for that tip.
-   - **Optional `cover_at:`** — the timestamp (in seconds, e.g. `cover_at: 3.5`) of the video frame to use for the vertical social cover (see "Vertical Video Covers" below). Optional; defaults to 1.0s and is overridable per run.
-
-2. **Regenerate the two affected OG cards** (requires headless `google-chrome` **and** ImageMagick's `magick` on PATH):
-   ```bash
-   deno task tip-cards <slug>   # per-tip card → assets/img/og/tips/<slug>.jpg
-   deno task archive-card       # catalog grid → assets/img/og/256tipsdev.jpg
-   ```
-   - Pass the slug to `tip-cards` to render **only the new tip** — omitting it re-renders every tip card.
-   - Always run `archive-card` too: adding a tip changes the shipped/remaining counts and shifts the three "coming soon" teaser cells (computed by bit-reversal of the tip count).
-   - Commit both generated JPGs alongside the new `.md`.
-
-3. **Recompute the Related Tips index:**
-   ```bash
-   deno task related   # → _og/related.json
-   ```
-   - One-time setup: `cp .env.example .env` and put your key in `.env` (gitignored). The task loads it via `--env-file`, so no need to paste the key each run. (A raw `OPENROUTER_API_KEY=… deno task related` still works too.)
-   - Embeds tips via OpenRouter (`openai/text-embedding-3-small`) and writes the top-3 cosine neighbors per tip. Adding a tip can change *other* tips' neighbors, so always re-run after a new tip.
-   - Incremental: only new/changed tips hit the API (cache at `_og/.cache/`, gitignored). A no-change run needs no key or network. Cost is negligible (~$0.002 for the whole corpus).
-   - **Commit `_og/related.json`** — the build reads it; CI never calls the API. A tip with no entry yet simply renders no Related section (graceful).
-   - The pure logic lives in `_lib/related-tips.ts` (tested in `_lib/related-tips_test.ts`); wiring is in `_config.ts` (reads the index, resolves links, honors the `related:` override) and `_includes/tip.vto` (renders the section).
-
-4. Preview with `deno task serve`.
+The 256 Tips series lives in its own repo now: `~/sites/256tips.dev`
+(https://github.com/ildarakhmetov/256tips.dev), live at https://256tips.dev.
+Old `/256tipsdev/*` URLs 301-redirect there via a Cloudflare rule on this
+zone. `assets/img/og/tips/` is kept only for cached social shares — do not
+add to it.
 
 ### New Publication
 Add a BibTeX entry to `_data/publications.bib`. The parser handles rendering automatically.
@@ -214,20 +174,6 @@ deno task og
 The task screenshots `_og/home.html` via headless Chrome (oversized to 1200×720 to work around Chrome's headless-mode chrome reservation), crops to 1200×630, and writes an optimized JPG. The source HTML is the source of truth — edit `_og/home.html` if the design needs to change, then re-run `deno task og` and commit the resulting JPG.
 
 Other pages currently get the default fallback description and no image; to give one a custom card, set `thumbnail:` in its front matter (Lume's metas plugin maps this to `og:image`).
-
-## Vertical Video Covers
-
-Each tip's YouTube Short is cross-posted to Instagram Reels and TikTok — all **9:16 (1080×1920)**, so one cover image serves all three. `deno task reel-cover` generates a branded cover: it pulls a frame from the source video and overlays a neo-style floating card (red `Tip N` badge + italic title + `@256tipsdev` handle), matching the OG cards.
-
-```bash
-deno task reel-cover <slug> --video <path-to-video> [--at <seconds>]
-```
-
-- **Requires `ffmpeg`** (frame extraction) plus the same headless `google-chrome` + ImageMagick `magick` used by the other render tasks.
-- **Frame timestamp precedence:** `--at` flag → the tip's `cover_at` front matter → `1.0s` default.
-- **Video isn't in the repo** — pass its local path each run (`--video`). Output goes to `_covers/<slug>.jpg` (gitignored; it's an upload asset, not site content).
-- **Layout safe zones:** the card sits in the upper-middle, leaving the bottom ~30% clear for the platform caption/username UI and keeping clear of right-edge action buttons.
-- Source of truth is `_og/reel-cover.html`; the renderer is `_og/render-reel-cover.ts`. Edit the HTML to change the design, then re-run.
 
 ## Dependency Management
 
